@@ -42,7 +42,11 @@ export const galleryQuery = graphql `
       frontmatter {
         title
         gallery {
-          image
+          image {
+            childImageSharp {
+              src
+            }
+          }
           band
         }
       }
