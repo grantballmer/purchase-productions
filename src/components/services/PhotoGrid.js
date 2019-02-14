@@ -47,8 +47,8 @@ class Gallery extends React.Component {
           <div className="photo" key={file + index} onClick={this.handleClick}>
             <div className={`overlay-background-image`}
               data-index={index}
-              data-image={file.thumbnail}
-              style={{ backgroundImage: `url(${file.thumbnail})` }}
+              data-image={file.image}
+              style={{ backgroundImage: `url(${file.image})` }}
             />
           </div>
         );

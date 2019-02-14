@@ -6,7 +6,7 @@ import PhotoGrid from "../components/services/PhotoGrid";
 
 const GalleryTemplate = ({ data }) => {
   const { markdownRemark: gallery } = data;
-  const images = gallery.frontmatter.insideGallery;
+  const images = gallery.frontmatter.gallery;
 
 
 
@@ -41,8 +41,8 @@ export const galleryQuery = graphql `
       html
       frontmatter {
         title
-        insideGallery {
-          thumbnail 
+        gallery {
+          image
           band
         }
       }

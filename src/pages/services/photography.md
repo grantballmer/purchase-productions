@@ -1,9 +1,9 @@
 ---
 templateKey: 'gallery'
 title: 'Photography Gallery'
-insideGallery:
+gallery:
   - band: Chris Cordle
-    thumbnail: /img/chris-cordle-lg.jpg
+    image: /img/chris-cordle-lg.jpg
   - band: 'Chirp '
-    thumbnail: /img/chirp-lg-1-.jpg
+    image: /img/chirp-lg-1-.jpg
 ---

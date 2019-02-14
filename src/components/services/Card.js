@@ -5,7 +5,7 @@ import { Link } from "gatsby";
 const Card = ({ frontImage, tinyImage, icon, service, management, check }) => {
 
   return (
-    <Link to={`/services/${service}`} className={`card card__${service}`}>
+    <Link to={`/services/photography`} className={`card card__${service}`}>
       
       <div className="card__side card__side--front" >
       

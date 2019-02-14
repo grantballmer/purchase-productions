@@ -49,7 +49,7 @@ class SliderOverlay extends React.Component {
       index = Number(index) - 1 <= -1 ? images.length - 1 : Number(index) - 1;
     }
 
-    this.setState({ image: images[index].thumbnail, index, imagePosition: 0 });
+    this.setState({ image: images[index].image, index, imagePosition: 0 });
   }
 
   handleKeyDown = e => {
