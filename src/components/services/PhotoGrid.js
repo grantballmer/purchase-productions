@@ -1,5 +1,5 @@
 import React from 'react';
-import "./gallery.scss";
+import "./photoGrid.scss";
 import SliderOverlay from "./SliderOverlay";
 // const imagePath = process.env.PUBLIC_URL + '/assets/images/design';
 
@@ -45,11 +45,12 @@ class Gallery extends React.Component {
       photoElements = images.map((file, index) => {
         return (
           <div className="photo" key={file + index} onClick={this.handleClick}>
-          <div className={`overlay-background-image photo__${file}`}
-            data-index={index}
-            data-image={file}
-          />
-        </div>
+            <div className={`overlay-background-image`}
+              data-index={index}
+              data-image={file.thumbnail}
+              style={{ backgroundImage: `url(${file.thumbnail})` }}
+            />
+          </div>
         );
       });
     }

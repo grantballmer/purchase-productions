@@ -26,8 +26,6 @@ class SliderOverlay extends React.Component {
     const index = activePhoto.attributes['data-index'].value;
     // const imagePath = isDesign ? baseImagePath + '/design' : baseImagePath + '/photography';
 
-    console.log(this.props);
-
     this.setState({ image, index, images });
   }
 
@@ -51,7 +49,7 @@ class SliderOverlay extends React.Component {
       index = Number(index) - 1 <= -1 ? images.length - 1 : Number(index) - 1;
     }
 
-    this.setState({ image: images[index], index, imagePosition: 0 });
+    this.setState({ image: images[index].thumbnail, index, imagePosition: 0 });
   }
 
   handleKeyDown = e => {
@@ -109,7 +107,7 @@ class SliderOverlay extends React.Component {
             
             <div className={`sliderOverlay__photo photo__${image}`}
               data-index={index}
-              style={{ transform: `translateX(${imagePosition}px` }}
+              style={{ transform: `translateX(${imagePosition}px`, backgroundImage: `url(${image})` }}
               onClick={e => e.stopPropagation() }
             >
             
