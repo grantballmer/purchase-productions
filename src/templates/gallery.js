@@ -6,9 +6,7 @@ import PhotoGrid from "../components/services/PhotoGrid";
 
 const GalleryTemplate = ({ data }) => {
   const { markdownRemark: gallery } = data;
-  const images = gallery.frontmatter.gallery;
-
-
+  const images = gallery.frontmatter.grid;
 
   return (
     <Layout>
@@ -35,17 +33,17 @@ export default GalleryTemplate;
 //   }
 // `;
 
-// export const galleryQuery = graphql `
-//   query Gallery($id: String!) {
-//     markdownRemark(id: { eq: $id }) {
-//       html
-//       frontmatter {
-//         title
-//         grid {
-//           image 
-//           band
-//         }
-//       }
-//     }
-//   }
-// `;
+export const galleryQuery = graphql `
+  query Gallery($id: String!) {
+    markdownRemark(id: { eq: $id }) {
+      html
+      frontmatter {
+        title
+        grid {
+          image 
+          band
+        }
+      }
+    }
+  }
+`;

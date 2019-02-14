@@ -1,5 +1,5 @@
 ---
-templateKey: gallery
+templateKey: 'gallery'
 title: photography
 grid:
   - band: chris-cordle
