@@ -1,80 +1,86 @@
-import React from 'react'
-import { Link } from 'gatsby'
-import github from '../img/github-icon.svg'
-import logo from '../img/logo.svg'
+import React from 'react';
+import { Link } from 'gatsby';
+import './scss/navbar.scss';
 
-const Navbar = class extends React.Component {
+import { FaFacebookSquare, FaInstagram, FaSoundcloud } from 'react-icons/fa';
+// import github from '../img/github-icon.svg'
+// import logo from '../img/logo.svg'
 
-  componentDidMount() {
-    // Get all "navbar-burger" elements
-   const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
-    // Check if there are any navbar burgers
-   if ($navbarBurgers.length > 0) {
- 
-     // Add a click event on each of them
-     $navbarBurgers.forEach( el => {
-       el.addEventListener('click', () => {
- 
-         // Get the target from the "data-target" attribute
-         const target = el.dataset.target;
-         const $target = document.getElementById(target);
- 
-         // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
-         el.classList.toggle('is-active');
-         $target.classList.toggle('is-active');
- 
-       });
-     });
-   }
- }
- 
- render() {
-   return (
-  
-  <nav className="navbar is-transparent" role="navigation" aria-label="main-navigation">
-    <div className="container">
-      <div className="navbar-brand">
-        <Link to="/" className="navbar-item" title="Logo">
-          <img src={logo} alt="Kaldi" style={{ width: '88px' }} />
+class Navbar extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      openMenu: false
+    };
+  }
+
+  handleClick = e => {
+    const { openMenu } = this.state;
+    this.setState({ openMenu: !openMenu });
+  }
+
+  removeSideNav = () => {
+    const { openMenu } = this.state;
+
+    if (!openMenu) return;
+    this.setState({ openMenu: !openMenu });
+
+  }
+
+  render() {
+    const { openMenu } = this.state;
+    const slideClass = openMenu ? 'slideIn' : '';
+    // const menuClass = openMenu ? 'open' : '';
+
+    return (
+      <nav>
+      
+        <Link to="/" className="logo" onClick={this.removeSideNav}>
+            Purchase Productions, LLC
         </Link>
-        {/* Hamburger menu */}
-        <div className="navbar-burger burger" data-target="navMenu">
+        
+        {/* <i className="nav-menu fas fa-bars" onClick={this.handleClick}></i> */}
+        
+        <div className={`nav-menu `} onClick={this.handleClick}>
           <span></span>
           <span></span>
           <span></span>
         </div>
-      </div>
-      <div id="navMenu" className="navbar-menu">
-      <div className="navbar-start has-text-centered">
-        <Link className="navbar-item" to="/about">
-          About
-        </Link>
-        <Link className="navbar-item" to="/products">
-          Products
-        </Link>
-        <Link className="navbar-item" to="/contact">
-          Contact
-        </Link>
-        <Link className="navbar-item" to="/contact/examples">
-          Form Examples
-        </Link>
-      </div>
-      <div className="navbar-end has-text-centered">
-        <a
-          className="navbar-item"
-          href="https://github.com/AustinGreen/gatsby-netlify-cms-boilerplate"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <span className="icon">
-            <img src={github} alt="Github" />
-          </span>
-        </a>
-      </div>
-      </div>
-    </div>
-  </nav>
-  )}
+        
+        <div className={`sideNav ${slideClass}`}>
+          <Link to="/about" onClick={this.handleClick}>About</Link>
+          <Link to="/roster" onClick={this.handleClick}>Roster</Link>
+          <Link to="/services" onClick={this.handleClick}>Services</Link>
+          <Link to="/contact" onClick={this.handleClick}>Contact</Link>
+        </div>
+        
+        <div className="nav-container">
+        
+          <div className="nav-middle">
+            <Link to="/about" className="nav-middle__links">About</Link>
+            <Link to="/roster"className="nav-middle__links">Roster</Link>
+            <Link to="/services" className="nav-middle__links">Services</Link>
+            <Link to="/contact"className="nav-middle__links">Contact</Link>
+          </div>
+          
+          <div className="nav-social-media">
+            <a href="https://www.facebook.com/pg/purchaseproductionsllc/about/?ref=page_internal" target="_blank" rel="noopener noreferrer" >
+              <FaFacebookSquare />
+            </a>
+            <a href="https://www.instagram.com/purchaseproductions/" target="_blank" rel="noopener noreferrer" >
+              <FaInstagram />
+            </a>
+            <a href="https://soundcloud.com/purchaseproductions?" target="_blank" rel="noopener noreferrer" >
+              <FaSoundcloud />
+            </a>
+          </div>
+          
+        </div>
+        
+      </nav>
+    );
+  }
 }
 
-export default Navbar
+export default Navbar;

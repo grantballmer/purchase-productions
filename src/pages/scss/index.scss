@@ -1,0 +1,121 @@
+@import "../../scss/mixins.scss";
+@import "../../scss/variables.scss";
+@import "../../scss/svg.scss";
+@import "../../scss/btn.scss";
+
+.hero-wrapper {
+  width: 100%;
+  height: 90vh;
+  padding: 0 12px;
+  position: relative;
+
+  @include tablet {
+    height: 100vh;
+  }
+
+}
+
+.hero {
+  width: 100%; // height: 90vh;
+  height: 99.9%;
+  background-position: center;
+  background-attachment: scroll; // -webkit-background-size: cover;
+  background-size: cover;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 98%, 0 94%);
+  clip-path: polygon(0 0, 101% 0, 101% 98%, 0 94%); // border: 12px solid white;
+  background-image: url('../images/desmond-hero-sm.jpg');
+  z-index: 10;
+
+  @include tablet {
+    height: 100%;
+    background-image: url('../images/desmond-jones-hero.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+  }
+}
+
+.home-about {
+  width: 100%;
+  height: 55vh;
+  @include flex(center,
+  center);
+  flex-direction: column;
+  font-size: 1.8rem;
+  font-weight: 300;
+  padding: 0 10%;
+  text-align: center;
+  @include wide-mobile {
+    font-size: 2.4rem;
+  }
+  @include tablet {
+    padding: 0 15%;
+    font-size: 3.6rem;
+  }
+}
+
+.home-booking-wrapper {
+  width: 100%;
+  height: 50vh;
+  padding: 0 12px 12px 12px;
+  position: relative;
+}
+
+.home-booking {
+  width: 100%;
+  height: 99.9%;
+  padding: 0 2%;
+  @include flex(center,
+  flex-start);
+  flex-direction: column;
+  color: white;
+  -webkit-clip-path: polygon(0 4%, 100% 12%, 100% 100%, 0 100%);
+  clip-path: polygon(0 4%, 100% 12%, 100% 100%, 0 100%);
+  background-color: black;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  z-index: 3;
+  @include tablet {
+    padding: 0 5%;
+  }
+
+  &:after {
+    @include afterOverlay;
+    background-color: rgba(0, 0, 0, 0.55);
+  }
+
+  a,
+  p {
+    color: white;
+    z-index: 1;
+  }
+
+  a {
+    font-size: 3.4rem;
+    font-weight: 700;
+    margin-bottom: 25px;
+    text-decoration: underline;
+    @include tablet {
+      font-size: 5.2rem;
+      text-decoration: none;
+    }
+
+    &:hover {
+      color: #DDD;
+      text-decoration: underline;
+    }
+  }
+
+  p {
+    font-size: 1.8rem;
+    margin: 4px 0;
+    @include wide-mobile {
+      font-size: 2.2rem;
+      margin: 0;
+    }
+    @include tablet {
+      font-size: 2.6rem;
+    }
+  }
+}
