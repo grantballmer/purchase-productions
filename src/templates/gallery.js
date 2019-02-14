@@ -42,7 +42,7 @@ export const galleryQuery = graphql `
       frontmatter {
         title
         insideGallery {
-          thumbnail
+          thumbnail 
           band
         }
       }
