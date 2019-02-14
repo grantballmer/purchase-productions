@@ -1,10 +1,13 @@
 import React from 'react';
 import { graphql } from 'gatsby';
+import Layout from "../components/Layout";
 
 const Example = ({ data }) => {
   const { markdownRemark: post } = data;
   return (
-    <div>This is the example page {post.frontmatter.title}</div>
+    <Layout>
+      <div>This is the example page {post.frontmatter.title}</div>
+    </Layout>
   );
 };
 
