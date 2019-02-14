@@ -35,21 +35,17 @@ export default GalleryTemplate;
 //   }
 // `;
 
-export const galleryQuery = graphql `
-  query Gallery($id: String!) {
-    markdownRemark(id: { eq: $id }) {
-      html
-      frontmatter {
-        title
-        gallery {
-          image {
-            childImageSharp {
-              src
-            }
-          }
-          band
-        }
-      }
-    }
-  }
-`;
+// export const galleryQuery = graphql `
+//   query Gallery($id: String!) {
+//     markdownRemark(id: { eq: $id }) {
+//       html
+//       frontmatter {
+//         title
+//         grid {
+//           image 
+//           band
+//         }
+//       }
+//     }
+//   }
+// `;
