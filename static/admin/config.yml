@@ -14,7 +14,6 @@ collections:
     create: true
     fields: 
       - { label: "Template Key", name: "templateKey", widget: "hidden", default: "gallery" }
-      # - { label: "Path", name: "path", widget: "hidden", default: "/services/photography" }
       - {label: "Title", name: "title", widget: "string"}
       - label: "Grid"
         name: "grid"

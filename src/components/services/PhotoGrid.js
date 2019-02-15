@@ -43,12 +43,15 @@ class Gallery extends React.Component {
 
     if (images) {
       photoElements = images.map((file, index) => {
+
+        const { src } = file.image.childImageSharp.original;
+
         return (
           <div className="photo" key={file + index} onClick={this.handleClick}>
             <div className={`overlay-background-image`}
               data-index={index}
-              data-image={file.image}
-              style={{ backgroundImage: `url(${file.image})` }}
+              data-image={src}
+              style={{ backgroundImage: `url(${src})` }}
             />
           </div>
         );
