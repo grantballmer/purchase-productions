@@ -4,11 +4,25 @@ import { graphql } from 'gatsby';
 import Layout from "../components/Layout";
 // import Content from '../components/Content';
 import PhotoGrid from "../components/services/PhotoGrid";
+import chirp from "../components/images/chirp.jpg";
 
 export const GalleryPageTemplate = ({ info }) => {
+  console.log(info);
+  console.log(info.gallery);
+
+  const images = info.frontmatter.grid.map(image => {
+    return (
+      <div className="preview-image">
+        <img src={chirp} alt="band" />
+        <p className="preview-band">Band Name</p>
+      </div>
+    );
+  });
 
   return (
-    <PhotoGrid images={info.frontmatter.grid} />
+    <div className="preview-container">
+      {images} 
+    </div>
   );
 };
 
@@ -17,9 +31,11 @@ const GalleryPage = ({ data }) => {
   const { markdownRemark: gallery } = data;
   const images = gallery.frontmatter.grid;
 
+  console.log(images);
+
   return (
     <Layout>
-      <GalleryPageTemplate images={images} />
+      <PhotoGrid />
     </Layout>
   );
 };

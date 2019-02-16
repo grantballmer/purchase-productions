@@ -1,3 +1,25 @@
-.preview-title {
-  color: green;
+.preview-container {
+  width: 100%;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.preview-image {
+  width: 30%;
+  height: 100px;
+  position: relative;
+
+  img {
+    max-width: 100%;
+  }
+}
+
+.preview-band {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
 }
