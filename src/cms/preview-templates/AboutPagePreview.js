@@ -16,4 +16,4 @@ AboutPagePreview.propTypes = {
   widgetFor: PropTypes.func,
 }
 
-export default AboutPagePreview
+export default AboutPagePreview;

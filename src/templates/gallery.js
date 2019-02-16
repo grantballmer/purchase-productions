@@ -2,39 +2,30 @@ import React from 'react';
 // import Helmet from 'react-helmet';
 import { graphql } from 'gatsby';
 import Layout from "../components/Layout";
+// import Content from '../components/Content';
 import PhotoGrid from "../components/services/PhotoGrid";
 
-const GalleryTemplate = ({ data }) => {
+export const GalleryPageTemplate = ({ info }) => {
+
+  return (
+    <PhotoGrid images={info.frontmatter.grid} />
+  );
+};
+
+const GalleryPage = ({ data }) => {
+  console.log(data);
   const { markdownRemark: gallery } = data;
   const images = gallery.frontmatter.grid;
 
-  console.log(images);
-
   return (
     <Layout>
-      <PhotoGrid images={images} />
+      <GalleryPageTemplate images={images} />
     </Layout>
   );
 };
 
 
-export default GalleryTemplate;
-
-
-// export const galleryQuery = graphql `
-//   query Gallery($id: String!) {
-//     page: markdownRemark(id: {eq: $id}) {
-//       id
-//       frontmatter {
-//         templateKey
-//         title 
-//         insideGallery {
-//           band
-//         }
-//       }
-//     }
-//   }
-// `;
+export default GalleryPage;
 
 export const galleryQuery = graphql `
   query Gallery($id: String!) {
