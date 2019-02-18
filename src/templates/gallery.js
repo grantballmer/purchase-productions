@@ -8,14 +8,20 @@ import chirp from "../components/images/chirp.jpg";
 
 export const GalleryPageTemplate = ({ info }) => {
   const { title } = info;
+  const isDesign = title === 'design';
 
   const images = info.grid.map(element => {
-    return (
-      <div className="preview-image">
-        <img src={element.image} alt="band" />
-        <p className="preview-band">{element.band}</p>
-      </div>
-    );
+    if (isDesign) {
+      return <img src={element.image} alt="poster" />;
+    }
+    else {
+      return (
+        <div className="preview-image">
+          <img src={element.image} alt="band" />
+          <p className="preview-band">{element.band}</p>
+        </div>
+      );
+    }
   });
 
   return (
