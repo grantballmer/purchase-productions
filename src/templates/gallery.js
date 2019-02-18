@@ -7,8 +7,7 @@ import PhotoGrid from "../components/services/PhotoGrid";
 import chirp from "../components/images/chirp.jpg";
 
 export const GalleryPageTemplate = ({ info }) => {
-  // console.log(info);
-  // console.log(info.grid);
+  const { title } = info;
 
   const images = info.grid.map(element => {
     return (
@@ -20,7 +19,7 @@ export const GalleryPageTemplate = ({ info }) => {
   });
 
   return (
-    <div className="preview-container">
+    <div className={title === 'design' ? 'preview-design' : 'preview-photography'}>
       {images} 
     </div>
   );
