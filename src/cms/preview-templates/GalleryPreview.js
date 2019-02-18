@@ -5,6 +5,8 @@ const GalleryPagePreview = ({ entry, widgetsFor }) => (
   <GalleryPageTemplate
     info={{
       frontmatter: entry.getIn(["data"]).toJS(),
+      newFront: entry.get(['data']),
+      otherFront: entry.toJS().data,
       gallery: widgetsFor('grid')
     }}
   />
