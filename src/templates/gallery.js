@@ -7,8 +7,8 @@ import PhotoGrid from "../components/services/PhotoGrid";
 import chirp from "../components/images/chirp.jpg";
 
 export const GalleryPageTemplate = ({ info }) => {
-  console.log(info);
-  console.log(info.grid);
+  // console.log(info);
+  // console.log(info.grid);
 
   const images = info.grid.map(element => {
     return (
