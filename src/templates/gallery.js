@@ -9,6 +9,7 @@ import chirp from "../components/images/chirp.jpg";
 export const GalleryPageTemplate = ({ info }) => {
   console.log(info);
   console.log(info.gallery);
+  console.log(info.frontmatter.grid);
 
   const images = info.frontmatter.grid.map(image => {
     return (
@@ -35,7 +36,7 @@ const GalleryPage = ({ data }) => {
 
   return (
     <Layout>
-      <PhotoGrid />
+      <PhotoGrid images={images} />
     </Layout>
   );
 };
