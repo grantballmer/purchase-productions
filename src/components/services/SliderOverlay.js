@@ -48,6 +48,7 @@ class SliderOverlay extends React.Component {
     else {
       index = Number(index) - 1 <= -1 ? images.length - 1 : Number(index) - 1;
     }
+    console.log(images[index]);
 
     this.setState({ image: images[index].image, index, imagePosition: 0 });
   }
