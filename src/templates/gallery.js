@@ -8,10 +8,9 @@ import chirp from "../components/images/chirp.jpg";
 
 export const GalleryPageTemplate = ({ info }) => {
   console.log(info);
-  console.log(info.gallery);
-  console.log(info.frontmatter.grid);
+  console.log(info.grid);
 
-  const images = info.frontmatter.grid.map(image => {
+  const images = info.grid.map(image => {
     return (
       <div className="preview-image">
         <img src={chirp} alt="band" />
