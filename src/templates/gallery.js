@@ -10,11 +10,11 @@ export const GalleryPageTemplate = ({ info }) => {
   console.log(info);
   console.log(info.grid);
 
-  const images = info.grid.map(image => {
+  const images = info.grid.map(element => {
     return (
       <div className="preview-image">
-        <img src={chirp} alt="band" />
-        <p className="preview-band">Band Name</p>
+        <img src={element.image} alt="band" />
+        <p className="preview-band">{element.band}</p>
       </div>
     );
   });
