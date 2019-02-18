@@ -39,25 +39,55 @@ class Gallery extends React.Component {
 
   render() {
     const { images, clicked } = this.state;
+    const { title } = this.props;
     let photoElements;
+
 
     if (images) {
       photoElements = images.map((file, index) => {
-
         const { src } = file.image.childImageSharp.original;
 
-        return (
-          <div className="photo" key={file + index} onClick={this.handleClick}>
-            <div className={`overlay-background-image`}
+        if (title === "design") {
+          return (
+            <img src={src} alt=""
+              key={file + index}
               data-index={index}
               data-image={src}
-              style={{ backgroundImage: `url(${src})` }}
+              onClick={this.handleClick}
             />
-          </div>
-        );
+          );
+        }
+        else {
+          return (
+            <div className="photo" key={file + index} onClick={this.handleClick}>
+              <div className={`overlay-background-image`}
+                data-index={index}
+                data-image={src}
+                style={{ backgroundImage: `url(${src})` }}
+              />
+            </div>
+          );
+        }
       });
     }
 
+
+    // if (images) {
+    //   photoElements = images.map((file, index) => {
+
+    //     const { src } = file.image.childImageSharp.original;
+
+    //     return (
+    //       <div className="photo" key={file + index} onClick={this.handleClick}>
+    //         <div className={`overlay-background-image`}
+    //           data-index={index}
+    //           data-image={src}
+    //           style={{ backgroundImage: `url(${src})` }}
+    //         />
+    //       </div>
+    //     );
+    //   });
+    // }
     return (
       <div className={`photos`}>
         {(clicked && images) &&
