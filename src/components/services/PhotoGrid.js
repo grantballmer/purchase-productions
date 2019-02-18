@@ -15,7 +15,7 @@ class Gallery extends React.Component {
   }
 
   componentDidMount() {
-    this.setState({ images: this.props.images });
+    this.setState({ images: this.props.images, title: this.props.title });
   }
 
   handleClick = e => {
@@ -38,8 +38,7 @@ class Gallery extends React.Component {
   }
 
   render() {
-    const { images, clicked } = this.state;
-    const { title } = this.props;
+    const { images, clicked, title } = this.state;
     let photoElements;
 
 
@@ -89,7 +88,7 @@ class Gallery extends React.Component {
     //   });
     // }
     return (
-      <div className={`photos`}>
+      <div className={`photos ${title === 'design' ? 'photos__posters' : ''}`}>
         {(clicked && images) &&
           <SliderOverlay 
             items={this.state}
