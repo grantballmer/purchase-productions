@@ -4,12 +4,15 @@ import { Link } from "gatsby";
 
 const Card = ({ frontImage, tinyImage, icon, service, management, check }) => {
 
+  const front = <img src={frontImage} alt="" style={{ display: 'none' }} />;
+  console.log(front.complete);
+
   return (
     <Link to={`/services/photography`} className={`card card__${service}`}>
       
       <div className="card__side card__side--front" >
       
-        <div className="overlay-background-image" />
+        <div className="overlay-background-image" style={{ backgroundImage: `url(${frontImage}`}}/>
         
         <div className="card__side--text">
           <img src={icon} className="card__icon" alt="" /> 

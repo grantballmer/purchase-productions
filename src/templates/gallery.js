@@ -4,7 +4,6 @@ import { graphql } from 'gatsby';
 import Layout from "../components/Layout";
 // import Content from '../components/Content';
 import PhotoGrid from "../components/services/PhotoGrid";
-import chirp from "../components/images/chirp.jpg";
 
 export const GalleryPageTemplate = ({ info }) => {
   const { title } = info;

@@ -7,7 +7,6 @@
   perspective: 800px;
   margin: 0 auto;
   position: relative;
-  will-change: perspective;
 
   @include wide-mobile {
     width: calc(50% - 6px);
@@ -46,9 +45,9 @@
     margin-bottom: 0;
   }
 
-  .card__side--front .overlay-background-image {
-    background-image: url('./images/MMJ.jpg');
-  }
+  // .card__side--front .overlay-background-image {
+  //   background-image: url('./images/MMJ.jpg');
+  // }
 }
 
 .card__design {
@@ -73,9 +72,9 @@
     }
   }
 
-  .card__side--front .overlay-background-image {
-    background-image: url('./images/earth-radio.jpg');
-  }
+  // .card__side--front .overlay-background-image {
+  //   background-image: url('./images/earth-radio.jpg');
+  // }
 }
 
 .design__background {
@@ -98,9 +97,9 @@
     margin-left: 12px;
   }
 
-  .card__side--front .overlay-background-image {
-    background-image: url('./images/desmond-jones.jpg');
-  }
+  // .card__side--front .overlay-background-image {
+  //   background-image: url('./images/desmond-jones.jpg');
+  // }
 }
 
 .card__side {
@@ -131,12 +130,12 @@
   &--front {
     color: white;
     background-color: grey;
-    will-change: transform;
+    // will-change: transform;
   }
 
   &--back {
     transform: rotateY(180deg);
-    will-change: transform; // background-image: linear-gradient(to top left, #29539b 0%, #1e3b70 74%);
+    // will-change: transform; // background-image: linear-gradient(to top left, #29539b 0%, #1e3b70 74%);
     // background: #000428;  /* fallback for old browsers */
     // background: -webkit-linear-gradient(to right, #004e92, #000428);  /* Chrome 10-25, Safari 5.1-6 */
     // background: linear-gradient(to right, #004e92, #000428); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
