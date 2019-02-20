@@ -42,7 +42,7 @@ const Services = () => {
 
   return (
     <Layout>
-      <section className={`box-container`}>
+      <section className='cards-container'>
       
         <Card 
           frontImage={FullPhotography} 
