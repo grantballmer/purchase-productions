@@ -1,23 +1,23 @@
 import React from 'react';
 // import "../scss/_box.scss";
-import Layout from "../components/Layout";
-import Card from "../components/services/Card";
+import Layout from "../../components/Layout";
+import Card from "../../components/services/Card";
 
-import FullPhotography from "../components/services/images/MMJ.jpg";
+import FullPhotography from "../../components/services/images/MMJ.jpg";
 // import MobilePhotography from "../components/services/images/mobile-MMJ.jpg";
 
-import FullPoster from "../components/services/images/earth-radio.jpg";
+import FullPoster from "../../components/services/images/earth-radio.jpg";
 // import MobilePoster from "../components/services/images/mobile-earth-radio.jpg";
 
 
-import FullManagement from "../components/services/images/desmond-jones.jpg";
+import FullManagement from "../../components/services/images/desmond-jones.jpg";
 // import MobileManagement from "../components/services/images/mobile-desmond-jones.jpg";
 
 
-import Camera from "./icons/camera.svg";
-import Pencil from "./icons/pencil.svg";
-import Phone from "./icons/phone.svg";
-import Check from "./icons/checkmark.svg";
+import Camera from "../icons/camera.svg";
+import Pencil from "../icons/pencil.svg";
+import Phone from "../icons/phone.svg";
+import Check from "../icons/checkmark.svg";
 
 const Services = () => {
 
