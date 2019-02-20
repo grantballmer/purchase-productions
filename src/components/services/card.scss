@@ -50,18 +50,27 @@
   }
 }
 
-.backImage__photography {
-  background-image: url('../images/chris-cordle-lg.jpg');
+.frontImage-photography {
+  background-image: url('./images/MMJ.jpg');
 }
 
-.backImage__design {
-  background-image: url('../images/design.jpg');
+.frontImage-design {
+  background-image: url('./images/earth-radio.jpg');
 }
 
-.backImage__management {
-  background-image: url('../images/chris-cordle-lg.jpg');
+.frontImage-management {
+  background-image: url('./images/desmond-jones.jpg');
 }
 
+// .backImage__photography {
+//   background-image: url('./images/index/chris-cordle-lg.jpg');
+// }
+// .backImage__design {
+//   background-image: url('./images/index/design.jpg');
+// }
+// .backImage__management {
+//   background-image: url('./images/index/chris-cordle-lg.jpg');
+// }
 // .card {
 //   height: 250px;
 //   width: 100%;

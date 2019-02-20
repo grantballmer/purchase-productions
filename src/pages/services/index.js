@@ -1,16 +1,16 @@
 import React from 'react';
-import "../scss/card.scss";
+import "../../scss/box.scss";
 import Layout from "../../components/Layout";
 import Card from "../../components/services/Card";
 
-import FullPhotography from "../images/MMJ.jpg";
-// import MobilePhotography from "../components/services/images/mobile-MMJ.jpg";
+// import FullPhotography from "../images/MMJ.jpg";
+// // import MobilePhotography from "../components/services/images/mobile-MMJ.jpg";
 
-import FullPoster from "../images/earth-radio.jpg";
-// import MobilePoster from "../components/services/images/mobile-earth-radio.jpg";
+// import FullPoster from "../images/earth-radio.jpg";
+// // import MobilePoster from "../components/services/images/mobile-earth-radio.jpg";
 
 
-import FullManagement from "../images/desmond-jones.jpg";
+// import FullManagement from "../images/desmond-jones.jpg";
 // import MobileManagement from "../components/services/images/mobile-desmond-jones.jpg";
 
 
@@ -42,10 +42,10 @@ const Services = () => {
 
   return (
     <Layout>
-      <section className='cards-container'>
+      <section className="box-container">
       
         <Card 
-          frontImage={FullPhotography} 
+          // frontImage={FullPhotography} 
           //tinyImage={TinyPhotography}
           // backImage={PhotographyBack} 
           icon={Camera} 
@@ -53,7 +53,7 @@ const Services = () => {
         />
         
         <Card 
-          frontImage={FullPoster}
+          // frontImage={FullPoster}
           // tinyImage={TinyPoster}
           // backImage={DesignBack} 
           icon={Pencil} 
@@ -61,7 +61,7 @@ const Services = () => {
         />
         
         <Card 
-          frontImage={FullManagement}
+          // frontImage = { FullManagement }
           // tinyImage = { TinyManagement }
           // backImage = { PhotographyBack }
           icon={Phone}

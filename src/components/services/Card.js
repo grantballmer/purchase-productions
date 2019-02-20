@@ -1,5 +1,5 @@
 import React from 'react';
-// import "./card.scss";
+import "./card.scss";
 import { Link } from "gatsby";
 
 const Card = ({ frontImage, tinyImage, icon, service, management, check }) => {
@@ -10,9 +10,9 @@ const Card = ({ frontImage, tinyImage, icon, service, management, check }) => {
   return (
     <Link to={`/services/photography`} className={`card card__${service}`}>
       
-      <div className="card__side card__side--front" >
+      <div className={`card__side card__side--front frontImage-${service}`} >
       
-        <div className="overlay-background-image" style={{ backgroundImage: `url(${frontImage}`}}/>
+        {/* <div className={`frontImage-${service}`} /> */}
         
         <div className="card__side--text">
           <img src={icon} className="card__icon" alt="" /> 
@@ -20,9 +20,9 @@ const Card = ({ frontImage, tinyImage, icon, service, management, check }) => {
         </div>
       </div>
       
-      <div className={`card__side card__side--back backImage__${service}`}>
+      {/* <div className={`card__side card__side--back backImage__${service}`}>
         <button to={`/services/${service}`} className="btn btn-gallery">View Gallery</button>
-      </div>
+      </div> */} 
       
     </Link>
   );
