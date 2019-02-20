@@ -1,5 +1,5 @@
 import React from 'react';
-import "./card.scss";
+// import "./card.scss";
 import { Link } from "gatsby";
 
 const Card = ({ frontImage, tinyImage, icon, service, management, check }) => {

@@ -1,16 +1,16 @@
 import React from 'react';
-// import "../scss/_box.scss";
+import "../scss/card.scss";
 import Layout from "../../components/Layout";
 import Card from "../../components/services/Card";
 
-import FullPhotography from "../../components/services/images/MMJ.jpg";
+import FullPhotography from "../images/MMJ.jpg";
 // import MobilePhotography from "../components/services/images/mobile-MMJ.jpg";
 
-import FullPoster from "../../components/services/images/earth-radio.jpg";
+import FullPoster from "../images/earth-radio.jpg";
 // import MobilePoster from "../components/services/images/mobile-earth-radio.jpg";
 
 
-import FullManagement from "../../components/services/images/desmond-jones.jpg";
+import FullManagement from "../images/desmond-jones.jpg";
 // import MobileManagement from "../components/services/images/mobile-desmond-jones.jpg";
 
 
