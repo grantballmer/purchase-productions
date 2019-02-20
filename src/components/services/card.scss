@@ -43,34 +43,74 @@
   backface-visibility: hidden;
   @include flex(center, center);
   transition: transform .8s;
+  transform-style: preserve-3d;
+  text-align: center;
+  font-size: 1.8rem;
+
+  h2 {
+    font-weight: 300;
+    text-transform: capitalize;
+  }
+
+  &--front {}
 
   &--back {
     transform: rotateY(180deg);
     background-size: cover;
   }
+
+  &--text {
+    z-index: 2;
+    backface-visibility: hidden;
+    transform: perspective(2px);
+    color: white;
+    filter: brightness(100%);
+  }
 }
 
-.frontImage-photography {
+.card__icon {
+  height: 65px;
+  z-index: 2;
+  @include tablet {
+    height: 110px;
+  }
+}
+
+.frontImage {
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  filter: brightness(50%);
+}
+
+.frontImage__photography {
   background-image: url('./images/MMJ.jpg');
 }
 
-.frontImage-design {
+.frontImage__design {
   background-image: url('./images/earth-radio.jpg');
 }
 
-.frontImage-management {
+.frontImage__management {
   background-image: url('./images/desmond-jones.jpg');
 }
 
-// .backImage__photography {
-//   background-image: url('./images/index/chris-cordle-lg.jpg');
-// }
-// .backImage__design {
-//   background-image: url('./images/index/design.jpg');
-// }
-// .backImage__management {
-//   background-image: url('./images/index/chris-cordle-lg.jpg');
-// }
+.backImage__photography {
+  background-image: url('./images/chris-cordle-lg.jpg');
+}
+
+.backImage__design {
+  background-image: url('./images/design.jpg');
+}
+
+.backImage__management {
+  background-image: url('./images/chris-cordle-lg.jpg');
+}
+
 // .card {
 //   height: 250px;
 //   width: 100%;
