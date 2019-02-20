@@ -8,7 +8,7 @@ const Card = ({ frontImage, tinyImage, icon, service, management, check }) => {
   // console.log(front.complete);
 
   return (
-    <Link to={`/services/photography`} className={`card card__${service}`}>
+    <Link to={`/services/${service}`} className={`card card__${service}`}>
       
       <div className={`card__side card__side--front`} >
       

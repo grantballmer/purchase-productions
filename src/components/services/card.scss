@@ -34,6 +34,43 @@
   }
 }
 
+.card__photography {
+  margin-bottom: 12px;
+  @include wide-mobile {
+    margin-right: 6px;
+  }
+  @include desktop {
+    margin-bottom: 0;
+  }
+}
+
+.card__design {
+  order: 2;
+  margin-bottom: 12px;
+  @include wide-mobile {
+    margin-bottom: 0;
+    order: 3;
+  }
+  @include desktop {
+    order: 2;
+    margin-left: 6px;
+  }
+}
+
+.card__management {
+  order: 3;
+  @include wide-mobile {
+    order: 2;
+    margin-left: 6px;
+    margin-bottom: 12px;
+  }
+  @include desktop {
+    order: 3;
+    margin-bottom: 0;
+    margin-left: 12px;
+  }
+}
+
 .card__side {
   width: 100%;
   height: 100%;
@@ -41,8 +78,9 @@
   top: 0;
   left: 0;
   backface-visibility: hidden;
+  box-shadow: $shadow;
   @include flex(center, center);
-  transition: transform .8s;
+  transition: transform 1s;
   transform-style: preserve-3d;
   text-align: center;
   font-size: 1.8rem;
@@ -109,9 +147,7 @@
 
 .backImage__management {
   background-image: url('./images/chris-cordle-lg.jpg');
-}
-
-// .card {
+} // .card {
 //   height: 250px;
 //   width: 100%;
 //   perspective: 800px;
