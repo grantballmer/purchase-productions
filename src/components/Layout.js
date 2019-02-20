@@ -21,7 +21,7 @@ const TemplateWrapper = ({ children }) => (
       <div>
         <Helmet>
           <html lang="en" />
-          <title>{data.site.siteMetadata.title}</title>
+          <title>Purchase Productions</title>
           <meta name="description" content={data.site.siteMetadata.description} />
           <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,700" rel="stylesheet" />
           
