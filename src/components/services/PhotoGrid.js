@@ -1,4 +1,5 @@
 import React from 'react';
+import Img from 'gatsby-image';
 import "./photoGrid.scss";
 import SliderOverlay from "./SliderOverlay";
 // const imagePath = process.env.PUBLIC_URL + '/assets/images/design';
@@ -44,31 +45,40 @@ class Gallery extends React.Component {
 
     if (images) {
       photoElements = images.map((file, index) => {
-        const { src } = file.image.childImageSharp.original;
+        console.log(file);
+        // const { src } = file.image.childImageSharp.original;
+        const { fluid } = file.image.childImageSharp;
+        return (
+          <div className="photo" key={file + index} onClick={this.handleClick}>
+            <Img fluid={fluid} style={{ position: 'static' }}/>
+          </div>
+        );
 
-        if (title === "design") {
-          return (
-            <img src={src} alt=""
-              key={file + index}
-              data-index={index}
-              data-image={src}
-              onClick={this.handleClick}
-            />
-          );
-        }
-        else {
-          return (
-            <div className="photo" key={file + index} onClick={this.handleClick}>
-              <div className={`overlay-background-image`}
-                data-index={index}
-                data-image={src}
-                style={{ backgroundImage: `url(${src})` }}
-              />
-            </div>
-          );
-        }
+        // if (title === "design") {
+        //   return (
+        //     <img src={src} alt=""
+        //       key={file + index}
+        //       data-index={index}
+        //       data-image={src}
+        //       onClick={this.handleClick}
+        //     />
+        //   );
+        // }
+        // else {
+        //   return (
+        //     <div className="photo" key={file + index} onClick={this.handleClick}>
+        //       <Img fluid={fluid} />
+        //     </div>
+        //   );
+        // }
       });
     }
+
+    //     <div className={`overlay-background-image`}
+    //   data-index={index}
+    //   data-image={src}
+    //   style={{ backgroundImage: `url(${src})` }}
+    // />
 
 
     // if (images) {

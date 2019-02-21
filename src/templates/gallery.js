@@ -31,7 +31,6 @@ export const GalleryPageTemplate = ({ info }) => {
 };
 
 const GalleryPage = ({ data }) => {
-  console.log(data);
   const { markdownRemark: gallery } = data;
   const images = gallery.frontmatter.grid;
   const { title } = gallery.frontmatter;
@@ -56,12 +55,10 @@ export const galleryQuery = graphql `
         grid {
           image {
             childImageSharp {
-                original {
-                  width
-                  height
-                  src
-                } 
-              }
+              fluid(maxWidth: 1000) {
+                ...GatsbyImageSharpFluid
+              } 
+            }
           }
           band
         }
@@ -69,3 +66,9 @@ export const galleryQuery = graphql `
     }
   }
 `;
+
+// childImageSharp {
+//               fluid(maxWidth: 1000) {
+//                 ...GatsbyImageSharpFluid
+//               }
+//             }

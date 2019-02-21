@@ -1,15 +1,47 @@
-import React from 'react';
-import Layout from '../../components/Layout';
+// import React from 'react';
+// import '../scss/management.scss';
+// import { StaticQuery, graphql } from 'gatsby';
+// import Img from 'gatsby-image';
 
-const Management = () => {
+// import Layout from '../../components/Layout';
 
-  return (
-    <Layout>
-      <section className="management">
-        <h1>This is the management page</h1>
-      </section>
-    </Layout>
-  );
-};
+// export default () => (
+//   <staticQuery
+//     query={graphql`
+//       query ServicesImages {
+//         fileName: file(relativePath: { eq: "../images/concert-comp.jpg"}) {
+//           childImageSharp {
+//             fixed(width: 125, height: 125) {
+//               ...GatsbyImageSharpFixed
+//           }
+//         }
+//       }
+//     `}
+//   />
+// )
 
-export default Management;
+// const Management = (props) => {
+//   console.log(props);
+//   return (
+//     <Layout>
+//       <section className="management">
+//         <div className="management-box"></div>
+//         <Img fixed={props.data} />
+//       </section>
+//     </Layout>
+//   );
+// };
+
+// export default Management;
+
+// export const galleryQuery = graphql `
+//   query ServicesImages {
+//     fileName: file(relativePath: { eq: "../images/concert-comp.jpg"}) {
+//       childImageSharp {
+//         fixed(width: 125, height: 125) {
+//           ...GatsbyImageSharpFixed
+//         }
+//       }
+//     }
+//   }
+// `;

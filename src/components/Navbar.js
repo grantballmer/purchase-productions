@@ -31,7 +31,7 @@ class Navbar extends React.Component {
   render() {
     const { openMenu } = this.state;
     const slideClass = openMenu ? 'slideIn' : '';
-    // const menuClass = openMenu ? 'open' : '';
+    const menuClass = openMenu ? 'open' : '';
 
     return (
       <nav>
@@ -42,7 +42,7 @@ class Navbar extends React.Component {
         
         {/* <i className="nav-menu fas fa-bars" onClick={this.handleClick}></i> */}
         
-        <div className={`nav-menu `} onClick={this.handleClick}>
+        <div className={`nav-menu ${menuClass}`} onClick={this.handleClick}>
           <span></span>
           <span></span>
           <span></span>
