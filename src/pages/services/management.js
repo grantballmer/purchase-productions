@@ -1,9 +1,22 @@
-// import React from 'react';
-// import '../scss/management.scss';
+import React from 'react';
+import '../scss/management.scss';
 // import { StaticQuery, graphql } from 'gatsby';
 // import Img from 'gatsby-image';
 
-// import Layout from '../../components/Layout';
+import Layout from '../../components/Layout';
+
+const Management = () => {
+
+  return (
+    <Layout>
+      <div className="managment">
+        <h1>Management Page</h1>
+      </div>
+    </Layout>
+  );
+};
+
+export default Management;
 
 // export default () => (
 //   <staticQuery
