@@ -1,4 +1,5 @@
 import React from 'react';
+import { graphql } from 'gatsby';
 import "../scss/box.scss";
 import Layout from "../components/Layout";
 import SideBooking from "../components/roster/SideBooking";
@@ -34,15 +35,17 @@ class Roster extends React.Component {
     const slideClass = showOverlay ? 'slide' : '';
     const noScrollClass = showOverlay ? 'noScroll' : '';
 
+    const { chirp, desmond, jesse } = this.props.data;
+
     return (
       <Layout>
         <div className={`overlay overlay-color ${slideClass}`} onClick={this.slideFunc}/>
         <SideBooking slideClass={slideClass} currentArtist={currentArtist} slideFunc={this.slideFunc} />
         <section className={`box-container ${noScrollClass}`}>
           
-          <Artist name='Desmond Jones' slideFunc={this.slideFunc} />
-          <Artist name='Jesse Ray & The Carolina Catfish' slideFunc={this.slideFunc} />
-          <Artist name='Chirp' slideFunc={this.slideFunc} />
+          <Artist name='Desmond Jones' image={desmond.childImageSharp.fluid} slideFunc={this.slideFunc} />
+          <Artist name='Jesse Ray & The Carolina Catfish' image={jesse.childImageSharp.fluid} slideFunc={this.slideFunc} />
+          <Artist name='Chirp' image={chirp.childImageSharp.fluid} slideFunc={this.slideFunc} />
           
         </section>
       </Layout>
@@ -51,3 +54,17 @@ class Roster extends React.Component {
 }
 
 export default Roster;
+
+export const servicesImages = graphql `
+  query {
+    desmond: file(relativePath: { eq: "images/desmond-lg.jpg"}) {
+      ...fluidImage
+    }
+    jesse: file(relativePath: { eq: "images/jesse-lg.jpg" }) {
+      ...fluidImage
+    }
+    chirp: file(relativePath: { eq: "images/chirp-lg.jpg"}) {
+      ...fluidImage
+    }
+  }
+`;

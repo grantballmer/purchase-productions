@@ -1,9 +1,10 @@
 import React from 'react';
+import Img from 'gatsby-image';
 import "./card.scss";
 import { Link } from "gatsby";
 
-const Card = ({ frontImage, tinyImage, icon, service, management, check }) => {
-
+const Card = ({ frontImage, icon, service, }) => {
+  console.log(frontImage);
   // const front = <img src={frontImage} alt="" style={{ display: 'none' }} />;
   // console.log(front.complete);
 
@@ -12,7 +13,9 @@ const Card = ({ frontImage, tinyImage, icon, service, management, check }) => {
       
       <div className={`card__side card__side--front`} >
       
-        <div className={`frontImage frontImage__${service}`} />
+        <div className={`frontImage`} >
+          <Img fluid={frontImage} style={{ position: 'static' }} />
+        </div>
         
         <div className="card__side--text">
           <img src={icon} className="card__icon" alt="" /> 
