@@ -5,15 +5,12 @@ import Img from 'gatsby-image';
 
 import Layout from '../../components/Layout';
 
-const Management = ({ data }) => {
+const Management = () => {
 
-  console.log(data);
   return (
     <Layout>
       <div className="management">
-        <div className="management-box">
-          <Img fluid={data.imageOne.childImageSharp.fluid} />
-        </div>
+        <h1>Management Page</h1>
       </div>
     </Layout>
   );
@@ -21,17 +18,17 @@ const Management = ({ data }) => {
 
 export default Management;
 
-export const imageQuery = graphql `
-  query {
-    imageOne: file(relativePath: { eq: "images/desmond-jones-hero.jpg"}) {
-      childImageSharp {
-        fluid(maxWidth: 800) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-  }
-`;
+// export const imageQuery = graphql `
+//   query {
+//     imageOne: file(relativePath: { eq: "images/desmond-jones-hero.jpg"}) {
+//       childImageSharp {
+//         fluid(maxWidth: 800) {
+//           ...GatsbyImageSharpFluid
+//         }
+//       }
+//     }
+//   }
+// `;
 
 // export default () => (
 //   <StaticQuery
