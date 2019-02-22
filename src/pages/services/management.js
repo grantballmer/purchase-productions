@@ -1,7 +1,7 @@
 import React from 'react';
 import '../scss/management.scss';
-import { graphql } from 'gatsby';
-import Img from 'gatsby-image';
+// import { graphql } from 'gatsby';
+// import Img from 'gatsby-image';
 
 import Layout from '../../components/Layout';
 

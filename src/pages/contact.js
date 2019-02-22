@@ -95,11 +95,12 @@ class Contact extends React.Component {
               
               <div className="contact-form">
                 {/* <form action="https://l7kzwmcxzd.execute-api.us-east-1.amazonaws.com/dev/" method="POST"> 
-                <form method="POST" onSubmit={this.handleSubmit}> */}
+                <form method="POST" onSubmit={this.handleSubmit}> 
                 <form action="https://www.briskforms.com/go/d6b974f5ebd0fb711c0a1d5bdfb94736" method="POST">
-                 {/* <form action="https://formspree.io/grant.a.ballmer@gmail.com" method="POST"> 
+                  <form action="https://formspree.io/grant.a.ballmer@gmail.com" method="POST"> 
                   <input type="hidden" name="_to" value="grant.a.ballmer@gmail.com" />
                   <input type="hidden" name="_redirect" value="https://test-grant8.c9users.io/contact?success=true" /> */} 
+                <form action="https://send.pageclip.co/QcMnzdPbCpCO81edAo82vuLWMleknLnm" className="pageclip-form" method="post">
                   <input type="hidden" name="honeypot" value="" style={{ display: 'none' }} onChange={this.handleChange} />
                   <input type="text" name="name" required placeholder="Name" onChange={this.handleChange} />
                   <input type="email" name="email" required placeholder="Email" onChange={this.handleChange}/>
