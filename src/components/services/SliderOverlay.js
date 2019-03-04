@@ -1,5 +1,7 @@
 import React from 'react';
 import Swipe from 'react-easy-swipe';
+import Img from 'gatsby-image';
+
 import ArrowRight from "./icons/arrow-right.svg";
 import ArrowLeft from "./icons/arrow-left.svg";
 import { FaTimes } from "react-icons/fa";
@@ -11,9 +13,9 @@ class SliderOverlay extends React.Component {
     super(props);
 
     this.state = {
-      image: null,
-      index: null,
-      images: null,
+      // currentImage: null,
+      // index: null,
+      // images: null,
       slideAction: null,
       imagePosition: 0,
       didLoad: false
@@ -22,11 +24,19 @@ class SliderOverlay extends React.Component {
 
   componentDidMount() {
     const { activePhoto, images } = this.props.items;
-    const image = activePhoto.attributes['data-image'].value;
+    // console.log('mounted');
+    // console.log(activePhoto);
+    // console.log(this.props);
+    // const image = activePhoto.attributes['data-image'].value;
     const index = activePhoto.attributes['data-index'].value;
+
+    // console.log(images, index);
+    // console.log(images[index]);
+
+    // const index = activePhoto.attributes['data-index'].value;
     // const imagePath = isDesign ? baseImagePath + '/design' : baseImagePath + '/photography';
 
-    this.setState({ image, index, images });
+    this.setState({ images, index, currentImage: images[index] });
   }
 
   onLoad = () => {
@@ -49,7 +59,7 @@ class SliderOverlay extends React.Component {
       index = Number(index) - 1 <= -1 ? images.length - 1 : Number(index) - 1;
     }
 
-    this.setState({ image: images[index].image.childImageSharp.original.src, index, imagePosition: 0 });
+    this.setState({ currentImage: images[index], index, imagePosition: 0 });
   }
 
   handleKeyDown = e => {
@@ -67,8 +77,9 @@ class SliderOverlay extends React.Component {
   }
 
   render() {
-    const { image, index, imagePosition } = this.state;
+    const { currentImage, index, imagePosition } = this.state;
     const { removeOverlay } = this.props;
+    console.log(currentImage);
     // const imageEnding = window.innerWidth > 812 ? 'lg' : 'sm';
 
 
@@ -97,27 +108,39 @@ class SliderOverlay extends React.Component {
         
         <FaTimes className="sliderOverlay__cancel" onClick={removeOverlay} />
         
+        
+        
         <Swipe 
           className="swipe"
           // allowMouseEvents = { true }
           onSwipeMove={this.onSwipeMove}
           onSwipeLeft={(e) => this.handleSlideAction(e, 'next')}
           onSwipeRight={(e) => this.handleSlideAction(e, 'prev')}
+          data-index={index}
+          style={{ transform: `translateX(${imagePosition}px` }}
+          onClick={e => e.stopPropagation() }
         > 
+          {currentImage && <Img fluid={currentImage.image.childImageSharp.fluid} /> }
             
-            <div className={`sliderOverlay__photo photo__${image}`}
+            
+          <img src={ArrowLeft} alt="" className="swipe__btn swipe__prev" onClick={(e) => this.handleSlideAction(e, 'prev')} />
+          <img src={ArrowRight} alt="" className="swipe__btn swipe__next" onClick={(e) => this.handleSlideAction(e, 'next')} /> 
+          
+          
+           {/* <div className={`sliderOverlay__photo`}
               data-index={index}
-              style={{ transform: `translateX(${imagePosition}px`, backgroundImage: `url(${image})` }}
+              style={{ transform: `translateX(${imagePosition}px` }}
               onClick={e => e.stopPropagation() }
             >
+            
+            
             
             <h2>Desmond Jones - August 1, 2018</h2>
           
             
-            <img src={ArrowLeft} alt="" className="swipe__btn swipe__prev" onClick={(e) => this.handleSlideAction(e, 'prev')} />
-            <img src={ArrowRight} alt="" className="swipe__btn swipe__next" onClick={(e) => this.handleSlideAction(e, 'next')} /> 
             
-            </div>
+            
+            </div> */}
           
         </Swipe>
       </section>
@@ -128,3 +151,10 @@ class SliderOverlay extends React.Component {
 export default SliderOverlay;
 
 // , backgroundImage: `url(./images/photography/${image}-${imageEnding}.jpg)
+
+
+// <div className={`sliderOverlay__photo photo__${image}`}
+//               data-index={index}
+//               style={{ transform: `translateX(${imagePosition}px`, backgroundImage: `url(${image})` }}
+//               onClick={e => e.stopPropagation() }
+//             >

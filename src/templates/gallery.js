@@ -55,7 +55,7 @@ export const galleryQuery = graphql `
         grid {
           image {
             childImageSharp {
-              fluid(maxWidth: 1000) {
+              fluid(maxWidth: 1400) {
                 ...GatsbyImageSharpFluid
               } 
             }

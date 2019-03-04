@@ -25,7 +25,7 @@ export default function HTML(props) {
           dangerouslySetInnerHTML={{ __html: props.body }}
         />
         {props.postBodyComponents}
-        <script src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8"></script>
+        <script src="https://s.pageclip.co/v1/pageclip.js" charSet="utf-8"></script>
       </body>
     </html>
   )

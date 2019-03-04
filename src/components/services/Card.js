@@ -4,7 +4,6 @@ import "./card.scss";
 import { Link } from "gatsby";
 
 const Card = ({ frontImage, icon, service, }) => {
-  console.log(frontImage);
   // const front = <img src={frontImage} alt="" style={{ display: 'none' }} />;
   // console.log(front.complete);
 

@@ -22,7 +22,9 @@ class Gallery extends React.Component {
   handleClick = e => {
     const { clicked } = this.state;
     document.body.style.overflow = "hidden";
-    this.setState({ clicked: !clicked, activePhoto: e.target });
+    // console.log(e.currentTarget);
+
+    this.setState({ clicked: !clicked, activePhoto: e.currentTarget });
   }
 
   handleTouchMove = e => {
@@ -45,11 +47,9 @@ class Gallery extends React.Component {
 
     if (images) {
       photoElements = images.map((file, index) => {
-        console.log(file);
-        // const { src } = file.image.childImageSharp.original;
         const { fluid } = file.image.childImageSharp;
         return (
-          <div className="photo" key={file + index} onClick={this.handleClick}>
+          <div className="photo" key={file + index} data-index={index} onClick={this.handleClick}>
             <Img fluid={fluid} style={{ position: 'static' }}/>
           </div>
         );
