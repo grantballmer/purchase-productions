@@ -29,14 +29,9 @@ class SliderOverlay extends React.Component {
     // console.log(this.props);
     // const image = activePhoto.attributes['data-image'].value;
     const index = activePhoto.attributes['data-index'].value;
+    const type = activePhoto.attributes['data-type'] ? activePhoto.attributes['data-type'].value : '';
 
-    // console.log(images, index);
-    // console.log(images[index]);
-
-    // const index = activePhoto.attributes['data-index'].value;
-    // const imagePath = isDesign ? baseImagePath + '/design' : baseImagePath + '/photography';
-
-    this.setState({ images, index, currentImage: images[index] });
+    this.setState({ images, index, type, currentImage: images[index] });
   }
 
   onLoad = () => {
@@ -77,7 +72,7 @@ class SliderOverlay extends React.Component {
   }
 
   render() {
-    const { currentImage, index, imagePosition } = this.state;
+    const { currentImage, index, type, imagePosition } = this.state;
     const { removeOverlay } = this.props;
     console.log(currentImage);
     // const imageEnding = window.innerWidth > 812 ? 'lg' : 'sm';
@@ -107,9 +102,7 @@ class SliderOverlay extends React.Component {
       >
         
         <FaTimes className="sliderOverlay__cancel" onClick={removeOverlay} />
-        
-        
-        
+
         <Swipe 
           className="swipe"
           // allowMouseEvents = { true }
@@ -120,7 +113,7 @@ class SliderOverlay extends React.Component {
           style={{ transform: `translateX(${imagePosition}px` }}
           onClick={e => e.stopPropagation() }
         > 
-          {currentImage && <Img fluid={currentImage.image.childImageSharp.fluid} /> }
+          {currentImage && <Img fluid={currentImage.image.childImageSharp.fluid} className={type === 'design' ? 'gatsby-wrapper-design' : ''} /> }
             
             
           <img src={ArrowLeft} alt="" className="swipe__btn swipe__prev" onClick={(e) => this.handleSlideAction(e, 'prev')} />

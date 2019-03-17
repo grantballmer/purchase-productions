@@ -49,9 +49,11 @@ class Navbar extends React.Component {
         </div>
         
         <div className={`sideNav ${slideClass}`}>
+          <Link to="/" onClick={this.handleClick}>Home</Link>
           <Link to="/about" onClick={this.handleClick}>About</Link>
           <Link to="/roster" onClick={this.handleClick}>Roster</Link>
           <Link to="/services" onClick={this.handleClick}>Services</Link>
+          <Link to="/podcast" className="nav-middle__links">Podcast</Link>
           <Link to="/contact" onClick={this.handleClick}>Contact</Link>
         </div>
         
@@ -61,6 +63,7 @@ class Navbar extends React.Component {
             <Link to="/about" className="nav-middle__links">About</Link>
             <Link to="/roster"className="nav-middle__links">Roster</Link>
             <Link to="/services" className="nav-middle__links">Services</Link>
+            <Link to="/podcast" className="nav-middle__links">Podcast</Link>
             <Link to="/contact"className="nav-middle__links">Contact</Link>
           </div>
           

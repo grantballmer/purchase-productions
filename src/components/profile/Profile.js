@@ -1,5 +1,6 @@
 import React from 'react';
 import Img from 'gatsby-image';
+import { FaSpotify, FaYoutube, FaItunesNote, FaFacebookSquare, FaInstagram } from 'react-icons/fa';
 
 import "./profile.scss";
 import { details } from "./profileDetails";
@@ -60,27 +61,29 @@ const Profile = ({ band, image }) => {
           
           
           <a className="profile-about__music--platform" href={spotify} target="_blank" rel="noopener noreferrer">
-            <i className="fab fa-spotify"></i>
+            <FaSpotify className="profile-icon" />
             <h4>Spotify</h4>
           </a>
           
+          {/* FaYoutube, FaItunesNote, FaFacebookSquare, FaInstagram */}
+
           <a className="profile-about__music--platform" href={youtube} target="_blank" rel="noopener noreferrer">
-            <i className="fab fa-youtube"></i>
+            <FaYoutube className="profile-icon" />
             <h4>Youtube</h4>
           </a>
           
           <a className="profile-about__music--platform" href={itunes} target="_blank" rel="noopener noreferrer">
-            <i className="fab fa-itunes-note"></i>
+            <FaItunesNote className="profile-icon" />
             <h4>iTunes</h4>
           </a>
           
           <a className="profile-about__music--platform" href={facebook} target="_blank" rel="noopener noreferrer">
-            <i className="fab fa-facebook-square"></i>
+            <FaFacebookSquare className="profile-icon" />
             <h4>Facebook</h4>
           </a>
           
           <a className="profile-about__music--platform" href={instagram} target="_blank" rel="noopener noreferrer">
-            <i className="fab fa-instagram"></i>
+            <FaInstagram className="profile-icon" />
             <h4>Instagram</h4>
           </a>
 

@@ -12,17 +12,16 @@ class Gallery extends React.Component {
       clicked: false,
       activePhoto: null
     };
-
   }
 
   componentDidMount() {
     this.setState({ images: this.props.images, title: this.props.title });
   }
 
-  handleClick = e => {
+  handleClick = e => {;
     const { clicked } = this.state;
     document.body.style.overflow = "hidden";
-    // console.log(e.currentTarget);
+    console.log('clicked')
 
     this.setState({ clicked: !clicked, activePhoto: e.currentTarget });
   }
@@ -48,11 +47,28 @@ class Gallery extends React.Component {
     if (images) {
       photoElements = images.map((file, index) => {
         const { fluid } = file.image.childImageSharp;
-        return (
-          <div className="photo" key={file + index} data-index={index} onClick={this.handleClick}>
-            <Img fluid={fluid} style={{ position: 'static' }}/>
-          </div>
-        );
+        
+        if (title === "design") {
+          return (
+            <div data-index={index} data-type='design' key={file + index} onClick={this.handleClick}>
+              <Img fluid={fluid} />
+            </div>
+          );
+        } else {
+          return (
+            <div className="photo" key={file + index} data-index={index} onClick={this.handleClick}>
+              <Img fluid={fluid} style={{ position: 'static' }}/>
+            </div>
+          );
+        }
+
+
+
+        // return (
+        //   <div className="photo" key={file + index} data-index={index} onClick={this.handleClick}>
+        //     <Img fluid={fluid} style={{ position: 'static' }}/>
+        //   </div>
+        // );
 
         // if (title === "design") {
         //   return (
