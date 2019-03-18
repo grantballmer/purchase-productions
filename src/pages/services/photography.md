@@ -4,9 +4,9 @@ title: photography
 grid:
   - band: My Morning Jacket
     image: /img/mmj.jpg
-  - band: 'chirp '
+  - band: Chirp
     image: /img/chirp-lg-1-.jpg
-  - band: Desmond Jone
+  - band: Desmond Jones
     image: /img/desmond-100060-lg.jpg
 ---
 
