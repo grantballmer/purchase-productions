@@ -122,7 +122,7 @@
   position: relative;
 
   &:hover .slider-text {
-    display: flex;
+    opacity: 1;
   }
 
   .gatsby-image-wrapper {
@@ -132,10 +132,6 @@
     @include tablet {
       width: 100%;
     }
-
-    &:hover .slider-image-wrapper {
-      display: flex;
-    }
   }
 
   .slider-text {
@@ -143,12 +139,18 @@
     height: 50px;
     padding-left: 12px;
     @include flex(flex-start, center);
-    background: rgb(0,0,0);
-    background: linear-gradient(0deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 100%); 
     margin-top: -50px;
-    font-size: 2.4rem;
+    font-size: 1.8rem;
     z-index: 5;
-    display: none;
+    opacity: 1;
+    transition: opacity .2s;
+
+    @include tablet {
+      font-size: 2.4rem;
+      opacity: 0;
+      background: rgb(0,0,0);
+      background: linear-gradient(0deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 100%); 
+    }
   }
 }
 
