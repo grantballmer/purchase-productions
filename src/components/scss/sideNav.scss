@@ -1,5 +1,5 @@
 .sideNav {
-  width: 60%;
+  width: 75%;
   height: 100vh;
   @include flex(flex-start, center);
   flex-direction: column;
@@ -15,6 +15,10 @@
 
   &>* {
     margin: 16px;
+  }
+
+  @include wide-mobile {
+    width: 60%;
   }
 
   @include tablet {

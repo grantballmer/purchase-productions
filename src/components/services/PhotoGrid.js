@@ -21,7 +21,6 @@ class Gallery extends React.Component {
   handleClick = e => {;
     const { clicked } = this.state;
     document.body.style.overflow = "hidden";
-    console.log('clicked')
 
     this.setState({ clicked: !clicked, activePhoto: e.currentTarget });
   }
@@ -55,11 +54,12 @@ class Gallery extends React.Component {
             </div>
           );
         } else {
-          return (
-            <div className="photo" key={file + index} data-index={index} onClick={this.handleClick}>
-              <Img fluid={fluid} style={{ position: 'static' }}/>
-            </div>
-          );
+            console.log(file);
+            return (
+              <div className="photo" key={file + index} data-index={index} data-text={file.band} onClick={this.handleClick}>
+                <Img fluid={fluid} style={{ position: 'static' }} alt={file.band} />
+              </div>
+            );
         }
 
 

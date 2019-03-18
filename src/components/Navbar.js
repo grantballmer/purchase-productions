@@ -39,9 +39,7 @@ class Navbar extends React.Component {
         <Link to="/" className="logo" onClick={this.removeSideNav}>
             Purchase Productions, LLC
         </Link>
-        
-        {/* <i className="nav-menu fas fa-bars" onClick={this.handleClick}></i> */}
-        
+                
         <div className={`nav-menu ${menuClass}`} onClick={this.handleClick}>
           <span></span>
           <span></span>
@@ -53,7 +51,7 @@ class Navbar extends React.Component {
           <Link to="/about" onClick={this.handleClick}>About</Link>
           <Link to="/roster" onClick={this.handleClick}>Roster</Link>
           <Link to="/services" onClick={this.handleClick}>Services</Link>
-          <Link to="/podcast" className="nav-middle__links">Podcast</Link>
+          <Link to="/podcast" onClick={this.handleClick}>Podcast</Link>
           <Link to="/contact" onClick={this.handleClick}>Contact</Link>
         </div>
         

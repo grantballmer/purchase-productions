@@ -68,14 +68,7 @@
     font-size: 2rem;
   }
 
-  .gatsby-image-wrapper {
-    width: 80%;
-    @include flex(center, center);
-
-    @include tablet {
-      width: 60%;
-    }
-  }
+  
 
   .gatsby-wrapper-design {
     width: 30%;
@@ -112,6 +105,67 @@
   &:hover {
     transform: scale(1.08) translateY(-50%);
   }
+}
+
+.slider-image {
+  width: 100%;
+  // height: 100%;
+  @include flex(center,center);
+  position: relative;
+}
+
+.slider-image-wrapper {
+  width: 60%;
+  @include flex(center,center);
+  flex-direction: column;
+  height: 100%;
+  position: relative;
+
+  &:hover .slider-text {
+    display: flex;
+  }
+
+  .gatsby-image-wrapper {
+    width: 100%;
+    @include flex(center, center);
+
+    @include tablet {
+      width: 100%;
+    }
+
+    &:hover .slider-image-wrapper {
+      display: flex;
+    }
+  }
+
+  .slider-text {
+    width: 100%;
+    height: 50px;
+    padding-left: 12px;
+    @include flex(flex-start, center);
+    background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 100%); 
+    margin-top: -50px;
+    font-size: 2.4rem;
+    z-index: 5;
+    display: none;
+  }
+}
+
+.image-box {
+  width: 100%;
+  height: 50px;
+  background-color: green;
+}
+
+
+.gatsby-image-text {
+  width: 50%;
+  height: 25px;
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .swipe__prev {

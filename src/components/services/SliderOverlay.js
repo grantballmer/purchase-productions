@@ -24,14 +24,11 @@ class SliderOverlay extends React.Component {
 
   componentDidMount() {
     const { activePhoto, images } = this.props.items;
-    // console.log('mounted');
-    // console.log(activePhoto);
-    // console.log(this.props);
-    // const image = activePhoto.attributes['data-image'].value;
     const index = activePhoto.attributes['data-index'].value;
     const type = activePhoto.attributes['data-type'] ? activePhoto.attributes['data-type'].value : '';
+    const text = activePhoto.attributes['data-text'] ? activePhoto.attributes['data-text'].value : '';
 
-    this.setState({ images, index, type, currentImage: images[index] });
+    this.setState({ images, index, type, text, currentImage: images[index] });
   }
 
   onLoad = () => {
@@ -54,7 +51,7 @@ class SliderOverlay extends React.Component {
       index = Number(index) - 1 <= -1 ? images.length - 1 : Number(index) - 1;
     }
 
-    this.setState({ currentImage: images[index], index, imagePosition: 0 });
+    this.setState({ index, currentImage: images[index], text: images[index].band, imagePosition: 0 });
   }
 
   handleKeyDown = e => {
@@ -72,26 +69,8 @@ class SliderOverlay extends React.Component {
   }
 
   render() {
-    const { currentImage, index, type, imagePosition } = this.state;
+    const { currentImage, index, type, text, imagePosition } = this.state;
     const { removeOverlay } = this.props;
-    console.log(currentImage);
-    // const imageEnding = window.innerWidth > 812 ? 'lg' : 'sm';
-
-
-    // if (window.innerWidth > 812) {
-    //   imageEnding = 'lg';
-    // }
-    // else if (window.innerWidth > 550) {
-    //   imageEnding = 'md';
-    // }
-    // else {
-    //   imageEnding = 'sm';
-    // }
-
-
-
-
-    // const imgVisibility = didLoad ? 'visible' : 'hidden';
 
     return (
       <section 
@@ -113,27 +92,24 @@ class SliderOverlay extends React.Component {
           style={{ transform: `translateX(${imagePosition}px` }}
           onClick={e => e.stopPropagation() }
         > 
-          {currentImage && <Img fluid={currentImage.image.childImageSharp.fluid} className={type === 'design' ? 'gatsby-wrapper-design' : ''} /> }
+          {/* container for photography image */}
+          {currentImage && type !== 'design' &&
+            <div className="slider-image-wrapper">
+              <Img fluid={currentImage.image.childImageSharp.fluid} />
+              <div className="slider-text">
+                <p>{text}</p>
+              </div>
+            </div>
+          } 
+
+          {/* container for poster design image */}
+          {currentImage && type === 'design' && 
+            <Img fluid={currentImage.image.childImageSharp.fluid} className='gatsby-wrapper-design' />
+          }
             
             
           <img src={ArrowLeft} alt="" className="swipe__btn swipe__prev" onClick={(e) => this.handleSlideAction(e, 'prev')} />
           <img src={ArrowRight} alt="" className="swipe__btn swipe__next" onClick={(e) => this.handleSlideAction(e, 'next')} /> 
-          
-          
-           {/* <div className={`sliderOverlay__photo`}
-              data-index={index}
-              style={{ transform: `translateX(${imagePosition}px` }}
-              onClick={e => e.stopPropagation() }
-            >
-            
-            
-            
-            <h2>Desmond Jones - August 1, 2018</h2>
-          
-            
-            
-            
-            </div> */}
           
         </Swipe>
       </section>
