@@ -1,5 +1,5 @@
-import React from 'react';
-import Img from 'gatsby-image';
+import React from "react";
+import Img from "gatsby-image";
 import "./photoGrid.scss";
 import SliderOverlay from "./SliderOverlay";
 // const imagePath = process.env.PUBLIC_URL + '/assets/images/design';
@@ -18,74 +18,58 @@ class Gallery extends React.Component {
     this.setState({ images: this.props.images, title: this.props.title });
   }
 
-  handleClick = e => {;
+  handleClick = e => {
     const { clicked } = this.state;
     document.body.style.overflow = "hidden";
 
     this.setState({ clicked: !clicked, activePhoto: e.currentTarget });
-  }
+  };
 
   handleTouchMove = e => {
     const { clicked } = this.state;
     if (clicked) {
       e.preventDefault();
     }
-  }
+  };
 
   removeOverlay = () => {
     const { clicked } = this.state;
     document.body.style.overflow = "visible";
     this.setState({ clicked: !clicked, activePhoto: null });
-  }
+  };
 
   render() {
     const { images, clicked, title } = this.state;
     let photoElements;
 
-
     if (images) {
       photoElements = images.map((file, index) => {
         const { fluid } = file.image.childImageSharp;
-        
-        if (title === "design") {
-          return (
-            <div data-index={index} data-type='design' key={file + index} onClick={this.handleClick}>
-              <Img fluid={fluid} />
-            </div>
-          );
-        } else {
-            console.log(file);
-            return (
-              <div className="photo" key={file + index} data-index={index} data-text={file.band} onClick={this.handleClick}>
-                <Img fluid={fluid} style={{ position: 'static' }} alt={file.band} />
-              </div>
-            );
-        }
-
-
-
-        // return (
-        //   <div className="photo" key={file + index} data-index={index} onClick={this.handleClick}>
-        //     <Img fluid={fluid} style={{ position: 'static' }}/>
-        //   </div>
-        // );
 
         // if (title === "design") {
         //   return (
-        //     <img src={src} alt=""
-        //       key={file + index}
+        //     <div
         //       data-index={index}
-        //       data-image={src}
+        //       data-type="design"
+        //       key={file + index}
         //       onClick={this.handleClick}
-        //     />
-        //   );
-        // }
-        // else {
-        //   return (
-        //     <div className="photo" key={file + index} onClick={this.handleClick}>
+        //     >
         //       <Img fluid={fluid} />
         //     </div>
         //   );
+        // } else {
+        return (
+          <div
+            className="photo"
+            key={file + index}
+            data-index={index}
+            data-text={file.band}
+            data-type={title === "design" ? "design" : ""}
+            onClick={this.handleClick}
+          >
+            <Img fluid={fluid} style={{ position: "static" }} alt={file.band} />
+          </div>
+        );
         // }
       });
     }
@@ -95,7 +79,6 @@ class Gallery extends React.Component {
     //   data-image={src}
     //   style={{ backgroundImage: `url(${src})` }}
     // />
-
 
     // if (images) {
     //   photoElements = images.map((file, index) => {
@@ -114,14 +97,14 @@ class Gallery extends React.Component {
     //   });
     // }
     return (
-      <div className={`photos ${title === 'design' ? 'photos__posters' : ''}`}>
-        {(clicked && images) &&
-          <SliderOverlay 
+      <div className={`photos ${title === "design" ? "photos__posters" : ""}`}>
+        {clicked && images && (
+          <SliderOverlay
             items={this.state}
             removeOverlay={this.removeOverlay}
           />
-        }
-        {photoElements} 
+        )}
+        {photoElements}
       </div>
     );
   }
