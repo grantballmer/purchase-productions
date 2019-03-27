@@ -1,5 +1,5 @@
-import React from 'react';
-import { graphql } from 'gatsby';
+import React from "react";
+import { graphql } from "gatsby";
 import "../scss/box.scss";
 import Layout from "../components/Layout";
 import SideBooking from "../components/roster/SideBooking";
@@ -11,14 +11,14 @@ class Roster extends React.Component {
 
     this.state = {
       showOverlay: false,
-      currentArtist: ''
+      currentArtist: ""
     };
   }
 
   slideFunc = e => {
     const { showOverlay } = this.state;
     // e.stopPropagation();
-    const currentArtist = e.currentTarget.dataset.artist || '';
+    const currentArtist = e.currentTarget.dataset.artist || "";
 
     // if (showOverlay) {
     //   document.body.style.position = 'fixed';
@@ -28,25 +28,42 @@ class Roster extends React.Component {
       currentArtist,
       showOverlay: !showOverlay
     });
-  }
+  };
 
   render() {
     const { showOverlay, currentArtist } = this.state;
-    const slideClass = showOverlay ? 'slide' : '';
-    const noScrollClass = showOverlay ? 'noScroll' : '';
+    const slideClass = showOverlay ? "slide" : "";
+    const noScrollClass = showOverlay ? "noScroll" : "";
 
     const { chirp, desmond, jesse } = this.props.data;
 
     return (
       <Layout>
-        <div className={`overlay overlay-color ${slideClass}`} onClick={this.slideFunc}/>
-        <SideBooking slideClass={slideClass} currentArtist={currentArtist} slideFunc={this.slideFunc} />
+        <div
+          className={`overlay overlay-color ${slideClass}`}
+          onClick={this.slideFunc}
+        />
+        <SideBooking
+          slideClass={slideClass}
+          currentArtist={currentArtist}
+          slideFunc={this.slideFunc}
+        />
         <section className={`box-container ${noScrollClass}`}>
-          
-          <Artist name='Desmond Jones' image={desmond.childImageSharp.fluid} slideFunc={this.slideFunc} />
-          <Artist name='Jesse Ray & The Carolina Catfish' image={jesse.childImageSharp.fluid} slideFunc={this.slideFunc} />
-          <Artist name='Chirp' image={chirp.childImageSharp.fluid} slideFunc={this.slideFunc} />
-          
+          <Artist
+            name="Desmond Jones"
+            image={desmond.childImageSharp.fluid}
+            slideFunc={this.slideFunc}
+          />
+          <Artist
+            name="Jesse Ray & The Carolina Catfish"
+            image={jesse.childImageSharp.fluid}
+            slideFunc={this.slideFunc}
+          />
+          <Artist
+            name="Chirp"
+            image={chirp.childImageSharp.fluid}
+            slideFunc={this.slideFunc}
+          />
         </section>
       </Layout>
     );
@@ -55,15 +72,15 @@ class Roster extends React.Component {
 
 export default Roster;
 
-export const servicesImages = graphql `
+export const servicesImages = graphql`
   query {
-    desmond: file(relativePath: { eq: "images/desmond-lg.jpg"}) {
+    desmond: file(relativePath: { eq: "images/desmond-jones-roster2.jpg" }) {
       ...fluidImage
     }
-    jesse: file(relativePath: { eq: "images/jesse-lg.jpg" }) {
+    jesse: file(relativePath: { eq: "images/jesse-ray-roster.jpg" }) {
       ...fluidImage
     }
-    chirp: file(relativePath: { eq: "images/chirp-lg.jpg"}) {
+    chirp: file(relativePath: { eq: "images/chirp-roster2.jpg" }) {
       ...fluidImage
     }
   }

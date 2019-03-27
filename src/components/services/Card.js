@@ -1,39 +1,39 @@
-import React from 'react';
-import Img from 'gatsby-image';
+import React from "react";
+import Img from "gatsby-image";
 import "./card.scss";
 import { Link } from "gatsby";
 
-const Card = ({ frontImage, icon, service, }) => {
+const Card = ({ frontImage, icon, service }) => {
   // const front = <img src={frontImage} alt="" style={{ display: 'none' }} />;
   // console.log(front.complete);
 
+  console.log(service);
+
   return (
     <Link to={`/services/${service}`} className={`card card__${service}`}>
-      
-      <div className={`card__side card__side--front`} >
-      
-        <div className={`frontImage`} >
-          <Img fluid={frontImage} style={{ position: 'static' }} />
+      <div className={`card__side card__side--front`}>
+        <div className={`frontImage`}>
+          <Img fluid={frontImage} style={{ position: "static" }} />
         </div>
-        
+
         <div className="card__side--text">
-          <img src={icon} className="card__icon" alt="" /> 
+          <img src={icon} className="card__icon" alt="" />
           <h2>{service}</h2>
         </div>
       </div>
-      
+
       <div className={`card__side card__side--back backImage__${service}`}>
-        <button to={`/services/${service}`} className="btn btn-gallery">View Gallery</button>
+        <button to={`/services/${service}`} className="btn btn-gallery">
+          {service === "management" ? "View Details" : "View Gallery"}
+        </button>
       </div>
-      
     </Link>
   );
 };
 
 export default Card;
 
-
-// {!management 
+// {!management
 //           ? <button to={`/services/${service}`} className="btn btn-gallery">View Gallery</button>
 //           :
 //           <React.Fragment>

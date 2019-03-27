@@ -1,5 +1,5 @@
-import React from 'react';
-import { graphql } from 'gatsby';
+import React from "react";
+import { graphql } from "gatsby";
 
 import "../../scss/box.scss";
 import Layout from "../../components/Layout";
@@ -10,30 +10,26 @@ import Pencil from "../icons/pencil.svg";
 import Phone from "../icons/phone.svg";
 
 const Services = ({ data }) => {
-
   return (
     <Layout>
       <section className="box-container">
-      
-        <Card 
-          frontImage={data.photography.childImageSharp.fluid} 
-          icon={Camera} 
-          service='photography' 
+        <Card
+          frontImage={data.photography.childImageSharp.fluid}
+          icon={Camera}
+          service="photography"
         />
-        
-        <Card 
+
+        <Card
           frontImage={data.design.childImageSharp.fluid}
-          icon={Pencil} 
-          service='design' 
+          icon={Pencil}
+          service="design"
         />
-        
-        <Card 
-          frontImage = {data.management.childImageSharp.fluid}
+
+        <Card
+          frontImage={data.management.childImageSharp.fluid}
           icon={Phone}
-          service='management'
+          service="management"
         />
-  
-        
       </section>
     </Layout>
   );
@@ -41,25 +37,25 @@ const Services = ({ data }) => {
 
 export default Services;
 
-export const fluidImage = graphql `
+export const fluidImage = graphql`
   fragment fluidImage on File {
     childImageSharp {
-      fluid(maxWidth: 800) {
+      fluid(maxWidth: 1000) {
         ...GatsbyImageSharpFluid
       }
     }
   }
 `;
 
-export const servicesImages = graphql `
+export const servicesImages = graphql`
   query {
-    photography: file(relativePath: { eq: "images/MMJ.jpg"}) {
+    photography: file(relativePath: { eq: "images/MMJ.jpg" }) {
       ...fluidImage
     }
-    design: file(relativePath: { eq: "images/earth-radio.jpg" }) {
+    design: file(relativePath: { eq: "images/abram-album.jpg" }) {
       ...fluidImage
     }
-    management: file(relativePath: { eq: "images/desmond-jones.jpg"}) {
+    management: file(relativePath: { eq: "images/management.jpg" }) {
       ...fluidImage
     }
   }

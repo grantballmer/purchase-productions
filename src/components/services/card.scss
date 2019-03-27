@@ -101,7 +101,8 @@
     text-transform: capitalize;
   }
 
-  &--front {}
+  &--front {
+  }
 
   &--back {
     transform: rotateY(180deg);
@@ -146,15 +147,17 @@
 //   background-image: url('./images/desmond-jones.jpg');
 // }
 .backImage__photography {
-  background-image: url('./images/chris-cordle-lg.jpg');
+  background-image: url("./images/photography-backImg.jpg");
+  background-position: center left;
 }
 
 .backImage__design {
-  background-image: url('./images/design.jpg');
+  background-image: url("./images/design-backImg.jpg");
+  background-position: center top;
 }
 
 .backImage__management {
-  background-image: url('./images/chris-cordle-lg.jpg');
+  background-image: url("./images/management-backImg.jpg");
 } // .card {
 //   height: 250px;
 //   width: 100%;
