@@ -8,9 +8,13 @@
   padding: 92px 12px 12px 12px;
   @include flex(center, center);
   flex-wrap: wrap;
-  align-content: center; // overflow: hidden;
+  align-content: center;
   @include wide-mobile {
     height: 100vh;
+  }
+
+  @include tablet {
+    overflow: hidden;
   }
   @include desktop {
     height: 100vh;
@@ -57,9 +61,7 @@
   }
 
   &:hover {
-
     @include tablet {
-
       .btn-profile {
         transform: translateY(-20px);
 
@@ -95,20 +97,17 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%) scale(.95);
+    transform: translate(-50%, -50%) scale(0.95);
     max-width: 100%;
     max-height: 100%;
     filter: brightness(70%);
-    transition: all .2s;
-
+    transition: all 0.2s;
   }
 
   &__name {
     z-index: 0;
     font-size: 2.6rem;
   }
-
-
 }
 
 .box__desmond {
@@ -134,14 +133,12 @@
   }
 }
 
-
 .box__services {
   position: relative;
   box-shadow: 1px 3px 5px 1px rgba(0, 0, 0, 0.5);
   background-color: $powder-blue;
   font-weight: 700;
   text-transform: uppercase;
-
 
   &:hover:before,
   &:hover:after {
@@ -153,34 +150,33 @@
   &:after {
     width: 100%;
     height: 30%;
-    content: '';
+    content: "";
     position: absolute;
     left: 0;
-    background-color: rgba(0, 0, 0, .75);
+    background-color: rgba(0, 0, 0, 0.75);
     z-index: 2;
     -webkit-backface-visibility: hidden;
-    transition: transform .3s;
+    transition: transform 0.3s;
     -webkit-transform-style: preserve-3d;
   }
 
   &:before {
     top: 0;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 2%);
-    transform: translate(-100%, -100%) translateZ(0) scale(1.0, 1.0);
+    transform: translate(-100%, -100%) translateZ(0) scale(1, 1);
   }
 
   &:after {
     bottom: 0;
     clip-path: polygon(0 0, 100% 98%, 100% 100%, 0 100%);
-    transform: translate(100%, 100%) translateZ(0) scale(1.0, 1.0);
-    ;
+    transform: translate(100%, 100%) translateZ(0) scale(1, 1);
   }
 
   h2 {
-    font-family: 'blockbrokersregular' !important;
+    font-family: "blockbrokersregular" !important;
     letter-spacing: -1px;
     -webkit-text-stroke: 2px black;
-    text-shadow: 0 10px 2px rgba(0, 0, 0, .45);
+    text-shadow: 0 10px 2px rgba(0, 0, 0, 0.45);
     font-size: 2.6rem;
   }
 
@@ -222,14 +218,12 @@
     .box__image {
       transform: translate(-50%, -50%) scale(1);
       filter: brightness(90%);
-
     }
   }
 }
 
 .box__management {
   order: 3;
-
 
   @include wide-mobile {
     order: 2;
@@ -243,22 +237,18 @@
 }
 
 .box__photo--desmond {
-  background-image: url('/assets/images/artists/desmond-lg.jpg');
-
+  background-image: url("/assets/images/artists/desmond-lg.jpg");
 }
 
 .box__photo--jesse {
-  background-image: url('/assets/images/artists/jesse-lg.jpg');
-
+  background-image: url("/assets/images/artists/jesse-lg.jpg");
 }
 
 .box__photo--chirp {
-  background-image: url('/assets/images/artists/chirp-lg.jpg');
-
+  background-image: url("/assets/images/artists/chirp-lg.jpg");
 }
 
 .screenTouchClass {
-
   .btn-profile {
     transform: translateY(-20px);
   }
@@ -274,5 +264,4 @@
   .overlay-background-image:after {
     background-color: rgba(0, 0, 0, 0.45);
   }
-
 }
