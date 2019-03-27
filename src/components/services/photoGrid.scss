@@ -12,7 +12,7 @@
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   }
   @include tablet {
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(375px, 1fr));
   }
 }
 
@@ -71,43 +71,43 @@
   img {
     max-width: 100%;
     max-height: 100%;
-    transition: transform .2s;
+    transition: transform 0.2s;
   }
 }
 
 .gatsby-image-wrapper img {
-  transition: transform .2s !important;
+  transition: transform 0.2s !important;
 }
 
 .photo__papadosio {
-  background-image: url('./images/photography/papadosio-sm.jpg');
+  background-image: url("./images/photography/papadosio-sm.jpg");
 
   @include tablet {
-    background-image: url('./images/photography/papadosio-lg.jpg');
+    background-image: url("./images/photography/papadosio-lg.jpg");
   }
 }
 
 .photo__chris-cordle {
-  background-image: url('./images/photography/chris-cordle-sm.jpg');
+  background-image: url("./images/photography/chris-cordle-sm.jpg");
 
   @include tablet {
-    background-image: url('./images/photography/chris-cordle-lg.jpg');
+    background-image: url("./images/photography/chris-cordle-lg.jpg");
   }
 }
 
 .photo__chirp {
-  background-image: url('./images/photography/chirp-sm.jpg');
+  background-image: url("./images/photography/chirp-sm.jpg");
 
   @include tablet {
-    background-image: url('./images/photography/chirp-lg.jpg');
+    background-image: url("./images/photography/chirp-lg.jpg");
   }
 }
 
 .photo__desmond {
-  background-image: url('./images/photography/desmond-sm.jpg');
+  background-image: url("./images/photography/desmond-sm.jpg");
 
   @include tablet {
-    background-image: url('./images/photography/desmond-lg.jpg');
+    background-image: url("./images/photography/desmond-lg.jpg");
   }
 }
 
@@ -120,86 +120,86 @@
 .photo__desmond-100060 {
   // background-image: url('./images/photography/desmond-100060-sm.jpg');
   @include tablet {
-    background-image: url('./images/photography/desmond-100060-lg.jpg');
+    background-image: url("./images/photography/desmond-100060-lg.jpg");
   }
 }
 
 .photo__desmond-july {
-  background-image: url('./images/photography/desmond-july-sm.jpg');
+  background-image: url("./images/photography/desmond-july-sm.jpg");
 
   @include tablet {
-    background-image: url('./images/photography/desmond-july-lg.jpg');
+    background-image: url("./images/photography/desmond-july-lg.jpg");
   }
 }
 
 .photo__jesse {
-  background-image: url('./images/photography/jesse-sm.jpg');
+  background-image: url("./images/photography/jesse-sm.jpg");
 
   @include tablet {
-    background-image: url('./images/photography/jesse-lg.jpg');
+    background-image: url("./images/photography/jesse-lg.jpg");
   }
 }
 
 .photo__desmond-sept {
-  background-image: url('./images/photography/desmond-sept-sm.jpg');
+  background-image: url("./images/photography/desmond-sept-sm.jpg");
 
   @include tablet {
-    background-image: url('./images/photography/desmond-sept-lg.jpg');
+    background-image: url("./images/photography/desmond-sept-lg.jpg");
   }
 }
 
 .photo__jesse-oct {
-  background-image: url('./images/photography/jesse-oct-sm.jpg');
+  background-image: url("./images/photography/jesse-oct-sm.jpg");
 
   @include tablet {
-    background-image: url('./images/photography/jesse-oct-lg.jpg');
+    background-image: url("./images/photography/jesse-oct-lg.jpg");
   }
 }
 
 .photo__strange-majik {
-  background-image: url('./images/photography/strange-majik-sm.jpg');
+  background-image: url("./images/photography/strange-majik-sm.jpg");
 
   @include tablet {
-    background-image: url('./images/photography/strange-majik-lg.jpg');
+    background-image: url("./images/photography/strange-majik-lg.jpg");
   }
 }
 
 .photo__trifocal {
-  background-image: url('./images/photography/trifocal-lg.jpg');
+  background-image: url("./images/photography/trifocal-lg.jpg");
 
   @include tablet {
-    background-image: url('./images/photography/trifocal-lg.jpg');
+    background-image: url("./images/photography/trifocal-lg.jpg");
   }
 }
 
 .photo__desmond-dec {
-  background-image: url('./images/photography/desmond-dec-lg.jpg');
+  background-image: url("./images/photography/desmond-dec-lg.jpg");
 
   @include tablet {
-    background-image: url('./images/photography/desmond-dec-lg.jpg');
+    background-image: url("./images/photography/desmond-dec-lg.jpg");
   }
 }
 
 .photo__design {
-  background-image: url('/assets/images/services/design.jpg');
+  background-image: url("/assets/images/services/design.jpg");
 }
 
 .photo__elRoy {
-  background-image: url('/assets/images/design/elRoy.jpg');
+  background-image: url("/assets/images/design/elRoy.jpg");
 }
 
 .photo__dtd {
-  background-image: url('/assets/images/design/does-the-dead.jpg');
+  background-image: url("/assets/images/design/does-the-dead.jpg");
 }
 
 .photo__monday {
-  background-image: url('/assets/images/design/monday.jpg');
+  background-image: url("/assets/images/design/monday.jpg");
 }
 
 .photo__round-table {
-  background-image: url('/assets/images/design/round-table.jpg');
+  background-image: url("/assets/images/design/round-table.jpg");
 }
 
 .photo__tip-top {
-  background-image: url('/assets/images/design/tip-top.jpg');
+  background-image: url("/assets/images/design/tip-top.jpg");
 }
