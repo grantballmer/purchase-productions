@@ -2,6 +2,8 @@
 templateKey: gallery
 title: photography
 grid:
+  - band: logo
+    image: /img/nathanpurchaselogo.jpg
   - band: '   '
     image: /img/_dsc6388.jpg
   - band: '  '
