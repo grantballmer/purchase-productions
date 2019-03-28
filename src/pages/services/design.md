@@ -40,5 +40,21 @@ grid:
     image: /img/jrccwinterspring2019.jpg
   - band: monday
     image: /img/melo_monday_groove.jpg
+  - band: melo august
+    image: /img/meloaugust12poster.jpg
+  - band: muskegon music
+    image: /img/muskegonmusic.jpg
+  - band: bernie
+    image: /img/jamforbernie2020.jpg
+  - band: nye
+    image: /img/nye_mlb_er_az.jpg
+  - band: pylar's picks
+    image: /img/pylarspickscover.jpg
+  - band: pylar's picks
+    image: /img/pylarspicksvol3.jpg
+  - band: desmond jones
+    image: /img/thisisagoodtourposter.jpg
+  - band: vision explored
+    image: /img/visionexploredalbumcover.jpg
 ---
 
