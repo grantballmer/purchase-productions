@@ -42,15 +42,15 @@
 
   &__desmond {
     // background-image: url('/assets/images/profile/desmond-profile.jpg');
-    background-image: url('/assets/images/profile/desmond-jones.jpg');
+    // background-image: url("/assets/images/profile/desmond-jones.jpg");
     background-position: center;
   }
 
   &__jesse {
-    background-image: url('/assets/images/profile/jesse-profile-sm.jpg');
+    background-image: url("/assets/images/profile/jesse-profile-sm.jpg");
     @include tablet {
       // background-image: url('/assets/images/jesse-profile.jpeg');
-      background-image: url('/assets/images/profile/jesse-profile-moz.jpg');
+      background-image: url("/assets/images/profile/jesse-profile-moz.jpg");
     }
 
     h2 {
@@ -61,15 +61,13 @@
   }
 
   &__chirp {
-    background-image: url('/assets/images/profile/chirp.jpg');
+    background-image: url("/assets/images/profile/chirp.jpg");
   }
 
   &:after {
     @include afterOverlay;
     background-color: rgba(0, 0, 0, 0.2);
   }
-
-
 }
 
 .profile-about {
@@ -89,8 +87,7 @@
 
 .profile-about__info {
   width: 100%;
-  @include flex(flex-start,
-  center);
+  @include flex(flex-start, center);
   flex-direction: column;
   margin-bottom: 24px;
   padding: 0 4%;
@@ -126,8 +123,7 @@
   height: 100%;
   padding: 0 4%;
   background-color: transparent;
-  @include flex(space-around,
-  center); // flex-wrap: wrap;
+  @include flex(space-around, center); // flex-wrap: wrap;
   @include tablet {
     width: 50%;
     justify-content: center;
@@ -141,19 +137,17 @@
     color: $charcoal;
   }
 
-
   &--platform {
     // width: 48%;
     width: 60px; // height: 75px;
     height: 60px;
     border-radius: 50%;
-    @include flex(center,
-    center);
+    @include flex(center, center);
     font-size: 3rem;
     background-color: $charcoal;
     color: white; // border: 1px solid $charcoal;
     // color: $charcoal;
-    transition: all .2s;
+    transition: all 0.2s;
     margin-bottom: 4%;
 
     @include wide-mobile {
@@ -181,7 +175,6 @@
       }
     }
 
-
     &:hover {
       background-color: $charcoal;
       color: white;
@@ -207,8 +200,7 @@
   height: 45vh;
   padding: 4%;
   position: relative;
-  @include flex(center,
-  center);
+  @include flex(center, center);
   flex-direction: column;
   background-color: $charcoal;
   clip-path: polygon(0 4%, 100% 12%, 100% 100%, 0 100%);
@@ -231,8 +223,7 @@
 
 .profile-contact__details {
   width: 100%;
-  @include flex(space-between,
-  center);
+  @include flex(space-between, center);
   flex-direction: column;
   @include tablet {
     flex-direction: row;
@@ -240,8 +231,7 @@
 }
 
 .contact-information {
-  @include flex(center,
-  center);
+  @include flex(center, center);
   flex-direction: column;
   margin: 8px 0;
 
@@ -261,8 +251,7 @@
   }
 
   &__email {
-    @include flex(center,
-    center);
+    @include flex(center, center);
     font-size: 1.3rem;
     color: white;
     @include tablet {
