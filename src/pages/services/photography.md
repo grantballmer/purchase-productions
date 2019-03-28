@@ -21,15 +21,17 @@ grid:
   - band: '    '
     image: /img/dsc_3307.jpg
   - band: '  '
+    image: /img/_dsc7031.jpg
+  - band: '  '
     image: /img/dsc_0473.jpg
   - band: '  '
     image: /img/dsc_4244.jpg
   - band: '  '
     image: /img/dsc_8263.jpg
   - band: '  '
-    image: /img/_dsc4431.jpg
-  - band: '  '
     image: /img/dsc_3604.jpg
+  - band: '  '
+    image: /img/_dsc4431.jpg
   - band: '  '
     image: /img/dsc_6350.jpg
   - band: '  '
@@ -53,11 +55,11 @@ grid:
   - band: '  '
     image: /img/dsc_7953.jpg
   - band: '  '
+    image: /img/dsc_7852.jpg
+  - band: '  '
     image: /img/dsc_6770.jpg
   - band: '  '
     image: /img/_dsc7418.jpg
-  - band: '  '
-    image: /img/dsc_7852.jpg
   - band: '  '
     image: /img/dsc_6914.jpg
   - band: '  '
@@ -94,8 +96,6 @@ grid:
     image: /img/dsc_2395.jpg
   - band: '  '
     image: /img/dsc_7931.jpg
-  - band: '  '
-    image: /img/_dsc7031.jpg
   - band: '  '
     image: /img/dsc_1254.jpg
   - band: '  '
