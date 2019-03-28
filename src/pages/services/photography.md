@@ -3,7 +3,7 @@ templateKey: gallery
 title: photography
 grid:
   - band: logo
-    image: /img/nathanpurchaselogo.jpg
+    image: /img/photography-logo.jpg
   - band: '   Umphrey''s McGee'
     image: /img/_dsc6388.jpg
   - band: Tomar and the FC's
