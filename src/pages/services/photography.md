@@ -15,11 +15,11 @@ grid:
   - band: '  '
     image: /img/dsc_0524.jpg
   - band: '  '
-    image: /img/dsc_1663.jpg
-  - band: '  '
     image: /img/dsc_0112.jpg
   - band: '    '
     image: /img/dsc_3307.jpg
+  - band: '  '
+    image: /img/dsc_6903.jpg
   - band: '  '
     image: /img/_dsc7031.jpg
   - band: '  '
@@ -28,6 +28,8 @@ grid:
     image: /img/dsc_4244.jpg
   - band: '  '
     image: /img/dsc_8263.jpg
+  - band: '  '
+    image: /img/dsc_1663.jpg
   - band: '  '
     image: /img/dsc_3604.jpg
   - band: '  '
@@ -98,8 +100,6 @@ grid:
     image: /img/dsc_7931.jpg
   - band: '  '
     image: /img/dsc_1254.jpg
-  - band: '  '
-    image: /img/dsc_6903.jpg
   - band: '  '
     image: /img/dsc_6735.jpg
 ---
