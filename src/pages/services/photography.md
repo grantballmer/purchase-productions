@@ -2,7 +2,7 @@
 templateKey: gallery
 title: photography
 grid:
-  - band: logo
+  - band: '  '
     image: /img/photography-logo.jpg
   - band: '   Umphrey''s McGee'
     image: /img/_dsc6388.jpg
