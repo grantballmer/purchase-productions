@@ -4,12 +4,12 @@ title: design
 grid:
   - band: poster
     image: /img/design-lg.jpg
-  - band: eRoy
-    image: /img/eroy-lg.jpg
   - band: abram
     image: /img/abramalbumcover.jpg
   - band: '  chirp'
     image: /img/chirptonicroom5.2.jpg
+  - band: eRoy
+    image: /img/eroy-lg.jpg
   - band: '  desmond'
     image: /img/desmondjones2019springposter.jpg
   - band: muskegon
