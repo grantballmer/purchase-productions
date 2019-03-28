@@ -1,13 +1,11 @@
 import React from "react";
 import { graphql } from "gatsby";
-// import Img from "gatsby-image";
 import "./scss/index.scss";
 import concert from "./images/concert-comp.jpg";
 import { Link } from "gatsby";
 import Layout from "../components/Layout";
 
 const IndexPage = ({ data }) => {
-  console.log(data.hero.childImageSharp.fluid);
   return (
     <Layout>
       <React.Fragment>
