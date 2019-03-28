@@ -6,6 +6,8 @@ grid:
     image: /img/nathanpurchaselogo.jpg
   - band: '   '
     image: /img/_dsc6388.jpg
+  - band: Tomar & The FC's
+    image: /img/dsc_0437.jpg
   - band: '  '
     image: /img/dsc_3504.jpg
   - band: '  '
