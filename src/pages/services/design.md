@@ -6,8 +6,6 @@ grid:
     image: /img/design-lg.jpg
   - band: abram
     image: /img/abramalbumcover.jpg
-  - band: '  chirp'
-    image: /img/chirptonicroom5.2.jpg
   - band: eRoy
     image: /img/eroy-lg.jpg
   - band: '  desmond'
@@ -56,5 +54,7 @@ grid:
     image: /img/thisisagoodtourposter.jpg
   - band: vision explored
     image: /img/visionexploredalbumcover.jpg
+  - band: ' '
+    image: /img/chirpspringtourposter.jpg
 ---
 
