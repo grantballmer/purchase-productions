@@ -1,23 +1,22 @@
 import React from "react";
-import { graphql } from "gatsby";
 
 import Layout from "../../components/Layout";
 import Profile from "../../components/profile/Profile";
 
-const Chirp = ({ data }) => {
+const Chirp = () => {
   return (
     <Layout>
-      <Profile band="chirp" image={data.chirpProfile.childImageSharp.fluid} />
+      <Profile band="chirp" />
     </Layout>
   );
 };
 
 export default Chirp;
 
-export const profileImage = graphql`
-  query {
-    chirpProfile: file(relativePath: { eq: "images/chirp-profile.jpg" }) {
-      ...profileImage
-    }
-  }
-`;
+// export const profileImage = graphql`
+//   query {
+//     chirpProfile: file(relativePath: { eq: "images/chirp-profile.jpg" }) {
+//       ...profileImage
+//     }
+//   }
+// `;

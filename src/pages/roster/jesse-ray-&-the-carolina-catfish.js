@@ -1,26 +1,22 @@
 import React from "react";
-import { graphql } from "gatsby";
 
 import Layout from "../../components/Layout";
 import Profile from "../../components/profile/Profile";
 
-const JesseRay = ({ data }) => {
+const JesseRay = () => {
   return (
     <Layout>
-      <Profile
-        band="jesseRay"
-        image={data.jesseProfile.childImageSharp.fluid}
-      />
+      <Profile band="jesseRay" />
     </Layout>
   );
 };
 
 export default JesseRay;
 
-export const profileImage = graphql`
-  query {
-    jesseProfile: file(relativePath: { eq: "images/jesse-ray-profile.jpg" }) {
-      ...profileImage
-    }
-  }
-`;
+// export const profileImage = graphql`
+//   query {
+//     jesseProfile: file(relativePath: { eq: "images/jesse-ray-profile.jpg" }) {
+//       ...profileImage
+//     }
+//   }
+// `;
