@@ -36,8 +36,6 @@ const GalleryPage = ({ data }) => {
   const images = gallery.frontmatter.grid;
   const { title } = gallery.frontmatter;
 
-  console.log(images);
-
   return (
     <Layout>
       <PhotoGrid images={images} title={title} />
