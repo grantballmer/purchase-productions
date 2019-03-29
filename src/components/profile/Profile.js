@@ -1,5 +1,4 @@
 import React from "react";
-// import Img from "gatsby-image";
 
 import {
   FaSpotify,
@@ -64,11 +63,7 @@ const Profile = ({ band, image }) => {
           </svg>
         </div>
 
-        <div className={`profile-hero profile-hero__${band}`}>
-          {/* <Img fluid={image} style={{ position: "static" }} /> */}
-          {/* <BackgroundImage className="gatsby-background" fluid={image} /> */}
-          {headings}
-        </div>
+        <div className={`profile-hero profile-hero__${band}`}>{headings}</div>
       </div>
 
       <div className="profile-about">
