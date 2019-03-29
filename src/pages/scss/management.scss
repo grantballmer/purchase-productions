@@ -3,16 +3,21 @@
 
 .management {
   width: calc(100% - 24px);
-  height: calc(100vh - 12px);
+  // height: calc(100vh - 12px);
   position: relative;
   margin-left: 12px;
-  padding: 92px 8% 12px;
+  padding: 92px 2% 12px;
   @include flex(space-around, center);
   flex-direction: column;
   overflow: hidden;
 
   @include wide-mobile {
     height: calc(100vh - 12px);
+    padding: 92px 4% 12px;
+  }
+
+  @include tablet {
+    padding: 92px 8% 12px;
   }
 
   @include desktop {

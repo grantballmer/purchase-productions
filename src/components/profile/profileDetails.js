@@ -20,9 +20,10 @@ export const details = {
       youtube: "https://www.youtube.com/channel/UCZDlT2HetTVdN2vRG07nPzA",
       itunes: "https://itunes.apple.com/us/album/desmond-jones/1294152783",
       facebook: "https://www.facebook.com/DesmondJonesBand/",
-      instagram: "https://www.instagram.com/desmondjonesband/",
+      instagram: "https://www.instagram.com/desmondjonesband/"
     },
-    management: [{
+    management: [
+      {
         title: "Booking",
         name: "Carly Shields",
         email: "carly@everupwardent.com"
@@ -30,7 +31,7 @@ export const details = {
       {
         title: "Tour Manager",
         name: "Nathan Purchase",
-        email: "purchaseproductionsllc@gmail.com",
+        email: "purchaseproductionsllc@gmail.com"
       },
       {
         title: "Manager",
@@ -67,11 +68,13 @@ export const details = {
     socialMedia: {
       spotify: "https://open.spotify.com/artist/4Qafc3GarByfVBFGCi81zy",
       youtube: "https://www.youtube.com/channel/UCnyprTjjiOpBIp1MOqkHSlQ",
-      itunes: "https://itunes.apple.com/us/artist/jesse-ray-and-the-carolina-catfish/916411830",
+      itunes:
+        "https://itunes.apple.com/us/artist/jesse-ray-and-the-carolina-catfish/916411830",
       facebook: "https://www.facebook.com/jesserayandthecatfish/",
-      instagram: "https://www.instagram.com/jrccband/",
+      instagram: "https://www.instagram.com/jrccband/"
     },
-    management: [{
+    management: [
+      {
         title: "Booking",
         name: "Nathan Purchase",
         email: "purchaseproductionsllc@gmail.com"
@@ -79,7 +82,7 @@ export const details = {
       {
         title: "Manager",
         name: "Nathan Purchase",
-        email: "purchaseproductionsllc@gmail.com",
+        email: "purchaseproductionsllc@gmail.com"
       }
     ]
   },
@@ -108,18 +111,24 @@ export const details = {
       youtube: "https://www.youtube.com/channel/UCHdhnMx3DJue5bd7cjC9_Sw",
       itunes: "https://itunes.apple.com/us/artist/chirp/id564364466",
       facebook: "https://www.facebook.com/chirpmusic/",
-      instagram: "https://www.instagram.com/chirpmusic/",
+      instagram: "https://www.instagram.com/chirpmusic/"
     },
-    management: [{
+    management: [
+      {
         title: "Booking",
         name: "Eric Frutchey",
         email: "eric.purchaseproductionsllc@gmail.com"
       },
       {
+        title: "Tour Manager",
+        name: "Scotty Oatley",
+        email: "chirplive@gmail.com"
+      },
+      {
         title: "Manager",
         name: "Nathan Purchase",
-        email: "purchaseproductionsllc@gmail.com",
-      },
+        email: "purchaseproductionsllc@gmail.com"
+      }
     ]
   }
 };

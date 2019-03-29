@@ -1,5 +1,5 @@
 import React from "react";
-import Img from "gatsby-image";
+// import Img from "gatsby-image";
 
 import {
   FaSpotify,
@@ -11,9 +11,9 @@ import {
 
 import "./profile.scss";
 import { details } from "./profileDetails";
-// const imagePath = process.env.PUBLIC_URL + '/assets/images';
 
 const Profile = ({ band, image }) => {
+  console.log(band);
   const profileDetails = details[band];
 
   const {
@@ -64,8 +64,8 @@ const Profile = ({ band, image }) => {
           </svg>
         </div>
 
-        <div className={`profile-hero`}>
-          <Img fluid={image} style={{ position: "static" }} />
+        <div className={`profile-hero profile-hero__${band}`}>
+          {/* <Img fluid={image} style={{ position: "static" }} /> */}
           {/* <BackgroundImage className="gatsby-background" fluid={image} /> */}
           {headings}
         </div>
@@ -89,8 +89,6 @@ const Profile = ({ band, image }) => {
             <FaSpotify className="profile-icon" />
             <h4>Spotify</h4>
           </a>
-
-          {/* FaYoutube, FaItunesNote, FaFacebookSquare, FaInstagram */}
 
           <a
             className="profile-about__music--platform"

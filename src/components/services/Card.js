@@ -4,11 +4,6 @@ import "./card.scss";
 import { Link } from "gatsby";
 
 const Card = ({ frontImage, icon, service }) => {
-  // const front = <img src={frontImage} alt="" style={{ display: 'none' }} />;
-  // console.log(front.complete);
-
-  console.log(service);
-
   return (
     <Link to={`/services/${service}`} className={`card card__${service}`}>
       <div className={`card__side card__side--front`}>

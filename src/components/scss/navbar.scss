@@ -41,24 +41,31 @@ nav {
 .logo {
   height: 100%;
   white-space: nowrap;
-  flex: 1;
+  // flex: 1;
 
   img {
     max-height: 100%;
   }
 }
 
-.nav-container {
+// .nav-container {
+//   display: none;
+
+//   @include tablet {
+//     flex: 2;
+//     @include flex(space-between, center);
+//   }
+// }
+
+.nav-middle {
   display: none;
 
   @include tablet {
-    flex: 2;
-    @include flex(space-between, center);
+    @include flex(center, center);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
   }
-}
-
-.nav-middle {
-  @include flex(center, center);
 
   &__links {
     margin: 0 12px;
@@ -87,7 +94,11 @@ nav {
 }
 
 .nav-social-media {
-  @include flex(flex-end, center);
+  display: none;
+
+  @include tablet {
+    @include flex(flex-end, center);
+  }
 
   a {
     margin: 0 12px;

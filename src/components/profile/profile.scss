@@ -40,17 +40,37 @@
     }
   }
 
-  &__desmond {
-    // background-image: url('/assets/images/profile/desmond-profile.jpg');
-    // background-image: url("/assets/images/profile/desmond-jones.jpg");
-    background-position: center;
+  &__desmondJones {
+    background-position: bottom;
+    background-image: url("../images/desmond-jones-mobile.jpg");
+
+    @include wide-mobile {
+      background-image: url("../images/desmond-jones-1000.jpg");
+    }
+
+    @include tablet {
+      background-image: url("../images/desmond-jones-tablet.jpg");
+    }
+
+    @include desktop {
+      background-image: url("../images/desmond-jones-profile.jpg");
+    }
   }
 
-  &__jesse {
-    background-image: url("/assets/images/profile/jesse-profile-sm.jpg");
+  &__jesseRay {
+    background-position: center;
+    background-image: url("../images/jesse-ray-mobile.jpg");
+
+    @include wide-mobile {
+      background-image: url("../images/jesse-ray-1000.jpg");
+    }
+
     @include tablet {
-      // background-image: url('/assets/images/jesse-profile.jpeg');
-      background-image: url("/assets/images/profile/jesse-profile-moz.jpg");
+      background-image: url("../images/jesse-ray-tablet.jpg");
+    }
+
+    @include desktop {
+      background-image: url("../images/jesse-ray-profile.jpg");
     }
 
     h2 {
@@ -61,7 +81,20 @@
   }
 
   &__chirp {
-    background-image: url("/assets/images/profile/chirp.jpg");
+    background-position: top;
+    background-image: url("../images/chirp-mobile.jpg");
+
+    @include wide-mobile {
+      background-image: url("../images/chirp-1000.jpg");
+    }
+
+    @include tablet {
+      background-image: url("../images/chirp-tablet.jpg");
+    }
+
+    @include desktop {
+      background-image: url("../images/chirp-profile.jpg");
+    }
   }
 
   &:after {

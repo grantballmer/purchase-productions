@@ -39,6 +39,48 @@ class Navbar extends React.Component {
           <img src={Logo} alt="logo" />
         </Link>
 
+        <div className="nav-middle">
+          <Link to="/about" className="nav-middle__links">
+            About
+          </Link>
+          <Link to="/roster" className="nav-middle__links">
+            Roster
+          </Link>
+          <Link to="/services" className="nav-middle__links">
+            Services
+          </Link>
+          <Link to="/podcast" className="nav-middle__links">
+            Podcast
+          </Link>
+          <Link to="/contact" className="nav-middle__links">
+            Contact
+          </Link>
+        </div>
+
+        <div className="nav-social-media">
+          <a
+            href="https://www.facebook.com/pg/purchaseproductionsllc/about/?ref=page_internal"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaFacebookSquare />
+          </a>
+          <a
+            href="https://www.instagram.com/purchaseproductions/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaInstagram />
+          </a>
+          <a
+            href="https://soundcloud.com/purchaseproductions?"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaSoundcloud />
+          </a>
+        </div>
+
         <div className={`nav-menu ${menuClass}`} onClick={this.handleClick}>
           <span />
           <span />
@@ -66,49 +108,9 @@ class Navbar extends React.Component {
           </Link>
         </div>
 
-        <div className="nav-container">
-          <div className="nav-middle">
-            <Link to="/about" className="nav-middle__links">
-              About
-            </Link>
-            <Link to="/roster" className="nav-middle__links">
-              Roster
-            </Link>
-            <Link to="/services" className="nav-middle__links">
-              Services
-            </Link>
-            <Link to="/podcast" className="nav-middle__links">
-              Podcast
-            </Link>
-            <Link to="/contact" className="nav-middle__links">
-              Contact
-            </Link>
-          </div>
+        {/* <div className="nav-container"> */}
 
-          <div className="nav-social-media">
-            <a
-              href="https://www.facebook.com/pg/purchaseproductionsllc/about/?ref=page_internal"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaFacebookSquare />
-            </a>
-            <a
-              href="https://www.instagram.com/purchaseproductions/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaInstagram />
-            </a>
-            <a
-              href="https://soundcloud.com/purchaseproductions?"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaSoundcloud />
-            </a>
-          </div>
-        </div>
+        {/* </div> */}
       </nav>
     );
   }

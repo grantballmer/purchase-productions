@@ -74,13 +74,13 @@ export default Roster;
 
 export const servicesImages = graphql`
   query {
-    desmond: file(relativePath: { eq: "images/desmond-jones-roster2.jpg" }) {
+    desmond: file(relativePath: { eq: "images/desmond-jones-roster.jpg" }) {
       ...fluidImage
     }
     jesse: file(relativePath: { eq: "images/jesse-ray-roster.jpg" }) {
       ...fluidImage
     }
-    chirp: file(relativePath: { eq: "images/chirp-roster2.jpg" }) {
+    chirp: file(relativePath: { eq: "images/chirp-roster.jpg" }) {
       ...fluidImage
     }
   }
