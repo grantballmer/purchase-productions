@@ -17,7 +17,7 @@
   width: 100%;
   height: 100%;
   position: relative;
-  @include flex(flex-start, center);
+  @include flex(center, center);
   flex-direction: column;
   background-size: cover;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 98%, 0 94%);
@@ -48,7 +48,7 @@
 
   &__desmondJones {
     background-position: bottom;
-    background-image: url("./images/desmond-jones-small.jpg");
+    background-image: url("./images/desmond-jones-mobile.jpg");
 
     // @include wide-mobile {
     //   background-image: url("./images/desmond-jones-1000.jpg");
@@ -59,7 +59,7 @@
     }
 
     @include desktop {
-      background-image: url("./images/desmond-jones-profile.jpg");
+      background-image: url("./images/desmond-jones-band.jpg");
     }
   }
 
