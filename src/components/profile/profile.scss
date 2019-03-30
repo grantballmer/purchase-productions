@@ -48,35 +48,35 @@
 
   &__desmondJones {
     background-position: bottom;
-    background-image: url("../images/desmond-jones-mobile.jpg");
+    background-image: url("./images/desmond-jones-small.jpg");
 
-    @include wide-mobile {
-      background-image: url("../images/desmond-jones-1000.jpg");
-    }
+    // @include wide-mobile {
+    //   background-image: url("./images/desmond-jones-1000.jpg");
+    // }
 
     @include tablet {
-      background-image: url("../images/desmond-jones-tablet.jpg");
+      background-image: url("./images/desmond-jones-tablet.jpg");
     }
 
     @include desktop {
-      background-image: url("../images/desmond-jones-profile.jpg");
+      background-image: url("./images/desmond-jones-profile.jpg");
     }
   }
 
   &__jesseRay {
     background-position: center;
-    background-image: url("../images/jesse-ray-mobile.jpg");
+    background-image: url("./images/jesse-ray-mobile.jpg");
 
     @include wide-mobile {
-      background-image: url("../images/jesse-ray-1000.jpg");
+      background-image: url("./images/jesse-ray-1000.jpg");
     }
 
     @include tablet {
-      background-image: url("../images/jesse-ray-tablet.jpg");
+      background-image: url("./images/jesse-ray-tablet.jpg");
     }
 
     @include desktop {
-      background-image: url("../images/jesse-ray-profile.jpg");
+      background-image: url("./images/jesse-ray-profile.jpg");
     }
 
     // h2 {
@@ -92,18 +92,18 @@
 
   &__chirp {
     background-position: top;
-    background-image: url("../images/chirp-mobile.jpg");
+    background-image: url("./images/chirp-mobile.jpg");
 
     @include wide-mobile {
-      background-image: url("../images/chirp-1000.jpg");
+      background-image: url("./images/chirp-1000.jpg");
     }
 
     @include tablet {
-      background-image: url("../images/chirp-tablet.jpg");
+      background-image: url("./images/chirp-tablet.jpg");
     }
 
     @include desktop {
-      background-image: url("../images/chirp-profile.jpg");
+      background-image: url("./images/chirp-profile.jpg");
     }
   }
 
