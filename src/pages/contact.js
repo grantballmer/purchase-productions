@@ -99,8 +99,10 @@ class Contact extends React.Component {
                   <form action="https://formspree.io/grant.a.ballmer@gmail.com" method="POST"> 
                   <input type="hidden" name="_to" value="grant.a.ballmer@gmail.com" />
                   <input type="hidden" name="_redirect" value="https://test-grant8.c9users.io/contact?success=true" /> */}
+                {/* QcMnzdPbCpCO81edAo82vuLWMleknLnm */}
+                {/* 9bhYIEEPdath8h1i4ULPVqDYo7A7UynT */}
                 <form
-                  action="https://send.pageclip.co/9bhYIEEPdatb8h1i4ULPVqDYo7A7UynT"
+                  action="https://send.pageclip.co/QcMnzdPbCpCO81edAo82vuLWMleknLnm"
                   className="pageclip-form"
                   method="post"
                 >
