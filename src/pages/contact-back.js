@@ -102,7 +102,7 @@ class Contact extends React.Component {
                 {/* QcMnzdPbCpCO81edAo82vuLWMleknLnm */}
                 {/* 9bhYIEEPdath8h1i4ULPVqDYo7A7UynT */}
                 <form
-                  action="https://send.pageclip.co/QcMnzdPbCpCO81edAo82vuLWMleknLnm"
+                  action="https://send.pageclip.co/QcMnzdPbCpCO81edAo82vuLWMleknLnm/default"
                   className="pageclip-form"
                   method="post"
                 >
