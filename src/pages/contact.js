@@ -48,7 +48,7 @@ class Contact extends React.Component {
     };
 
     Pageclip.send(
-      "QcMnzdPbCpCO81edAo82vuLWMleknLnm",
+      "9bhYIEEPdath8h1i4ULPVqDYo7A7UynT",
       "default",
       data,
       (error, response) => {
