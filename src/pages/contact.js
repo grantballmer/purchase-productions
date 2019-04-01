@@ -14,7 +14,7 @@ class Contact extends React.Component {
     this.state = {
       name: "",
       email: "",
-      number: "",
+      phone: "",
       message: "",
       honeypot: "",
       formWaiting: false,
@@ -36,14 +36,14 @@ class Contact extends React.Component {
     this.setState({ formWaiting: true }); //add loader while waiting for submission response
 
     const { Pageclip } = window;
-    const { name, email, number, message, honeypot } = this.state;
+    const { name, email, phone, message, honeypot } = this.state;
 
     if (honeypot.value) return; // return if bot adds data to honeypot field
 
     const data = {
       name,
       email,
-      number,
+      phone,
       message
     };
 
