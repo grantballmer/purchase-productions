@@ -3,7 +3,7 @@ import "./scss/contact.scss";
 import Layout from "../components/Layout";
 // import Loader from "./icons/loader.svg";
 // import Success from "../components/contact/Success";
-import Info from "../components/contact/Info";
+// import Info from "../components/contact/Info";
 
 class Contact extends React.Component {
   constructor(props) {
@@ -19,18 +19,35 @@ class Contact extends React.Component {
     };
   }
 
-  render() {
-    // const { name, success, messageSent } = this.state;
+  handleChange = e => {
+    const property = e.target.name;
+    this.setState({
+      [property]: e.target.value
+    });
+  };
 
+  render() {
     return (
       <Layout>
-        <div className="contact-main">
+        <form
+          action="https://send.pageclip.co/QcMnzdPbCpCO81edAo82vuLWMleknLnm"
+          class="pageclip-form contact-form-pageclip"
+          method="post"
+        >
+          <input type="text" name="name" onChange={this.handleChange} />
+          <input type="email" name="email" onChange={this.handleChange} />
+
+          <button type="submit" class="pageclip-form__submit">
+            <span>Send</span>
+          </button>
+        </form>
+        {/* <div className="contact-main">
           <div className="contact-container">
             <Info />
 
             <div className="contact-form">
-              {/* QcMnzdPbCpCO81edAo82vuLWMleknLnm */}
-              {/* 9bhYIEEPdath8h1i4ULPVqDYo7A7UynT */}
+               QcMnzdPbCpCO81edAo82vuLWMleknLnm 
+               9bhYIEEPdath8h1i4ULPVqDYo7A7UynT 
               <form
                 action="https://send.pageclip.co/QcMnzdPbCpCO81edAo82vuLWMleknLnm"
                 className="pageclip-form"
@@ -76,7 +93,7 @@ class Contact extends React.Component {
               </form>
             </div>
           </div>
-        </div>
+        </div> */}
       </Layout>
     );
   }

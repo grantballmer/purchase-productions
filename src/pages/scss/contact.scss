@@ -82,7 +82,6 @@
       // width: 50%;
     }
 
-
     &--details {
       width: 100%;
       @include flex(flex-start, flex-start);
@@ -102,8 +101,12 @@
       }
     }
   }
+}
 
-
+.contact-form-pageclip {
+  height: 100vh;
+  width: 100%;
+  @include flex(center, center);
 }
 
 .contact-form {
@@ -143,12 +146,12 @@
     color: white;
   }
 
-  input[type=text] {
+  input[type="text"] {
     width: 100%;
   }
 
-  input[type=email],
-  input[type=tel] {
+  input[type="email"],
+  input[type="tel"] {
     width: 48%;
   }
 
@@ -159,13 +162,13 @@
     overflow: auto;
   }
 
-  input[type=submit] {
+  input[type="submit"] {
     height: 50px;
     margin: 0 auto;
-    transition: all .1s linear;
+    transition: all 0.1s linear;
 
     &:hover {
-      color: rgba(0, 0, 0, .75);
+      color: rgba(0, 0, 0, 0.75);
       background-color: white;
     }
   }
