@@ -27,10 +27,21 @@ class Contact extends React.Component {
   };
 
   handleSubmit = e => {
+    e.preventDefault();
+    const { Pageclip } = window;
     const { honeypot } = this.state;
-    console.log(e);
 
     if (honeypot.value) return;
+
+    Pageclip.send(
+      "QcMnzdPbCpCO81edAo82vuLWMleknLnm",
+      "default",
+      this.state,
+      function(error, response) {
+        console.log(error);
+        console.log(response);
+      }
+    );
   };
 
   render() {
