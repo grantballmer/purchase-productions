@@ -29,25 +29,13 @@ class Contact extends React.Component {
   render() {
     return (
       <Layout>
-        <form
-          action="https://send.pageclip.co/QcMnzdPbCpCO81edAo82vuLWMleknLnm"
-          class="pageclip-form contact-form-pageclip"
-          method="post"
-        >
-          <input type="text" name="name" onChange={this.handleChange} />
-          <input type="email" name="email" onChange={this.handleChange} />
-
-          <button type="submit" class="pageclip-form__submit">
-            <span>Send</span>
-          </button>
-        </form>
-        {/* <div className="contact-main">
+        <div className="contact-main">
           <div className="contact-container">
             <Info />
 
             <div className="contact-form">
-               QcMnzdPbCpCO81edAo82vuLWMleknLnm 
-               9bhYIEEPdath8h1i4ULPVqDYo7A7UynT 
+              {/* QcMnzdPbCpCO81edAo82vuLWMleknLnm 
+               9bhYIEEPdath8h1i4ULPVqDYo7A7UynT  */}
               <form
                 action="https://send.pageclip.co/QcMnzdPbCpCO81edAo82vuLWMleknLnm"
                 className="pageclip-form"
@@ -93,7 +81,7 @@ class Contact extends React.Component {
               </form>
             </div>
           </div>
-        </div> */}
+        </div>
       </Layout>
     );
   }
