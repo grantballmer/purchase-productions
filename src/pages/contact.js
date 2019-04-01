@@ -3,7 +3,7 @@ import "./scss/contact.scss";
 import Layout from "../components/Layout";
 // import Loader from "./icons/loader.svg";
 // import Success from "../components/contact/Success";
-// import Info from "../components/contact/Info";
+import Info from "../components/contact/Info";
 
 class Contact extends React.Component {
   constructor(props) {
