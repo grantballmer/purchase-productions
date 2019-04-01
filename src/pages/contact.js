@@ -57,6 +57,7 @@ class Contact extends React.Component {
           this.setState({ success: true, formWaiting: false });
         } else {
           //handle error
+          console.log(error);
           this.setState({ error: true, formWaiting: false });
         }
       }
