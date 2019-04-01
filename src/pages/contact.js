@@ -26,6 +26,13 @@ class Contact extends React.Component {
     });
   };
 
+  handleSubmit = e => {
+    const { honeypot } = this.state;
+    console.log(e);
+
+    if (honeypot.value) return;
+  };
+
   render() {
     return (
       <Layout>
@@ -40,6 +47,7 @@ class Contact extends React.Component {
                 action="https://send.pageclip.co/QcMnzdPbCpCO81edAo82vuLWMleknLnm"
                 className="pageclip-form"
                 method="post"
+                onSubmit={this.handleSubmit}
               >
                 <input
                   type="hidden"
