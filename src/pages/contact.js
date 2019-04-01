@@ -1,8 +1,10 @@
 import React from "react";
 import "./scss/contact.scss";
+
 import Layout from "../components/Layout";
-// import Loader from "./icons/loader.svg";
-// import Success from "../components/contact/Success";
+import Loading from "../components/contact/Loading";
+import Success from "../components/contact/Success";
+import Error from "../components/contact/Error";
 import Info from "../components/contact/Info";
 
 class Contact extends React.Component {
@@ -15,7 +17,9 @@ class Contact extends React.Component {
       number: "",
       message: "",
       honeypot: "",
-      success: false
+      formWaiting: false,
+      success: false,
+      error: false
     };
   }
 
@@ -28,79 +32,105 @@ class Contact extends React.Component {
 
   handleSubmit = e => {
     e.preventDefault();
-    const { Pageclip } = window;
-    const { honeypot } = this.state;
 
-    if (honeypot.value) return;
+    this.setState({ formWaiting: true }); //add loader while waiting for submission response
+
+    const { Pageclip } = window;
+    const { name, email, number, message, honeypot } = this.state;
+
+    if (honeypot.value) return; // return if bot adds data to honeypot field
+
+    const data = {
+      name,
+      email,
+      number,
+      message
+    };
 
     Pageclip.send(
       "QcMnzdPbCpCO81edAo82vuLWMleknLnm",
       "default",
-      this.state,
-      function(error, response) {
-        console.log(error);
-        console.log(response);
+      data,
+      (error, response) => {
+        if (response) {
+          //handle success
+          this.setState({ success: true, formWaiting: false });
+        } else {
+          //handle error
+          this.setState({ error: true, formWaiting: false });
+        }
       }
     );
   };
 
   render() {
+    const { formWaiting, success, error } = this.state;
     return (
       <Layout>
-        <div className="contact-main">
-          <div className="contact-container">
-            <Info />
+        {formWaiting && <Loading />} {/* render Loading component */}
+        {/* Check if form has been submitted, if it has, render success or error component; if not, render form component */}
+        {success || error ? (
+          success ? (
+            <Success />
+          ) : (
+            <Error />
+          )
+        ) : (
+          <div className="contact-main">
+            <div className="contact-container">
+              <Info />
 
-            <div className="contact-form">
-              {/* QcMnzdPbCpCO81edAo82vuLWMleknLnm 
+              <div className="contact-form">
+                {/* QcMnzdPbCpCO81edAo82vuLWMleknLnm 
                9bhYIEEPdath8h1i4ULPVqDYo7A7UynT  */}
-              <form
-                action="https://send.pageclip.co/QcMnzdPbCpCO81edAo82vuLWMleknLnm"
-                className="pageclip-form"
-                method="post"
-                onSubmit={this.handleSubmit}
-              >
-                <input
-                  type="hidden"
-                  name="honeypot"
-                  value=""
-                  style={{ display: "none" }}
-                  onChange={this.handleChange}
-                />
-                <input
-                  type="text"
-                  name="name"
-                  required
-                  placeholder="Name"
-                  onChange={this.handleChange}
-                />
-                <input
-                  type="email"
-                  name="email"
-                  required
-                  placeholder="Email"
-                  onChange={this.handleChange}
-                />
-                <input
-                  type="tel"
-                  name="phone"
-                  placeholder="Phone Number"
-                  onChange={this.handleChange}
-                />
-                <textarea
-                  name="message"
-                  placeholder="Enter Message Here"
-                  onChange={this.handleChange}
-                />
-                <input
-                  type="submit"
-                  className="btn btn-link"
-                  value="Submit Message"
-                />
-              </form>
+                <form
+                  // action="https://send.pageclip.co/QcMnzdPbCpCO81edAo82vuLWMleknLnm"
+                  className="pageclip-form"
+                  method="post"
+                  onSubmit={this.handleSubmit}
+                >
+                  <input
+                    type="hidden"
+                    name="honeypot"
+                    value=""
+                    style={{ display: "none" }}
+                    onChange={this.handleChange}
+                  />
+                  <input
+                    type="text"
+                    name="name"
+                    required
+                    placeholder="Name"
+                    onChange={this.handleChange}
+                  />
+                  <input
+                    type="email"
+                    name="email"
+                    required
+                    placeholder="Email"
+                    onChange={this.handleChange}
+                  />
+                  <input
+                    type="tel"
+                    name="phone"
+                    placeholder="Phone Number"
+                    onChange={this.handleChange}
+                  />
+                  <textarea
+                    name="message"
+                    placeholder="Enter Message Here"
+                    onChange={this.handleChange}
+                  />
+                  <input
+                    type="submit"
+                    className="btn btn-link"
+                    value="Submit Message"
+                  />
+                </form>
+              </div>
             </div>
           </div>
-        </div>
+        )}
       </Layout>
     );
   }

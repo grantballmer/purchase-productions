@@ -1,7 +1,7 @@
 import React from "react";
 import "./scss/contact.scss";
 import Layout from "../components/Layout";
-import Loader from "./icons/loader.svg";
+// import Loader from "./icons/loader.svg";
 import Success from "../components/contact/Success";
 import Info from "../components/contact/Info";
 
@@ -82,7 +82,7 @@ class Contact extends React.Component {
         <div className="contact-main">
           {messageSent && (
             <div className="overlay overlay-contact">
-              <img src={Loader} alt="loading..." />
+              {/* <img src={Loader} alt="loading..." /> */}
             </div>
           )}
 
