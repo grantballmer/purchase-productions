@@ -50,7 +50,7 @@ class Contact extends React.Component {
     console.log(Pageclip, data);
 
     Pageclip.send(
-      "QcMnzdPbCpCO81edAo82vuLWMleknLnm",
+      "9bhYIEEPdatb8h1i4ULPVqDYo7A7UynT",
       "default",
       data,
       (error, response) => {
