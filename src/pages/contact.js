@@ -47,8 +47,6 @@ class Contact extends React.Component {
       message
     };
 
-    console.log(Pageclip, data);
-
     Pageclip.send(
       "9bhYIEEPdatb8h1i4ULPVqDYo7A7UynT",
       "default",
@@ -59,7 +57,6 @@ class Contact extends React.Component {
           this.setState({ success: true, formWaiting: false });
         } else {
           //handle error
-          console.log(error);
           this.setState({ error: true, formWaiting: false });
         }
       }
@@ -84,10 +81,7 @@ class Contact extends React.Component {
               <Info />
 
               <div className="contact-form">
-                {/* QcMnzdPbCpCO81edAo82vuLWMleknLnm 
-               9bhYIEEPdath8h1i4ULPVqDYo7A7UynT  */}
                 <form
-                  // action="https://send.pageclip.co/QcMnzdPbCpCO81edAo82vuLWMleknLnm"
                   className="pageclip-form"
                   method="post"
                   onSubmit={this.handleSubmit}

@@ -2,7 +2,8 @@
 @import "../../scss/variables.scss";
 
 .form-message {
-  padding: 2% 4%;
+  width: 100%;
+  padding: 2% 8%;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -10,8 +11,18 @@
   @include flex(space-evenly, center);
   flex-direction: column;
   z-index: 1;
-  font-size: 2.2rem;
+  font-size: 1.6rem;
   text-align: center;
+
+  @include wide-mobile {
+    font-size: 1.8rem;
+  }
+
+  @include tablet {
+    width: auto;
+    font-size: 2.2rem;
+    padding: 2% 4%;
+  }
 
   img {
     height: 150px;
@@ -20,6 +31,16 @@
     @include tablet {
       height: 200px;
     }
+  }
+
+  h2 {
+    @include wide-mobile {
+      white-space: nowrap;
+    }
+  }
+
+  .btn {
+    -webkit-appearance: none;
   }
 }
 
