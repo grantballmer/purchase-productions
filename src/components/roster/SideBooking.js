@@ -21,6 +21,8 @@ class SideBooking extends React.Component {
   }
 
   handleChange = e => {
+    const { date } = this.state;
+    console.log(date);
     const property = e.target.name;
     this.setState({
       [property]: e.target.value
