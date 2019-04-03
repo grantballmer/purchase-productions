@@ -120,11 +120,6 @@ export const details = {
         email: "eric.purchaseproductionsllc@gmail.com"
       },
       {
-        title: "Tour Manager",
-        name: "Scotty Oatley",
-        email: "chirplive@gmail.com"
-      },
-      {
         title: "Manager",
         name: "Nathan Purchase",
         email: "purchaseproductionsllc@gmail.com"
