@@ -92,7 +92,7 @@ export const details = {
     musicType: "Funk/Jazz/Fusion",
     heroClass: "profile-hero__chirp",
     info: [
-      `Based in Ann Arbor, MI, Cirp is a four-piece band that does their fair share of genre-hopping. 
+      `Based in Ann Arbor, MI, Chirp is a four-piece band that does their fair share of genre-hopping. 
       Often playing in the styles of progressive rock/funk and jazz-fusion, their sound maintains a melodic center.
       The group features a wide array of originals and covers in their live sets and puts together dynamic, 
       high-energy shows. Though their music ties in many technical elements, an equal emphasis is put on 
