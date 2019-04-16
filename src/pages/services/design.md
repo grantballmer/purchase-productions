@@ -54,7 +54,7 @@ grid:
     image: /img/thisisagoodtourposter.jpg
   - band: vision explored
     image: /img/visionexploredalbumcover.jpg
-  - band: ' '
+  - band: ' Chirp Spring Tour'
     image: /img/chirpspringtourposter.jpg
 ---
 
