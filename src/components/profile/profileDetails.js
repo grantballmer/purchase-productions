@@ -31,7 +31,7 @@ export const details = {
       {
         title: "Tour Manager",
         name: "Nathan Purchase",
-        email: "purchaseproductionsllc@gmail.com"
+        email: "Nathan@purchaseproductions.com"
       },
       {
         title: "Manager",
@@ -77,12 +77,12 @@ export const details = {
       {
         title: "Booking",
         name: "Nathan Purchase",
-        email: "purchaseproductionsllc@gmail.com"
+        email: "Nathan@purchaseproductions.com"
       },
       {
         title: "Manager",
         name: "Nathan Purchase",
-        email: "purchaseproductionsllc@gmail.com"
+        email: "Nathan@purchaseproductions.com"
       }
     ]
   },
@@ -117,12 +117,12 @@ export const details = {
       {
         title: "Booking",
         name: "Eric Frutchey",
-        email: "eric.purchaseproductionsllc@gmail.com"
+        email: "Eric@purchaseproductions.com"
       },
       {
         title: "Manager",
         name: "Nathan Purchase",
-        email: "purchaseproductionsllc@gmail.com"
+        email: "Nathan@purchaseproductions.com"
       }
     ]
   }
