@@ -115,7 +115,7 @@
       width: 200px;
       height: 4px;
       background-color: $charcoal;
-      content: '';
+      content: "";
       position: absolute;
       bottom: 0;
       left: 0;
@@ -128,7 +128,7 @@
 
 .details {
   margin: 64px 0;
-  @include flex(flex-start, center);
+  @include flex(space-between, center);
   flex-direction: column;
   @include tablet {
     flex-direction: row;
@@ -137,15 +137,19 @@
   &__image {
     width: 75%;
     margin-bottom: 12px;
+    @include flex(center, center);
     @include tablet {
       width: 35%;
       margin-bottom: 12px;
+      justify-content: flex-start;
     }
 
     &--reverse {
       order: 1;
+
       @include tablet {
         order: 2;
+        justify-content: flex-end;
       }
     }
 
@@ -160,7 +164,7 @@
     width: 100%;
     @include tablet {
       width: 55%;
-      margin-left: 32px;
+      padding: 0 4%;
     }
 
     &--reverse {
@@ -168,7 +172,6 @@
       @include tablet {
         order: 1;
         margin-left: 0;
-        margin-right: 32px;
       }
     }
 
@@ -183,5 +186,4 @@
       font-size: 1.6rem;
     }
   }
-
 }
