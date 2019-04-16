@@ -98,8 +98,10 @@
       font-size: 1.1rem;
     }
     @include desktop {
-      // font-size: 1.3rem;
       font-size: 1.7vh;
+    }
+    @include ultra-wide {
+      font-size: 1.5vh;
     }
   }
 }

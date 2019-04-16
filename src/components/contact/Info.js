@@ -1,4 +1,5 @@
 import React from "react";
+import "./info.scss";
 import { FaEnvelope, FaPhone, FaFacebookF } from "react-icons/fa";
 
 const Info = () => {
