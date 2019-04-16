@@ -78,16 +78,6 @@
     @include desktop {
       background-image: url("./images/jesse-ray-profile.jpg");
     }
-
-    // h2 {
-    //   font-size: 3rem;
-    //   color: white;
-    //   z-index: 3;
-
-    //   @include tablet {
-    //     font-size: 7rem;
-    //   }
-    // }
   }
 
   &__chirp {
@@ -188,8 +178,7 @@
     @include flex(center, center);
     font-size: 3rem;
     background-color: $charcoal;
-    color: white; // border: 1px solid $charcoal;
-    // color: $charcoal;
+    color: white;
     transition: all 0.2s;
     margin-bottom: 4%;
 
@@ -268,6 +257,7 @@
   width: 100%;
   @include flex(space-between, center);
   flex-direction: column;
+  z-index: 5;
   @include tablet {
     flex-direction: row;
   }
