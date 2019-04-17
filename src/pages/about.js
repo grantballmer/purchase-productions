@@ -120,7 +120,7 @@ class About extends React.Component {
                 <p>
                   Guitarist and co-founder of the band Desmond Jones, Berkowitz
                   has brought his knowledge and skills of booking and touring to
-                  Purchase Productions. booking hundreds of shows for his own
+                  Purchase Productions. Booking hundreds of shows for his own
                   band, he is now ready to help upcoming local bands book their
                   own tours on a tour by tour basis. He learned by doing and now
                   he’s ready to help. Want to get out of your hometown and get
