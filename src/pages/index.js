@@ -26,10 +26,10 @@ const IndexPage = ({ data }) => {
         </section>
 
         <div className="home-about">
-          <p>
+          <h1>
             Purchase Productions is a one stop shop for your band management,
             booking, design, and photography needs based out of Muskegon, MI.
-          </p>
+          </h1>
           <Link to="/about" className="btn btn-link">
             ABOUT US
           </Link>
