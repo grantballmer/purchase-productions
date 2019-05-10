@@ -121,7 +121,7 @@ class Contact extends React.Component {
                   <input
                     type="submit"
                     className="btn btn-link"
-                    value="Submit Message"
+                    value="Send Message"
                   />
                 </form>
               </div>
