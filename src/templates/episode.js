@@ -1,7 +1,7 @@
 import React from "react";
 import { graphql } from "gatsby";
 import Layout from "../components/Layout";
-import EpisodePage from "../components/podcast/EpisodePage";
+// import EpisodePage from "../components/podcast/EpisodePage";
 
 export const PodcastPageTemplate = ({ info }) => {
   const { title, date, description, episode } = info;
@@ -21,7 +21,7 @@ const PodcastPage = ({ data }) => {
 
   return (
     <Layout>
-      <EpisodePage info={podcast.frontmatter} />
+      <div>Sample</div>
     </Layout>
   );
 };
