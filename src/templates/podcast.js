@@ -18,12 +18,12 @@ export const PodcastPageTemplate = ({ info }) => {
 
 const PodcastPage = ({ data }) => {
   const { markdownRemark: podcast } = data;
-  const images = gallery.frontmatter.grid;
+  // const images = podcast.frontmatter.grid;
   const { title } = gallery.frontmatter;
 
   return (
     <Layout>
-      <PhotoGrid images={images} title={title} />
+      <div>{title}</div>
     </Layout>
   );
 };
