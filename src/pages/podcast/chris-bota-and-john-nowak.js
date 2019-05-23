@@ -11,4 +11,3 @@ const chrisBota = () => {
 };
 
 export default chrisBota;
-s;

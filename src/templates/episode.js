@@ -35,10 +35,6 @@ export const podcastQuery = graphql`
       html
       frontmatter {
         title
-        date
-        description
-        episode
-        src
       }
     }
   }
