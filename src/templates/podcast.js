@@ -1,7 +1,6 @@
 import React from "react";
 import { graphql } from "gatsby";
 import Layout from "../components/Layout";
-import PhotoGrid from "../components/services/PhotoGrid";
 
 export const PodcastPageTemplate = ({ info }) => {
   const { title, date, description, episode } = info;
@@ -19,7 +18,7 @@ export const PodcastPageTemplate = ({ info }) => {
 const PodcastPage = ({ data }) => {
   const { markdownRemark: podcast } = data;
   // const images = podcast.frontmatter.grid;
-  const { title } = gallery.frontmatter;
+  const { title } = podcast.frontmatter;
 
   return (
     <Layout>
