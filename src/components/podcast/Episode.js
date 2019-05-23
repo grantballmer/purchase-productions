@@ -2,7 +2,7 @@ import React from "react";
 // import "../../pages/scss/podcast.scss";
 import "./episode.scss";
 
-const Episode = ({ info }) => {
+const Episode = () => {
   return (
     <div className="episodePage">
       <div className="podcast__hero" />
