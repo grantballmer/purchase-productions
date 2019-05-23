@@ -8,7 +8,7 @@ const Episode = props => {
     <div className="episodePage">
       <div className="podcast__hero" />
       <div className="episodePage__group">
-        <h1>title</h1>
+        <h1>Chris Bota and John Nowak of Desmond Jones</h1>
         <p className="episodePage__date">Published May 20th, 2019</p>
       </div>
 
