@@ -1,11 +1,13 @@
 import React from "react";
+// import { graphql } from "gatsby";
 import "./scss/podcast.scss";
 import Layout from "../components/Layout";
 import { Link } from "gatsby";
 
 // import PodcastLogo from "./images/podcast-logo.jpg";
 
-const Podcast = () => {
+const Podcast = props => {
+  console.log(props);
   return (
     <Layout>
       <section className="podcast">
@@ -15,7 +17,7 @@ const Podcast = () => {
 
         <div className="episodes">
           <Link
-            to="/podcast/chris-bota-and-john-nowak"
+            to="/podcast/special-music-episode"
             className="episode-container"
           >
             <div className="episode-counter">02</div>
@@ -47,5 +49,13 @@ const Podcast = () => {
 };
 
 export default Podcast;
+
+// export const episodeQuery = graphql`
+//   query Episode($id: String!) {
+//     allMarkdownRemark {
+
+//     }
+//   }
+// `;
 
 // https://frontendhappyhour.com/

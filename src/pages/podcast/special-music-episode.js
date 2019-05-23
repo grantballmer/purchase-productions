@@ -1,8 +1,8 @@
 import React from "react";
 import Layout from "../../components/Layout";
-import Episode from "../../components/podcast/EpisodeDes";
+import Episode from "../../components/podcast/EpisodeMusic";
 
-const chrisBota = () => {
+const specialMusic = () => {
   return (
     <Layout>
       <Episode />
@@ -10,4 +10,4 @@ const chrisBota = () => {
   );
 };
 
-export default chrisBota;
+export default specialMusic;
