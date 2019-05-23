@@ -14,7 +14,7 @@ const Podcast = () => {
         <h1>Episodes</h1>
 
         <div className="episodes">
-          <Link to="/podcast" className="episode-container">
+          <Link to="/podcast/chris-bota" className="episode-container">
             <div className="episode-counter">02</div>
             <h2>Special Music Episode</h2>
             <p>May 22nd, 2019</p>
@@ -24,7 +24,7 @@ const Podcast = () => {
             </p>
           </Link>
 
-          <Link to="/podcast" className="episode-container">
+          <Link to="/podcast/chris-bota" className="episode-container">
             <div className="episode-counter">01</div>
             <h2>Chris Bota & John Nowak of Desmond Jones</h2>
             <p>May 20th, 2019</p>
