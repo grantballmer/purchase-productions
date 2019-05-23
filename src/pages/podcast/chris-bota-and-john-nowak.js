@@ -1,6 +1,6 @@
 import React from "react";
 import Layout from "../../components/Layout";
-import Episode from "../../components/podcast/Episode";
+import Episode from "../../components/podcast/EpisodePage";
 
 const chrisBota = () => {
   return (
@@ -11,3 +11,4 @@ const chrisBota = () => {
 };
 
 export default chrisBota;
+s;

@@ -1,6 +1,7 @@
 import React from "react";
 import { graphql } from "gatsby";
 import Layout from "../components/Layout";
+import EpisodePage from "../components/podcast/EpisodePage";
 
 export const PodcastPageTemplate = ({ info }) => {
   const { title, date, description, episode } = info;
@@ -17,12 +18,10 @@ export const PodcastPageTemplate = ({ info }) => {
 
 const PodcastPage = ({ data }) => {
   const { markdownRemark: podcast } = data;
-  // const images = podcast.frontmatter.grid;
-  const { title } = podcast.frontmatter;
 
   return (
     <Layout>
-      <div>{title}</div>
+      <EpisodePage info={podcast.frontmatter} />
     </Layout>
   );
 };
@@ -36,16 +35,10 @@ export const podcastQuery = graphql`
       html
       frontmatter {
         title
-        grid {
-          image {
-            childImageSharp {
-              fluid(maxWidth: 1400) {
-                ...GatsbyImageSharpFluid
-              }
-            }
-          }
-          band
-        }
+        date
+        description
+        episode
+        src
       }
     }
   }

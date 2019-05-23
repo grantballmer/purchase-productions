@@ -34,12 +34,13 @@ collections:
           label: "Template Key",
           name: "templateKey",
           widget: "hidden",
-          default: "podcast",
+          default: "episode",
         }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Description", name: "description", widget: "text" }
       - { label: "Episode Number", name: "episode", widget: "string" }
+      - { label: "Soundcloud URL", name: "src", widget: "string" }
 #   - name: "blog"
 #     label: "Blog"
 #     folder: "src/pages/blog"
