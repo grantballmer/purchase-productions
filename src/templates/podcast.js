@@ -1,46 +1,53 @@
-// import React from "react";
-// // import Helmet from 'react-helmet';
-// import { graphql } from "gatsby";
-// import Layout from "../components/Layout";
-// // import Content from '../components/Content';
-// import PhotoGrid from "../components/services/PhotoGrid";
+import React from "react";
+import { graphql } from "gatsby";
+import Layout from "../components/Layout";
+import PhotoGrid from "../components/services/PhotoGrid";
 
-// export const GalleryPageTemplate = ({ info }) => {
-//   const { title } = info;
-// };
+export const PodcastPageTemplate = ({ info }) => {
+  const { title, date, description, episode } = info;
 
-// const PodcastPage = ({ data }) => {
-//   const { markdownRemark: podcast } = data;
-//   const images = gallery.frontmatter.grid;
-//   const { title } = gallery.frontmatter;
+  return (
+    <div>
+      <p>{title}</p>
+      <p>{date}</p>
+      <p>{description}</p>
+      <p>{episode}</p>
+    </div>
+  );
+};
 
-//   return (
-//     <Layout>
-//       <PhotoGrid images={images} title={title} />
-//     </Layout>
-//   );
-// };
+const PodcastPage = ({ data }) => {
+  const { markdownRemark: podcast } = data;
+  const images = gallery.frontmatter.grid;
+  const { title } = gallery.frontmatter;
 
-// export default PodcastPage;
+  return (
+    <Layout>
+      <PhotoGrid images={images} title={title} />
+    </Layout>
+  );
+};
 
-// export const podcastQuery = graphql`
-//   query Podcast($id: String!) {
-//     markdownRemark(id: { eq: $id }) {
-//       id
-//       html
-//       frontmatter {
-//         title
-//         grid {
-//           image {
-//             childImageSharp {
-//               fluid(maxWidth: 1400) {
-//                 ...GatsbyImageSharpFluid
-//               }
-//             }
-//           }
-//           band
-//         }
-//       }
-//     }
-//   }
-// `;
+export default PodcastPage;
+
+export const podcastQuery = graphql`
+  query Podcast($id: String!) {
+    markdownRemark(id: { eq: $id }) {
+      id
+      html
+      frontmatter {
+        title
+        grid {
+          image {
+            childImageSharp {
+              fluid(maxWidth: 1400) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+          band
+        }
+      }
+    }
+  }
+`;
