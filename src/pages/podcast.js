@@ -24,7 +24,11 @@ const Podcast = ({ data }) => {
     "December"
   ];
 
-  const episodes = edges.map(episode => {
+  const sortedEpisodes = edges.sort((a, b) => {
+    return b.node.frontmatter.episode - a.node.frontmatter.episode;
+  });
+
+  const episodes = sortedEpisodes.map((episode, index) => {
     const { frontmatter } = episode.node;
 
     const publishDate = new Date(frontmatter.date);
@@ -36,7 +40,11 @@ const Podcast = ({ data }) => {
     const slug = frontmatter.title.toLowerCase().replace(/\s/g, "-");
 
     return (
-      <Link to={`/podcast/${slug}`} className="episode-container" key={episode}>
+      <Link
+        to={`/podcast/${slug}`}
+        className="episode-container"
+        key={episode + index}
+      >
         <div className="episode-counter">{frontmatter.episode}</div>
         <h2>{frontmatter.title}</h2>
         <p>{`${month} ${day}, ${year}`}</p>
