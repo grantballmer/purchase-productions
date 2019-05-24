@@ -7,7 +7,50 @@ import { Link } from "gatsby";
 // import PodcastLogo from "./images/podcast-logo.jpg";
 
 const Podcast = props => {
-  console.log(props);
+  // const { edges } = data.allMarkdownRemark;
+
+  // const months = [
+  //   "January",
+  //   "February",
+  //   "March",
+  //   "April",
+  //   "May",
+  //   "June",
+  //   "July",
+  //   "August",
+  //   "September",
+  //   "October",
+  //   "November",
+  //   "December"
+  // ];
+
+  // const episodes = edges.map(episode => {
+  //   const { frontmatter } = episode.node;
+
+  //   const publishDate = new Date(frontmatter.date);
+
+  //   const month = months[publishDate.getMonth()];
+  //   const day = publishDate.getDate();
+  //   const year = publishDate.getFullYear();
+
+  //   const slug = frontmatter.title.toLowerCase().replace(/\s/g, "-");
+
+  //   console.log(slug);
+
+  //   return (
+  //     <Link
+  //       to={`/podcast/special-music-episode`}
+  //       className="episode-container"
+  //       key={episode}
+  //     >
+  //       <div className="episode-counter">{frontmatter.episode}</div>
+  //       <h2>{frontmatter.title}</h2>
+  //       <p>{`${month} ${day}, ${year}`}</p>
+  //       <p>{frontmatter.description}</p>
+  //     </Link>
+  //   );
+  // });
+
   return (
     <Layout>
       <section className="podcast">
@@ -16,6 +59,7 @@ const Podcast = props => {
         <h1>Episodes</h1>
 
         <div className="episodes">
+          {/* {episodes} */}
           <Link
             to="/podcast/special-music-episode"
             className="episode-container"
@@ -51,9 +95,19 @@ const Podcast = props => {
 export default Podcast;
 
 // export const episodeQuery = graphql`
-//   query Episode($id: String!) {
-//     allMarkdownRemark {
-
+//   query Episode {
+//     allMarkdownRemark(filter: { frontmatter: { episode: { ne: null } } }) {
+//       edges {
+//         node {
+//           frontmatter {
+//             title
+//             date
+//             description
+//             src
+//             episode
+//           }
+//         }
+//       }
 //     }
 //   }
 // `;
