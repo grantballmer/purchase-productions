@@ -14,13 +14,6 @@
   @include tablet {
     flex-direction: row;
   }
-
-  h1 {
-    text-align: left;
-    font-size: 3rem;
-    margin-left: 4%;
-    margin-bottom: 4%;
-  }
 }
 
 .podcast__hero {
@@ -38,6 +31,63 @@
 
   @include tablet {
     background-position: top;
+  }
+}
+
+.podcast-banner {
+  width: 100%;
+  padding: 0 6%;
+  margin-bottom: 4%;
+  @include flex(space-between, center);
+
+  @include wide-mobile {
+    padding: 0 10%;
+  }
+
+  @include tablet {
+    padding: 0 calc(20% - 92px);
+  }
+
+  h1 {
+    font-size: 2rem;
+
+    @include tablet {
+      font-size: 3rem;
+    }
+  }
+}
+
+.podcast__logo {
+  @include flex(center, center);
+  flex-direction: column;
+
+  img {
+    height: 50px;
+
+    @include wide-mobile {
+      height: 80px;
+    }
+
+    @include tablet {
+      height: 120px;
+    }
+  }
+
+  p {
+    color: white;
+    font-size: 1.1rem;
+
+    @include wide-mobile {
+      font-size: 1.4rem;
+    }
+
+    @include tablet {
+      font-size: 2rem;
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }
 

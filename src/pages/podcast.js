@@ -4,7 +4,7 @@ import "./scss/podcast.scss";
 import Layout from "../components/Layout";
 import { Link } from "gatsby";
 
-// import PodcastLogo from "./images/podcast-logo.jpg";
+import PodcastLogo from "./images/podcast-logo.jpg";
 
 const Podcast = ({ data }) => {
   const { edges } = data.allMarkdownRemark;
@@ -58,7 +58,18 @@ const Podcast = ({ data }) => {
       <section className="podcast">
         <div className="podcast__hero" />
 
-        <h1>Episodes</h1>
+        <div className="podcast-banner">
+          <h1>Episodes</h1>
+          <a
+            href="https://www.patreon.com/LifeThroughMusic?fbclid=IwAR1sc0pOHxiVtLdU89uyDb4tKi_wkXIN86vu3faSeFSfN-yPHhTbcDSSyyM"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="podcast__logo"
+          >
+            <img src={PodcastLogo} alt="life through music logo" />
+            <p>Become a patron today</p>
+          </a>
+        </div>
 
         <div className="episodes">{episodes}</div>
       </section>
