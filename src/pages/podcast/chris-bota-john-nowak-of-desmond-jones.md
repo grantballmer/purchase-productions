@@ -1,6 +1,6 @@
 ---
 templateKey: episode
-title: Chris Bota & John Nowak of Desmond Jones
+title: Chris Bota and John Nowak of Desmond Jones
 date: 2019-05-23T15:56:57.032Z
 description: >-
   On episode 001, featuring Chris Bota and John Nowak of Desmond Jones, we chat
