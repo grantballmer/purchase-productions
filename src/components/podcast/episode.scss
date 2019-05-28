@@ -7,7 +7,7 @@
   padding-top: 100px;
   color: black;
   padding: calc(80px + 6%) 15% 8%;
-  @include flex(space-around, flex-start);
+  @include flex(center, flex-start);
   flex-direction: column;
   color: white;
 
@@ -38,6 +38,7 @@
   }
 
   iframe {
+    background-color: white;
     @include wide-mobile {
       margin-top: 0;
     }
@@ -45,6 +46,11 @@
 
   &__date {
     font-size: 1.6rem;
+    margin-bottom: 100px;
+
+    @include wide-mobile {
+      margin-bottom: 0;
+    }
   }
 
   &__desc {
@@ -58,4 +64,9 @@
       font-size: 2.2rem;
     }
   }
+}
+
+audio {
+  width: 100%;
+  border: 1px solid red;
 }

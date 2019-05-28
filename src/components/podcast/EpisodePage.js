@@ -30,6 +30,8 @@ const EpisodePage = ({ info }) => {
   let end = info.src.indexOf('"', start);
   const iframeSrc = info.src.substring(start, end);
 
+  // let iframeHeight = window.innerWidth > 600 ? "166" : "20";
+
   return (
     <div className="episodePage">
       <div className="podcast__hero" />
@@ -50,8 +52,20 @@ const EpisodePage = ({ info }) => {
           title="episode 1"
           src={iframeSrc}
         />
+        {/* <iframe
+          height="200px"
+          width="100%"
+          frameborder="no"
+          scrolling="no"
+          seamless
+          src="https://player.simplecast.com/249e7832-b3d6-42a6-93d0-2efcacd66311?dark=false"
+        /> */}
         <p className="episodePage__desc">{info.description}</p>
       </div>
+
+      {/* <audio controls preload="auto">
+        <source src={AudioFile} type="audio/mp3" />
+      </audio> */}
     </div>
   );
 };
