@@ -7,8 +7,7 @@ description: >-
   Colorado.
 episode: '02'
 src: >-
-  <iframe width="100%" height="166" scrolling="no" frameborder="no"
-  allow="autoplay"
-  src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/624801270&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+  <iframe height="200px" width="100%" frameborder="no" scrolling="no" seamless
+  src="https://player.simplecast.com/249e7832-b3d6-42a6-93d0-2efcacd66311?dark=false"></iframe>
 ---
 
