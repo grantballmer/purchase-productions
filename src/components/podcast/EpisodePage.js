@@ -45,22 +45,13 @@ const EpisodePage = ({ info }) => {
       <div className="episodePage__group">
         <iframe
           width="100%"
-          height="166"
+          height="200px"
           scrolling="no"
           frameBorder="no"
-          allow="autoplay"
           title="episode 1"
           src={iframeSrc}
         />
 
-        {/* <iframe
-          height="200px"
-          width="100%"
-          frameborder="no"
-          scrolling="no"
-          seamless
-          src="https://player.simplecast.com/249e7832-b3d6-42a6-93d0-2efcacd66311?dark=false"
-        /> */}
         <p className="episodePage__desc">{info.description}</p>
       </div>
 
