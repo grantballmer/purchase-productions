@@ -7,8 +7,7 @@ description: >-
   about the early years and members and tour life. Listen now!
 episode: '01'
 src: >-
-  <iframe width="100%" height="166" scrolling="no" frameborder="no"
-  allow="autoplay"
-  src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/621764838&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+  <iframe height="200px" width="100%" frameborder="no" scrolling="no" seamless
+  src="https://player.simplecast.com/e2637ba5-f705-479f-9ffc-297f1ae46050?dark=false"></iframe>
 ---
 
