@@ -2,9 +2,7 @@
 templateKey: episode
 title: Special Music Episode
 date: 2019-05-23T14:37:23.751Z
-description: >-
-  Special music episode featuring the songs of bands from Michigan, Ohio, and
-  Colorado.
+description: Special music episode featuring the songs of bands some very talented artists.
 episode: '002'
 src: >-
   <iframe height="200px" width="100%" frameborder="no" scrolling="no" seamless
