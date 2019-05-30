@@ -1,6 +1,6 @@
 ---
 templateKey: episode
-title: Jay Frydenlund & Brian Long of Chirp
+title: Jay Frydenlund and Brian Long of Chirp
 date: 2019-05-30T18:40:31.371Z
 description: >-
   We sat down for a chat with Jay and Brian to talk about the struggles of a
