@@ -1,6 +1,6 @@
 ---
 templateKey: episode
-title: Music Only
+title: Music Only One
 date: 2019-05-23T14:37:23.751Z
 description: Special music episode featuring the songs of some very talented artists.
 episode: '002'
