@@ -1,6 +1,6 @@
 ---
 templateKey: episode
-title: Music Only
+title: Music Only Two
 date: 2019-06-21T14:19:00.277Z
 description: Enjoy our second music only episode!
 episode: '006'
