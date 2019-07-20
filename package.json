@@ -5,6 +5,8 @@
   "author": "Austin Green",
   "dependencies": {
     "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "babel-loader": "^8.0.6",
     "bulma": "^0.7.0",
     "gatsby": "^2.7.0",
     "gatsby-background-image": "^0.2.8-alpha3",
