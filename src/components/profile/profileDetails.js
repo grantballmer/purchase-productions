@@ -25,8 +25,8 @@ export const details = {
     management: [
       {
         title: "Booking",
-        name: "Carly Shields",
-        email: "carly@everupwardent.com"
+        name: "Erwin Schemankewitz",
+        email: "erwin@everupwardent.com"
       },
       {
         title: "Tour Manager",
@@ -117,6 +117,11 @@ export const details = {
         title: "Booking",
         name: "Eric Frutchey",
         email: "Eric@purchaseproductions.com"
+      },
+      {
+        title: "Tour Manager",
+        name: "Brian Long",
+        email: "chirplive@gmail.com"
       },
       {
         title: "Manager",
