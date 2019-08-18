@@ -17,6 +17,7 @@ export default function HTML(props) {
           media="screen"
         />
         {props.headComponents}
+        <meta name="title" content="Purchase Productions LLC." />
       </head>
       <body {...props.bodyAttributes}>
         {props.preBodyComponents}
