@@ -1,5 +1,5 @@
-import React from "react"
-import PropTypes from "prop-types"
+import React from "react";
+import PropTypes from "prop-types";
 
 export default function HTML(props) {
   return (
@@ -11,7 +11,11 @@ export default function HTML(props) {
           name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
-        <link rel="stylesheet" href="https://s.pageclip.co/v1/pageclip.css" media="screen" />
+        <link
+          rel="stylesheet"
+          href="https://s.pageclip.co/v1/pageclip.css"
+          media="screen"
+        />
         {props.headComponents}
       </head>
       <body {...props.bodyAttributes}>
@@ -25,10 +29,13 @@ export default function HTML(props) {
           dangerouslySetInnerHTML={{ __html: props.body }}
         />
         {props.postBodyComponents}
-        <script src="https://s.pageclip.co/v1/pageclip.js" charSet="utf-8"></script>
+        <script
+          src="https://s.pageclip.co/v1/pageclip.js"
+          charSet="utf-8"
+        ></script>
       </body>
     </html>
-  )
+  );
 }
 
 HTML.propTypes = {
@@ -37,5 +44,5 @@ HTML.propTypes = {
   bodyAttributes: PropTypes.object,
   preBodyComponents: PropTypes.array,
   body: PropTypes.string,
-  postBodyComponents: PropTypes.array,
-}
+  postBodyComponents: PropTypes.array
+};
