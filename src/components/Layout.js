@@ -24,7 +24,7 @@ const TemplateWrapper = ({ children }) => (
           <title>Purchase Productions</title>
           <meta
             name="description"
-            content="Purchase Productions LLC. Michigan based agency for band management, tour management, design, and music/band/concert photography"
+            content="Purchase Productions LLC. is a Michigan based agency for band management, tour management, design, and music/band/concert photography"
           />
           <link
             href="https://fonts.googleapis.com/css?family=Open+Sans:300,700"
@@ -57,7 +57,8 @@ const TemplateWrapper = ({ children }) => (
           <meta name="theme-color" content="#fff" />
 
           <meta property="og:type" content="business.business" />
-          <meta property="og:title" content={data.site.siteMetadata.title} />
+          {/* <meta property="og:title" content={data.site.siteMetadata.title} /> */}
+          <meta property="og:title" content="Purchase Productions LLC" />
           <meta property="og:url" content="/" />
           <meta property="og:image" content="/img/og-image.jpg" />
         </Helmet>

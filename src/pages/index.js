@@ -1,5 +1,6 @@
 import React from "react";
 import { graphql } from "gatsby";
+
 import "./scss/index.scss";
 import concert from "./images/concert-comp.jpg";
 import { Link } from "gatsby";
