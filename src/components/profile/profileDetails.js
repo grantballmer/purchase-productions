@@ -115,8 +115,8 @@ export const details = {
     management: [
       {
         title: "Booking",
-        name: "Eric Frutchey",
-        email: "Eric@purchaseproductions.com"
+        name: "Nathan Purchase",
+        email: "Nathan@purchaseproductions.com"
       },
       {
         title: "Tour Manager",

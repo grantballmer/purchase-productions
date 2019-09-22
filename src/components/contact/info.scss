@@ -12,6 +12,7 @@
   border-top-right-radius: 6px;
   color: white; // padding: 4% calc(8% + 25px);
   padding: 3% 0 3% calc(4% + 25px);
+
   @include tablet {
     width: 40%;
     height: 100%;
@@ -19,58 +20,68 @@
     border-bottom-left-radius: 6px;
     border-top-right-radius: 0;
     flex-direction: column;
-    padding: 50px 0 50px calc(4% + 25px);
+    // padding: 50px 0 50px calc(4% + 25px);
+    // padding: 50px;
+    padding: 50px 10px 50px 50px;
+  }
+}
+
+.contact-info__item {
+  width: 100%;
+  @include flex(flex-start, flex-start);
+  font-size: 1.6rem;
+
+  a {
+    text-decoration: underline;
+    color: white;
+
+    @include tablet {
+      text-decoration: none;
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.contact-info__item--email a {
+  word-break: break-all;
+}
+
+.contact-info__item--social {
+  display: none;
+  white-space: nowrap;
+  @include tablet {
+    display: flex;
+  }
+}
+
+.contact-info__item--details {
+  width: 100%;
+  @include flex(flex-start, flex-start);
+  flex-direction: column;
+
+  p {
+    font-size: 1.4rem;
+    position: relative;
+
+    @include tablet {
+      font-size: 1.6rem;
+    }
+
+    &:first-of-type {
+      @include tablet {
+        font-size: 1.5rem;
+      }
+      @include desktop {
+        font-size: 1.6rem;
+      }
+    }
   }
 
-  &__item {
-    width: 100%;
-    @include flex(flex-start, flex-start);
-    font-size: 1.6rem;
-
-    &--email a {
-      word-break: break-all;
-    }
-
-    &--social {
-      display: none;
-      white-space: nowrap;
-      @include tablet {
-        display: flex;
-      }
-    }
-
-    a {
-      text-decoration: underline;
-      color: white;
-      @include tablet {
-        text-decoration: none;
-      }
-      &:hover {
-        text-decoration: underline;
-      }
-    }
-
-    // &:nth-child(n + 2) {
-    //   // width: 50%;
-    // }
-
-    &--details {
-      width: 100%;
-      @include flex(flex-start, flex-start);
-      flex-direction: column;
-
-      p {
-        font-size: 1.4rem;
-        position: relative;
-        @include tablet {
-          font-size: 1.6rem;
-        }
-      }
-
-      .icon-left {
-        position: absolute;
-        left: -25px;
-      }
-    }
+  .icon-left {
+    position: absolute;
+    left: -25px;
   }
 }

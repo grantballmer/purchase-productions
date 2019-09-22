@@ -3,6 +3,7 @@ import { graphql } from "gatsby";
 
 import "./scss/index.scss";
 import concert from "./images/concert-comp.jpg";
+import POME from "./images/diamond-logo.png";
 import { Link } from "gatsby";
 import Layout from "../components/Layout";
 
@@ -51,9 +52,17 @@ const IndexPage = ({ data }) => {
             className="home-booking"
             style={{ backgroundImage: `url(${concert}` }}
           >
-            <Link to="/contact">Book With Us</Link>
-            <p>Interested in one of our live bands?</p>
-            <p>Contact us and book your next event.</p>
+            <div className="home-booking__section">
+              <Link to="/contact">Book With Us</Link>
+              <p>Interested in one of our live bands?</p>
+              <p>Contact us and book your next event.</p>
+            </div>
+            <div className="home-booking__section home-booking__ambassador">
+              <img src={POME} alt="POME logo" />
+              <div>
+                <h2>Brand Ambassador</h2>
+              </div>
+            </div>
           </div>
         </section>
       </React.Fragment>
