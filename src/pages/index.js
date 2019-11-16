@@ -1,10 +1,10 @@
 import React from "react";
-import { graphql } from "gatsby";
+import { graphql, Link } from "gatsby";
+import BackgroundImage from "gatsby-background-image";
 
-import "./scss/index.scss";
-import concert from "./images/concert-comp.jpg";
-import POME from "./images/diamond-logo.png";
-import { Link } from "gatsby";
+import "../scss/index.scss";
+import concert from "../img/concert.jpg";
+import POME from "../img/pome-logo.png";
 import Layout from "../components/Layout";
 
 const IndexPage = ({ data }) => {
@@ -22,9 +22,11 @@ const IndexPage = ({ data }) => {
               <polygon points="0,94 100,98 100,100 0,100" />
             </svg>
           </div>
-          <div className="hero">
-            {/* <Img fluid={data.hero.childImageSharp.fluid} /> */}
-          </div>
+          <BackgroundImage
+            className={`hero`}
+            fluid={data.hero.childImageSharp.fluid}
+            alt="concert photo at night"
+          ></BackgroundImage>
         </section>
 
         <div className="home-about">
@@ -74,7 +76,7 @@ export default IndexPage;
 
 export const homeHeroImage = graphql`
   query {
-    hero: file(relativePath: { eq: "images/hero.jpg" }) {
+    hero: file(relativePath: { eq: "hero.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 1920) {
           ...GatsbyImageSharpFluid

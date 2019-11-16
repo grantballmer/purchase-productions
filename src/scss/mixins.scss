@@ -1,3 +1,5 @@
+@import "./variables.scss";
+
 @mixin wide-mobile {
   @media (min-width: #{$wide-mobile-width}) {
     @content;

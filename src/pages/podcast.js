@@ -1,10 +1,10 @@
 import React from "react";
 import { graphql } from "gatsby";
-import "./scss/podcast.scss";
+import "../scss/podcast.scss";
 import Layout from "../components/Layout";
 import { Link } from "gatsby";
 
-import PodcastLogo from "./images/podcast-logo.jpg";
+import PodcastLogo from "../img/podcast-logo.jpg";
 
 const Podcast = ({ data }) => {
   const { edges } = data.allMarkdownRemark;

@@ -1,11 +1,13 @@
 import React from "react";
-import "./scss/about.scss";
+import "../scss/about.scss";
 import ReactDOM from "react-dom";
-import Nate from "./images/nate.jpg";
-import Eric from "./images/eric.jpg";
-import Isaac from "./images/isaac.jpg";
-import Layout from "../components/Layout";
 import { FaAngleDoubleDown } from "react-icons/fa";
+
+import Nate from "../img/about/nate.jpg";
+import Eric from "../img/about/eric.jpg";
+import Isaac from "../img/about/isaac.jpg";
+
+import Layout from "../components/Layout";
 
 class About extends React.Component {
   constructor(props) {

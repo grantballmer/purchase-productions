@@ -1,19 +1,27 @@
-import React from "react";
-import "../scss/management.scss";
+import React from "react"
+import { graphql } from "gatsby"
+import BackgroundImage from "gatsby-background-image"
+import "../../scss/management.scss"
 
-import Handshake from "../icons/handshake.svg";
-import Connection from "../icons/connection.svg";
-import Location from "../icons/location.svg";
+import Handshake from "../../icons/handshake.svg"
+import Connection from "../../icons/connection.svg"
+import Location from "../../icons/location.svg"
 
-import ManagementCard from "../../components/services/ManagementCard";
+import ManagementCard from "../../components/services/ManagementCard"
 
-import Layout from "../../components/Layout";
+import Layout from "../../components/Layout"
 
-const Management = () => {
+const Management = ({ data }) => {
   return (
     <Layout>
       <section className="management">
-        <div className="management__hero" />
+        <BackgroundImage
+          className="management__hero"
+          fluid={data.background.childImageSharp.fluid}
+          alt="concert background image"
+          style={{ position: "absolute" }}
+        ></BackgroundImage>
+        <div className="management__overlay" />
         <ManagementCard icon={Handshake} heading="management" />
         <ManagementCard icon={Location} heading="tour management" />
         <ManagementCard icon={Connection} heading="booking" />
@@ -61,83 +69,19 @@ const Management = () => {
         </div>
       </div>
     </Layout>
-  );
-};
+  )
+}
 
-export default Management;
+export default Management
 
-// export const managementBkgrd = graphql`
-//   query {
-//     management: file(relativePath: { eq: "images/management-bkgrd.jpg" }) {
-//       childImageSharp {
-//         fluid(maxWidth: 1800) {
-//           ...GatsbyImageSharpFluid
-//         }
-//       }
-//     }
-//   }
-// `;
-
-// export const imageQuery = graphql `
-//   query {
-//     imageOne: file(relativePath: { eq: "images/desmond-jones-hero.jpg"}) {
-//       childImageSharp {
-//         fluid(maxWidth: 800) {
-//           ...GatsbyImageSharpFluid
-//         }
-//       }
-//     }
-//   }
-// `;
-
-// export default () => (
-//   <StaticQuery
-//     query={graphql`
-//       query ServicesImages {
-//         fileName: file(relativePath: { eq: "../images/concert-comp.jpg"}) {
-//           childImageSharp {
-//             fixed(width: 125, height: 125) {
-//               ...GatsbyImageSharpFixed
-//           }
-//         }
-//       }
-//     `}
-//     render={data => {
-
-//       console.log(data);
-//       return (
-//         <Layout>
-//           <div className="Management">
-//             <h1>Management Page</h1>
-//           </div>
-//         </Layout>
-//       );
-//     }}
-//   />
-// );
-
-// const Management = (props) => {
-//   console.log(props);
-//   return (
-//     <Layout>
-//       <section className="management">
-//         <div className="management-box"></div>
-//         <Img fixed={props.data} />
-//       </section>
-//     </Layout>
-//   );
-// };
-
-// export default Management;
-
-// export const galleryQuery = graphql `
-//   query ServicesImages {
-//     fileName: file(relativePath: { eq: "../images/concert-comp.jpg"}) {
-//       childImageSharp {
-//         fixed(width: 125, height: 125) {
-//           ...GatsbyImageSharpFixed
-//         }
-//       }
-//     }
-//   }
-// `;
+export const managementBkQuery = graphql`
+  query {
+    background: file(relativePath: { eq: "management/management-bk.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1920) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`

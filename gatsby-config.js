@@ -1,12 +1,20 @@
+/**
+ * Configure your Gatsby site with this file.
+ *
+ * See: https://www.gatsbyjs.org/docs/gatsby-config/
+ */
+
 module.exports = {
+  /* Your site config here */
   siteMetadata: {
-    title: "Purchase Productions LLC.",
-    description:
-      "Purchase Productions is a one stop shop for your band management, booking, design, and photography needs based out of Muskegon, MI."
+    title: `Purchase Productions LLC.`,
+    description: `Purchase Productions LLC. is a Michigan based agency for band management, tour management, design, and music/band/concert photography`,
+    author: `Grant Ballmer`
   },
   plugins: [
-    "gatsby-plugin-react-helmet",
-    "gatsby-plugin-sass",
+    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sass`,
+    `gatsby-plugin-netlify-cms`,
     {
       // keep as first gatsby-source-filesystem plugin for gatsby image support
       resolve: "gatsby-source-filesystem",
@@ -16,10 +24,10 @@ module.exports = {
       }
     },
     {
-      resolve: "gatsby-source-filesystem",
+      resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/src/pages`,
-        name: "pages"
+        name: `blog`,
+        path: `${__dirname}/src/pages`
       }
     },
     {
@@ -30,7 +38,7 @@ module.exports = {
       }
     },
     "gatsby-plugin-sharp",
-    "gatsby-transformer-sharp",
+    `gatsby-transformer-sharp`,
     {
       resolve: "gatsby-transformer-remark",
       options: {
@@ -65,13 +73,6 @@ module.exports = {
         modulePath: `${__dirname}/src/cms/cms.js`
       }
     },
-    {
-      resolve: "gatsby-plugin-purgecss", // purges all unused/unreferenced css rules
-      options: {
-        develop: true, // Activates purging in npm run develop
-        purgeOnly: ["/all.sass"] // applies purging only on the bulma css file
-      }
-    }, // must be after other CSS plugins
     "gatsby-plugin-netlify" // make sure to keep it last in the array
   ]
 };

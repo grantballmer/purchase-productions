@@ -1,31 +1,31 @@
-import React from "react";
-import { graphql } from "gatsby";
-import "../scss/box.scss";
+import React from "react"
+import { graphql } from "gatsby"
+import "../scss/box.scss"
 
-import Layout from "../components/Layout";
-import SideBooking from "../components/roster/SideBooking";
-import Loading from "../components/contact/Loading";
-import Success from "../components/contact/Success";
-import Error from "../components/contact/Error";
+import Layout from "../components/Layout"
+import SideBooking from "../components/roster/SideBooking"
+import Loading from "../components/contact/Loading"
+import Success from "../components/contact/Success"
+import Error from "../components/contact/Error"
 
-import Artist from "../components/roster/Artist";
+import Artist from "../components/roster/Artist"
 
 class Roster extends React.Component {
   constructor(props) {
-    super(props);
+    super(props)
 
     this.state = {
       showOverlay: false,
       currentArtist: "",
       formWaiting: false,
       success: false,
-      error: false
-    };
+      error: false,
+    }
   }
 
   slideFunc = e => {
-    const { showOverlay } = this.state;
-    const currentArtist = e.currentTarget.dataset.artist || "";
+    const { showOverlay } = this.state
+    const currentArtist = e.currentTarget.dataset.artist || ""
 
     // if (showOverlay) {
     //   document.body.style.position = 'fixed';
@@ -33,34 +33,41 @@ class Roster extends React.Component {
 
     this.setState({
       currentArtist,
-      showOverlay: !showOverlay
-    });
-  };
+      showOverlay: !showOverlay,
+    })
+  }
 
   formWaitingScreen = () => {
-    this.setState({ formWaiting: true });
-  };
+    this.setState({ formWaiting: true })
+  }
 
   formSuccessScreen = () => {
-    this.setState({ success: true, formWaiting: false });
-  };
+    this.setState({ success: true, formWaiting: false })
+  }
 
   formErrorScreen = () => {
-    this.setState({ error: true, formWaiting: false });
-  };
+    this.setState({ error: true, formWaiting: false })
+  }
 
   render() {
+    console.log(this.props)
     const {
       showOverlay,
       currentArtist,
       formWaiting,
       success,
-      error
-    } = this.state;
-    const slideClass = showOverlay ? "slide" : "";
-    const noScrollClass = showOverlay ? "noScroll" : "";
+      error,
+    } = this.state
+    const slideClass = showOverlay ? "slide" : ""
+    const noScrollClass = showOverlay ? "noScroll" : ""
 
-    const { chirp, desmond, jesse } = this.props.data;
+    const { edges } = this.props.data.allMarkdownRemark
+    console.log(edges)
+    const chirp = edges[0].node.frontmatter.thumbnail
+    const desmond = edges[1].node.frontmatter.thumbnail
+    const jesse = edges[2].node.frontmatter.thumbnail
+
+    // const { chirp, desmond, jesse } = this.props.data
 
     return (
       <Layout>
@@ -85,7 +92,7 @@ class Roster extends React.Component {
               formFuncs={{
                 formWaitingScreen: this.formWaitingScreen,
                 formSuccessScreen: this.formSuccessScreen,
-                formErrorScreen: this.formWaitingScreen
+                formErrorScreen: this.formWaitingScreen,
               }}
             />
             <section className={`box-container ${noScrollClass}`}>
@@ -108,22 +115,31 @@ class Roster extends React.Component {
           </React.Fragment>
         )}
       </Layout>
-    );
+    )
   }
 }
 
-export default Roster;
+export default Roster
 
 export const servicesImages = graphql`
-  query {
-    desmond: file(relativePath: { eq: "images/desmond-jones-roster.jpg" }) {
-      ...fluidImage
-    }
-    jesse: file(relativePath: { eq: "images/jesse-ray-roster.jpg" }) {
-      ...fluidImage
-    }
-    chirp: file(relativePath: { eq: "images/chirp-roster.jpg" }) {
-      ...fluidImage
+  query ArtistsThumbnails {
+    allMarkdownRemark(
+      filter: { frontmatter: { templateKey: { eq: "bandTemplate" } } }
+    ) {
+      edges {
+        node {
+          frontmatter {
+            name
+            thumbnail {
+              childImageSharp {
+                fluid(maxWidth: 1000) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+          }
+        }
+      }
     }
   }
-`;
+`

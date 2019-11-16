@@ -1,15 +1,15 @@
-import React from "react";
-import "./scss/contact.scss";
+import React from "react"
+import "../scss/contact.scss"
 
-import Layout from "../components/Layout";
-import Loading from "../components/contact/Loading";
-import Success from "../components/contact/Success";
-import Error from "../components/contact/Error";
-import Info from "../components/contact/Info";
+import Layout from "../components/Layout"
+import Loading from "../components/contact/Loading"
+import Success from "../components/contact/Success"
+import Error from "../components/contact/Error"
+import Info from "../components/contact/Info"
 
 class Contact extends React.Component {
   constructor(props) {
-    super(props);
+    super(props)
 
     this.state = {
       name: "",
@@ -19,33 +19,33 @@ class Contact extends React.Component {
       honeypot: "",
       formWaiting: false,
       success: false,
-      error: false
-    };
+      error: false,
+    }
   }
 
   handleChange = e => {
-    const property = e.target.name;
+    const property = e.target.name
     this.setState({
-      [property]: e.target.value
-    });
-  };
+      [property]: e.target.value,
+    })
+  }
 
   handleSubmit = e => {
-    e.preventDefault();
+    e.preventDefault()
 
-    this.setState({ formWaiting: true }); //add loader while waiting for submission response
+    this.setState({ formWaiting: true }) //add loader while waiting for submission response
 
-    const { Pageclip } = window;
-    const { name, email, phone, message, honeypot } = this.state;
+    const { Pageclip } = window
+    const { name, email, phone, message, honeypot } = this.state
 
-    if (honeypot.value) return; // return if bot adds data to honeypot field
+    if (honeypot.value) return // return if bot adds data to honeypot field
 
     const data = {
       name,
       email,
       phone,
-      message
-    };
+      message,
+    }
 
     Pageclip.send(
       "9bhYIEEPdatb8h1i4ULPVqDYo7A7UynT",
@@ -54,17 +54,17 @@ class Contact extends React.Component {
       (error, response) => {
         if (response) {
           //handle success
-          this.setState({ success: true, formWaiting: false });
+          this.setState({ success: true, formWaiting: false })
         } else {
           //handle error
-          this.setState({ error: true, formWaiting: false });
+          this.setState({ error: true, formWaiting: false })
         }
       }
-    );
-  };
+    )
+  }
 
   render() {
-    const { formWaiting, success, error } = this.state;
+    const { formWaiting, success, error } = this.state
     return (
       <Layout>
         {formWaiting && <Loading />} {/* render Loading component */}
@@ -129,8 +129,8 @@ class Contact extends React.Component {
           </div>
         )}
       </Layout>
-    );
+    )
   }
 }
 
-export default Contact;
+export default Contact

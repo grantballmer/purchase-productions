@@ -1,5 +1,6 @@
 ---
 templateKey: gallery
+path: /services/design
 title: design
 grid:
   - band: poster
@@ -8,7 +9,7 @@ grid:
     image: /img/abramalbumcover.jpg
   - band: eRoy
     image: /img/eroy-lg.jpg
-  - band: '  desmond'
+  - band: "  desmond"
     image: /img/desmondjones2019springposter.jpg
   - band: muskegon
     image: /img/desmondjones_muskegon_3.29-2.jpg
@@ -28,7 +29,7 @@ grid:
     image: /img/grandrapidsdoesthedeadposter.jpg
   - band: iggy berks
     image: /img/iggyberksheaderpigeonhill.jpg
-  - band: 'march '
+  - band: "march "
     image: /img/jakejamesmarchposter.jpg
   - band: chirp founders
     image: /img/jrccchirpfounders1.19.jpg
@@ -54,7 +55,6 @@ grid:
     image: /img/thisisagoodtourposter.jpg
   - band: vision explored
     image: /img/visionexploredalbumcover.jpg
-  - band: ' Chirp Spring Tour'
+  - band: " Chirp Spring Tour"
     image: /img/chirpspringtourposter.jpg
 ---
-

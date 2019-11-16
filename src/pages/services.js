@@ -1,15 +1,16 @@
-import React from "react";
-import { graphql } from "gatsby";
+import React from "react"
+import { graphql } from "gatsby"
 
-import "../../scss/box.scss";
-import Layout from "../../components/Layout";
-import Card from "../../components/services/Card";
+import "../scss/box.scss"
+import Layout from "../components/Layout"
+import Card from "../components/services/Card"
 
-import Camera from "../icons/camera.svg";
-import Pencil from "../icons/pencil.svg";
-import Phone from "../icons/phone.svg";
+import Camera from "../icons/camera.svg"
+import Pencil from "../icons/pencil.svg"
+import Phone from "../icons/phone.svg"
 
 const Services = ({ data }) => {
+  console.log(data)
   return (
     <Layout>
       <section className="box-container">
@@ -32,10 +33,10 @@ const Services = ({ data }) => {
         />
       </section>
     </Layout>
-  );
-};
+  )
+}
 
-export default Services;
+export default Services
 
 export const fluidImage = graphql`
   fragment fluidImage on File {
@@ -45,18 +46,18 @@ export const fluidImage = graphql`
       }
     }
   }
-`;
+`
 
 export const servicesImages = graphql`
   query {
-    photography: file(relativePath: { eq: "images/MMJ.jpg" }) {
+    photography: file(relativePath: { eq: "services/MMJ.jpg" }) {
       ...fluidImage
     }
-    design: file(relativePath: { eq: "images/abram-album.jpg" }) {
+    design: file(relativePath: { eq: "services/abram-album.jpg" }) {
       ...fluidImage
     }
-    management: file(relativePath: { eq: "images/management.jpg" }) {
+    management: file(relativePath: { eq: "services/management.jpg" }) {
       ...fluidImage
     }
   }
-`;
+`
