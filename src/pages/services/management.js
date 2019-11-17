@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
-import { Helmet } from "react-helmet"
+import SEO from "../../components/SEO"
 import BackgroundImage from "gatsby-background-image"
 import "../../scss/management.scss"
 
@@ -15,19 +15,12 @@ import Layout from "../../components/Layout"
 const Management = ({ data }) => {
   return (
     <React.Fragment>
-      <Helmet>
-        <meta charSet="utf-8" />
-        <title>Management - Purchase Productions</title>
-        <meta
-          name="keywords"
-          content="Nathan Purchase, Band Management, Tour Management, Booking Management, Purchase, Purchase Productions, Purchase Productions LLC, Music Agency, Concert Photography, Michigan Music, Michigan music agency"
-        ></meta>
-        <meta
-          name="description"
-          content="Purchase Productions LLC has years of experience helping bands meet their booking, touring, and general management needs."
-        ></meta>
-        <link rel="canonical" href="https://purchaseproductions.com/about" />
-      </Helmet>
+      <SEO
+        title="Management - Purchase Productions"
+        keywords="Band Management, Tour Management, Booking Management"
+        description="Purchase Productions LLC has years of experience helping bands meet their booking, touring, and general management needs."
+        canonical="/services/management"
+      />
       <Layout>
         <section className="management">
           <BackgroundImage

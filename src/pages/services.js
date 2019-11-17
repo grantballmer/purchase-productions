@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
-import { Helmet } from "react-helmet"
+import SEO from "../components/SEO"
 
 import "../scss/box.scss"
 import Layout from "../components/Layout"
@@ -13,19 +13,12 @@ import Phone from "../icons/phone.svg"
 const Services = ({ data }) => {
   return (
     <React.Fragment>
-      <Helmet>
-        <meta charSet="utf-8" />
-        <title>Services - Purchase Productions</title>
-        <meta
-          name="keywords"
-          content="Nathan Purchase, Purchase, Purchase Productions, Purchase Productions LLC, Music Agency, Concert Photography, Michigan Music, Michigan music agency"
-        ></meta>
-        <meta
-          name="description"
-          content="Purchase Productions LLC offers an array of services, including: meeting any of your concert/band photography needs, poster and album design, and any booking/tour management needs."
-        ></meta>
-        <link rel="canonical" href="https://purchaseproductions.com/services" />
-      </Helmet>
+      <SEO
+        title="Services - Purchase Productions"
+        keywords=""
+        description="Purchase Productions LLC offers an array of services, including: meeting any of your concert/band photography needs, poster and album design, and any booking/tour management needs."
+        canonical="/services"
+      />
       <Layout>
         <section className="box-container">
           <Card

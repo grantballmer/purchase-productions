@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
-import { Helmet } from "react-helmet"
+import SEO from "../components/SEO"
 import BackgroundImage from "gatsby-background-image"
 
 import "../scss/index.scss"
@@ -11,19 +11,12 @@ import Layout from "../components/Layout"
 const IndexPage = ({ data }) => {
   return (
     <React.Fragment>
-      <Helmet>
-        <meta charSet="utf-8" />
-        <title>Home - Purchase Productions</title>
-        <meta
-          name="keywords"
-          content="Nathan Purchase, Purchase, Purchase Productions, Purchase Productions LLC, Music Agency, Concert Photography, Michigan Music, Michigan music agency"
-        ></meta>
-        <meta
-          name="description"
-          content="Purchase Productions LLC. is a Michigan based agency for band management, tour management, design, and music/band/concert photography"
-        ></meta>
-        <link rel="canonical" href="https://purchaseproductions.com" />
-      </Helmet>
+      <SEO
+        title="Home - Purchase Productions"
+        keywords=""
+        description="Purchase Productions LLC. is a Michigan based agency for band management, tour management, design, and music/band/concert photography"
+        canonical="/"
+      />
       <Layout>
         <section className="hero-wrapper">
           <div className="svg-container">

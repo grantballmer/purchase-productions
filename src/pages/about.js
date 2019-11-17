@@ -1,7 +1,7 @@
 import React from "react"
 import "../scss/about.scss"
 import ReactDOM from "react-dom"
-import { Helmet } from "react-helmet"
+import SEO from "../components/SEO"
 import { FaAngleDoubleDown } from "react-icons/fa"
 
 import Nate from "../images/about/nate.jpg"
@@ -29,19 +29,12 @@ class About extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <Helmet>
-          <meta charSet="utf-8" />
-          <title>About - Purchase Productions</title>
-          <meta
-            name="keywords"
-            content="Nathan Purchase, Purchase, Purchase Productions, Purchase Productions LLC, Music Agency, Concert Photography, Michigan Music, Michigan music agency"
-          ></meta>
-          <meta
-            name="description"
-            content="Learn about the team that helps run Purchase Productions LLC. on a day-to-day basis."
-          ></meta>
-          <link rel="canonical" href="https://purchaseproductions.com/about" />
-        </Helmet>
+        <SEO
+          title="About - Purchase Productions"
+          keywords=""
+          description="Learn about the team that helps run Purchase Productions LLC. on a day-to-day basis."
+          canonical="/about"
+        />
         <Layout>
           <div className="about">
             <div className="info-wrapper">

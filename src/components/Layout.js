@@ -6,7 +6,7 @@
  */
 
 import React from "react"
-import { Helmet } from "react-helmet"
+// import { Helmet } from "react-helmet"
 import "./layout.scss"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
@@ -26,7 +26,7 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <Helmet>
+      {/* <Helmet>
         <html lang="en" />
         <title>Purchase Productions</title>
         <meta
@@ -65,10 +65,9 @@ const Layout = ({ children }) => {
 
         <meta property="og:type" content="business.business" />
         {/* <meta property="og:title" content={data.site.siteMetadata.title} /> */}
-        <meta property="og:title" content="Purchase Productions LLC" />
-        <meta property="og:url" content="/" />
-        {/* <meta property="og:image" content="/img/og-image.jpg" /> */}
-      </Helmet>
+      {/* <meta property="og:title" content="Purchase Productions LLC" />
+        <meta property="og:url" content="/" /> */}
+      {/* </Helmet> */}
       <Navbar siteTitle={data.site.siteMetadata.title} />
       {/* <div
         style={{

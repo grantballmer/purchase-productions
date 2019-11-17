@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
-import { Helmet } from "react-helmet"
+import SEO from "../components/SEO"
 import "../scss/podcast.scss"
 import Layout from "../components/Layout"
 import { Link } from "gatsby"
@@ -56,19 +56,12 @@ const Podcast = ({ data }) => {
 
   return (
     <React.Fragment>
-      <Helmet>
-        <meta charSet="utf-8" />
-        <title>Podcast - Purchase Productions</title>
-        <meta
-          name="keywords"
-          content="Nathan Purchase, Purchase, Life Through Music, Purchase Productions, podcast, Purchase Productions LLC, Music Agency, Concert Photography, Michigan Music, Michigan music agency"
-        ></meta>
-        <meta
-          name="description"
-          content="Nathan Purchase and the team put out a weekly podcast interviewing individuals from every aspect of the music industry. Check out the Patreon page for exclusive content."
-        ></meta>
-        <link rel="canonical" href="https://purchaseproductions.com/podcast" />
-      </Helmet>
+      <SEO
+        title="Podcast - Purchase Productions"
+        keywords="Life Through Music, podcast"
+        description="Nathan Purchase and the team put out a weekly podcast interviewing individuals from every aspect of the music industry. Check out the Patreon page for exclusive content."
+        canonical="/podcast"
+      />
       <Layout>
         <section className="podcast">
           <div className="podcast__hero" />

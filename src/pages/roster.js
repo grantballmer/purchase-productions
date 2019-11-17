@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
-import { Helmet } from "react-helmet"
+import SEO from "../components/SEO"
 import "../scss/box.scss"
 
 import Layout from "../components/Layout"
@@ -70,19 +70,12 @@ class Roster extends React.Component {
 
     return (
       <React.Fragment>
-        <Helmet>
-          <meta charSet="utf-8" />
-          <title>Roster - Purchase Productions</title>
-          <meta
-            name="keywords"
-            content="Nathan Purchase, Purchase, Purchase Productions, Purchase Productions LLC, Music Agency, Concert Photography, Michigan Music, Michigan music agency"
-          ></meta>
-          <meta
-            name="description"
-            content="Check out the current roster of Purchase Productions. Inquire about setting up a show with any group."
-          ></meta>
-          <link rel="canonical" href="https://purchaseproductions.com/about" />
-        </Helmet>
+        <SEO
+          title="Roster - Purchase Productions"
+          keywords=""
+          description="Check out the current roster of Purchase Productions. Inquire about setting up a show with any group."
+          canonical="/roster"
+        />
         <Layout>
           {formWaiting && <Loading />} {/* render Loading component */}
           {/* Check if form has been submitted, if it has, render success or error component; if not, render form component */}

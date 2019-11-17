@@ -1,5 +1,5 @@
 import React from "react"
-import { Helmet } from "react-helmet"
+import SEO from "../components/SEO"
 import "../scss/contact.scss"
 
 import Layout from "../components/Layout"
@@ -68,22 +68,12 @@ class Contact extends React.Component {
     const { formWaiting, success, error } = this.state
     return (
       <React.Fragment>
-        <Helmet>
-          <meta charSet="utf-8" />
-          <title>Contact - Purchase Productions</title>
-          <meta
-            name="keywords"
-            content="Nathan Purchase, Purchase, Purchase Productions, Purchase Productions LLC, Music Agency, Concert Photography, Michigan Music, Michigan music agency"
-          ></meta>
-          <meta
-            name="description"
-            content="Contact us about any questions and concerns, or if you want to set up an opportunity to collaborate."
-          ></meta>
-          <link
-            rel="canonical"
-            href="https://purchaseproductions.com/contact"
-          />
-        </Helmet>
+        <SEO
+          title="Contact - Purchase Productions"
+          keywords=""
+          description="Contact us about any questions and concerns, or if you want to set up an opportunity to collaborate."
+          canonical="/contact"
+        />
         <Layout>
           {formWaiting && <Loading />} {/* render Loading component */}
           {/* Check if form has been submitted, if it has, render success or error component; if not, render form component */}
