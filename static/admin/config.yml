@@ -1,48 +1,9 @@
 backend:
-  name: git-gateway
+  name: github
   repo: grantballmer/purchase-productions
-  branch: master
-
-media_folder: static/img
-public_folder: /img
-
+media_folder: static/assets
+public_folder: assets
 collections:
-  - name: "gallery"
-    label: "Gallery"
-    folder: "src/pages/services"
-    create: true
-    fields:
-      - {
-          label: "Template Key",
-          name: "templateKey",
-          widget: "hidden",
-          default: "gallery",
-        }
-      - { label: "Title", name: "title", widget: "string" }
-      - label: "Grid"
-        name: "grid"
-        widget: "list"
-        fields:
-          - { label: "Image", name: "image", widget: "image" }
-          - { label: "Band Name", name: "band", widget: "string" }
-  - name: "podcast"
-    label: "Podcast"
-    folder: "src/pages/podcast"
-    create: true
-    fields:
-      - {
-          label: "Template Key",
-          name: "templateKey",
-          widget: "hidden",
-          default: "episode",
-        }
-      - { label: "Title", name: "title", widget: "string" }
-      - { name: path, label: Path }
-      - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Description", name: "description", widget: "text" }
-      - { label: "Episode Number", name: "episode", widget: "string" }
-      - { label: "Embed URL", name: "src", widget: "string" }
-
   - name: band
     label: Band
     folder: src/pages/roster
@@ -78,3 +39,59 @@ collections:
           widget: "hidden",
           default: "bandTemplate",
         }
+
+  - name: "podcast"
+    label: "Podcast"
+    folder: "src/pages/podcast"
+    create: true
+    fields:
+      - {
+          label: "Template Key",
+          name: "templateKey",
+          widget: "hidden",
+          default: "episode",
+        }
+      - { label: "Title", name: "title", widget: "string" }
+      - { name: path, label: Path }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Episode Number", name: "episode", widget: "string" }
+      - { label: "Embed URL", name: "src", widget: "string" }
+
+  - name: gallery
+    label: Gallery
+    folder: src/pages/services
+    create: true
+    fields:
+      - {
+          label: "Template Key",
+          name: "templateKey",
+          widget: "hidden",
+          default: "gallery",
+        }
+      - { name: path, label: Path }
+      - { label: "Title", name: "title", widget: "string" }
+      - label: "Grid"
+        name: "grid"
+        widget: "list"
+        fields:
+          - { label: "Image", name: "image", widget: "image" }
+          - { label: "Band Name", name: "band", widget: "string" }
+  # - name: pages
+  #   label: Pages
+  #   files:
+  #     - label: About Page
+  #       name: about
+  #       file: src/pages/about/index.md
+  #       fields:
+  #         - { name: path, label: Path }
+  #         - { name: title, label: Title }
+  #         - { name: body, label: About, widget: markdown }
+  #         - label: Team
+  #           name: team
+  #           widget: list
+  #           allow_add: true
+  #           fields:
+  #             - { label: Name, name: name }
+  #             - { label: Bio, name: body }
+  #             - { label: Picture, name: picture, widget: image }

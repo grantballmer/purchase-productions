@@ -24,7 +24,7 @@
   left: 12px;
   background-size: cover;
   background-position: right;
-  background-image: url("../img/podcast-crop.jpg");
+  background-image: url("../images/podcast-crop.jpg");
   @include flex(center, center);
   z-index: -1;
   filter: brightness(50%);

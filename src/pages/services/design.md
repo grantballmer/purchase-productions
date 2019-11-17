@@ -3,58 +3,58 @@ templateKey: gallery
 path: /services/design
 title: design
 grid:
-  - band: poster
-    image: /img/design-lg.jpg
-  - band: abram
-    image: /img/abramalbumcover.jpg
+  - band: Monday Night
+    image: /assets/mondaynight2019posteronline.jpg
+  - band: Abram
+    image: /assets/abramalbumcover.jpg
   - band: eRoy
-    image: /img/eroy-lg.jpg
-  - band: "  desmond"
-    image: /img/desmondjones2019springposter.jpg
+    image: /assets/eroyresidencyposter.jpg
+  - band: eRoy
+    image: /assets/desmondjones2019springposter.jpg
   - band: muskegon
-    image: /img/desmondjones_muskegon_3.29-2.jpg
+    image: /assets/desmondjones_muskegon_3.29-2.jpg
   - band: jrcc
-    image: /img/desmondjones_summertourbrown.jpg
+    image: /assets/desmondjones_summertourbrown.jpg
   - band: desmond fall 2018
-    image: /img/desmondjonesfall2018poster.jpg
+    image: /assets/desmondjonesfall2018poster.jpg
   - band: desmond-jones
-    image: /img/desmondjonespschememarch21.jpg
+    image: /assets/desmondjonespschememarch21.jpg
   - band: tonic room
-    image: /img/desmondjonestonicroom3.15.jpg
+    image: /assets/desmondjonestonicroom3.15.jpg
   - band: eroy
-    image: /img/eroyalbum.jpg
+    image: /assets/eroyalbum.jpg
   - band: eroy
-    image: /img/eroyposter.jpg
+    image: /assets/eroyposter.jpg
   - band: does the dead
-    image: /img/grandrapidsdoesthedeadposter.jpg
+    image: /assets/grandrapidsdoesthedeadposter.jpg
   - band: iggy berks
-    image: /img/iggyberksheaderpigeonhill.jpg
+    image: /assets/iggyberksheaderpigeonhill.jpg
   - band: "march "
-    image: /img/jakejamesmarchposter.jpg
+    image: /assets/jakejamesmarchposter.jpg
   - band: chirp founders
-    image: /img/jrccchirpfounders1.19.jpg
+    image: /assets/jrccchirpfounders1.19.jpg
   - band: jrcc
-    image: /img/jrccwestcoastposter.jpg
+    image: /assets/jrccwestcoastposter.jpg
   - band: jrcc
-    image: /img/jrccwinterspring2019.jpg
+    image: /assets/jrccwinterspring2019.jpg
   - band: monday
-    image: /img/melo_monday_groove.jpg
+    image: /assets/melo_monday_groove.jpg
   - band: melo august
-    image: /img/meloaugust12poster.jpg
+    image: /assets/meloaugust12poster.jpg
   - band: muskegon music
-    image: /img/muskegonmusic.jpg
+    image: /assets/muskegonmusic.jpg
   - band: bernie
-    image: /img/jamforbernie2020.jpg
+    image: /assets/jamforbernie2020.jpg
   - band: nye
-    image: /img/nye_mlb_er_az.jpg
+    image: /assets/nye_mlb_er_az.jpg
   - band: pylar's picks
-    image: /img/pylarspickscover.jpg
+    image: /assets/pylarspickscover.jpg
   - band: pylar's picks
-    image: /img/pylarspicksvol3.jpg
+    image: /assets/pylarspicksvol3.jpg
   - band: desmond jones
-    image: /img/thisisagoodtourposter.jpg
+    image: /assets/thisisagoodtourposter.jpg
   - band: vision explored
-    image: /img/visionexploredalbumcover.jpg
+    image: /assets/visionexploredalbumcover.jpg
   - band: " Chirp Spring Tour"
-    image: /img/chirpspringtourposter.jpg
+    image: /assets/chirpspringtourposter.jpg
 ---

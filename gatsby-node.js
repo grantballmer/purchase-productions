@@ -1,9 +1,9 @@
-const path = require(`path`);
-const { createFilePath } = require("gatsby-source-filesystem");
-const { fmImagesToRelative } = require("gatsby-remark-relative-images");
+const path = require(`path`)
+const { createFilePath } = require("gatsby-source-filesystem")
+const { fmImagesToRelative } = require("gatsby-remark-relative-images")
 
 exports.createPages = async ({ actions, graphql, reporter }) => {
-  const { createPage } = actions;
+  const { createPage } = actions
 
   const result = await graphql(`
     {
@@ -19,12 +19,12 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
         }
       }
     }
-  `);
+  `)
 
   // Handle errors
   if (result.errors) {
-    reporter.panicOnBuild(`Error while running GraphQL query.`);
-    return;
+    reporter.panicOnBuild(`Error while running GraphQL query.`)
+    return
   }
 
   result.data.allMarkdownRemark.edges.forEach(({ node }) => {
@@ -33,23 +33,23 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       component: path.resolve(
         `src/templates/${String(node.frontmatter.templateKey)}.js`
       ),
-      context: { id: node.id } // additional data can be passed via context
-    });
-  });
-};
+      context: { id: node.id }, // additional data can be passed via context
+    })
+  })
+}
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
-  const { createNodeField } = actions;
-  fmImagesToRelative(node); // convert image paths for gatsby images
+  const { createNodeField } = actions
+  fmImagesToRelative(node) // convert image paths for gatsby images
 
   if (node.internal.type === `MarkdownRemark`) {
-    const value = createFilePath({ node, getNode });
+    const value = createFilePath({ node, getNode })
     createNodeField({
       name: `slug`,
       node,
-      value
-    });
+      value,
+    })
   }
-};
+}
 
 // ${String(node.frontmatter.templateKey)}

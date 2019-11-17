@@ -1,49 +1,49 @@
 {
-  "name": "purchase-productions",
-  "description": "Purchase Productions is a one stop shop for your band management, booking, design, and photography needs based out of Muskegon, MI.",
-  "version": "1.1.3",
-  "author": "Grant Ballmer",
+  "name": "gatsby-starter-hello-world",
+  "private": true,
+  "description": "A simplified bare-bones starter for Gatsby",
+  "version": "0.1.0",
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing \""
+  },
   "dependencies": {
     "gatsby": "^2.17.15",
-    "gatsby-background-image": "^0.8.19",
-    "gatsby-image": "^2.2.33",
-    "gatsby-plugin-netlify": "^2.1.25",
-    "gatsby-plugin-netlify-cms": "^4.1.28",
-    "gatsby-plugin-purgecss": "^3.1.0",
-    "gatsby-plugin-react-helmet": "^3.1.15",
-    "gatsby-plugin-sass": "^2.1.23",
-    "gatsby-plugin-sharp": "^2.3.0",
-    "gatsby-remark-copy-linked-files": "^2.1.30",
-    "gatsby-remark-images": "^3.1.31",
+    "gatsby-background-image": "^0.8.14",
+    "gatsby-image": "^2.2.23",
+    "gatsby-plugin-netlify": "^2.1.19",
+    "gatsby-plugin-netlify-cms": "^4.1.21",
+    "gatsby-plugin-react-helmet": "^3.1.10",
+    "gatsby-plugin-sass": "^2.1.17",
+    "gatsby-plugin-sharp": "^2.2.27",
+    "gatsby-remark-copy-linked-files": "^2.1.23",
+    "gatsby-remark-images": "^3.1.25",
     "gatsby-remark-relative-images": "^0.2.3",
-    "gatsby-source-filesystem": "^2.1.37",
-    "gatsby-transformer-remark": "^2.6.35",
-    "gatsby-transformer-sharp": "^2.3.5",
+    "gatsby-source-filesystem": "^2.1.10",
+    "gatsby-transformer-remark": "^2.6.15",
+    "gatsby-transformer-sharp": "^2.2.19",
     "netlify-cms-app": "^2.9.7",
-    "node-sass": "^4.13.0",
-    "prop-types": "^15.6.0",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
-    "react-easy-swipe": "0.0.17",
-    "react-helmet": "^5.2.0",
-    "react-icons": "^3.8.0"
-  },
-  "keywords": [
-    "gatsby"
-  ],
-  "license": "MIT",
-  "main": "n/a",
-  "scripts": {
-    "start": "npm run develop",
-    "clean": "rimraf .cache public",
-    "build": "npm run clean && gatsby build",
-    "develop": "npm run clean && gatsby develop",
-    "serve": "gatsby serve",
-    "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"{gatsby-*.js,src/**/*.js}\"",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "node-sass": "^4.12.0",
+    "prop-types": "^15.7.2",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "react-easy-swipe": "0.0.18",
+    "react-helmet": "^5.2.1",
+    "react-icons": "^3.7.0"
   },
   "devDependencies": {
-    "prettier": "^1.19.1",
-    "rimraf": "^2.7.1"
+    "prettier": "^1.18.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gatsbyjs/gatsby-starter-hello-world"
+  },
+  "bugs": {
+    "url": "https://github.com/gatsbyjs/gatsby/issues"
   }
 }

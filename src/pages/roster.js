@@ -1,5 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
+import { Helmet } from "react-helmet"
 import "../scss/box.scss"
 
 import Layout from "../components/Layout"
@@ -50,7 +51,6 @@ class Roster extends React.Component {
   }
 
   render() {
-    console.log(this.props)
     const {
       showOverlay,
       currentArtist,
@@ -62,7 +62,6 @@ class Roster extends React.Component {
     const noScrollClass = showOverlay ? "noScroll" : ""
 
     const { edges } = this.props.data.allMarkdownRemark
-    console.log(edges)
     const chirp = edges[0].node.frontmatter.thumbnail
     const desmond = edges[1].node.frontmatter.thumbnail
     const jesse = edges[2].node.frontmatter.thumbnail
@@ -70,51 +69,66 @@ class Roster extends React.Component {
     // const { chirp, desmond, jesse } = this.props.data
 
     return (
-      <Layout>
-        {formWaiting && <Loading />} {/* render Loading component */}
-        {/* Check if form has been submitted, if it has, render success or error component; if not, render form component */}
-        {success || error ? (
-          success ? (
-            <Success />
+      <React.Fragment>
+        <Helmet>
+          <meta charSet="utf-8" />
+          <title>Roster - Purchase Productions</title>
+          <meta
+            name="keywords"
+            content="Nathan Purchase, Purchase, Purchase Productions, Purchase Productions LLC, Music Agency, Concert Photography, Michigan Music, Michigan music agency"
+          ></meta>
+          <meta
+            name="description"
+            content="Check out the current roster of Purchase Productions. Inquire about setting up a show with any group."
+          ></meta>
+          <link rel="canonical" href="https://purchaseproductions.com/about" />
+        </Helmet>
+        <Layout>
+          {formWaiting && <Loading />} {/* render Loading component */}
+          {/* Check if form has been submitted, if it has, render success or error component; if not, render form component */}
+          {success || error ? (
+            success ? (
+              <Success />
+            ) : (
+              <Error />
+            )
           ) : (
-            <Error />
-          )
-        ) : (
-          <React.Fragment>
-            <div
-              className={`overlay overlay-color ${slideClass}`}
-              onClick={this.slideFunc}
-            />
-            <SideBooking
-              slideClass={slideClass}
-              currentArtist={currentArtist}
-              slideFunc={this.slideFunc}
-              formFuncs={{
-                formWaitingScreen: this.formWaitingScreen,
-                formSuccessScreen: this.formSuccessScreen,
-                formErrorScreen: this.formWaitingScreen,
-              }}
-            />
-            <section className={`box-container ${noScrollClass}`}>
-              <Artist
-                name="Desmond Jones"
-                image={desmond.childImageSharp.fluid}
-                slideFunc={this.slideFunc}
+            <React.Fragment>
+              <div
+                className={`overlay overlay-color ${slideClass}`}
+                onClick={this.slideFunc}
               />
-              <Artist
-                name="Jesse Ray & The Carolina Catfish"
-                image={jesse.childImageSharp.fluid}
+              <SideBooking
+                slideClass={slideClass}
+                currentArtist={currentArtist}
                 slideFunc={this.slideFunc}
+                formFuncs={{
+                  formWaitingScreen: this.formWaitingScreen,
+                  formSuccessScreen: this.formSuccessScreen,
+                  formErrorScreen: this.formWaitingScreen,
+                }}
               />
-              <Artist
-                name="Chirp"
-                image={chirp.childImageSharp.fluid}
-                slideFunc={this.slideFunc}
-              />
-            </section>
-          </React.Fragment>
-        )}
-      </Layout>
+              <section className={`box-container ${noScrollClass}`}>
+                <Artist
+                  name="Desmond Jones"
+                  image={desmond.childImageSharp.fluid}
+                  slideFunc={this.slideFunc}
+                />
+                <Artist
+                  name="Jesse Ray & The Carolina Catfish"
+                  image={jesse.childImageSharp.fluid}
+                  slideFunc={this.slideFunc}
+                />
+                <Artist
+                  name="Chirp"
+                  image={chirp.childImageSharp.fluid}
+                  slideFunc={this.slideFunc}
+                />
+              </section>
+            </React.Fragment>
+          )}
+        </Layout>
+      </React.Fragment>
     )
   }
 }

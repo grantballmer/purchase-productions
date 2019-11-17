@@ -1,16 +1,30 @@
-import React from "react";
-import { graphql, Link } from "gatsby";
-import BackgroundImage from "gatsby-background-image";
+import React from "react"
+import { graphql, Link } from "gatsby"
+import { Helmet } from "react-helmet"
+import BackgroundImage from "gatsby-background-image"
 
-import "../scss/index.scss";
-import concert from "../img/concert.jpg";
-import POME from "../img/pome-logo.png";
-import Layout from "../components/Layout";
+import "../scss/index.scss"
+import concert from "../images/concert.jpg"
+import POME from "../images/pome-logo.png"
+import Layout from "../components/Layout"
 
 const IndexPage = ({ data }) => {
   return (
-    <Layout>
-      <React.Fragment>
+    <React.Fragment>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Home - Purchase Productions</title>
+        <meta
+          name="keywords"
+          content="Nathan Purchase, Purchase, Purchase Productions, Purchase Productions LLC, Music Agency, Concert Photography, Michigan Music, Michigan music agency"
+        ></meta>
+        <meta
+          name="description"
+          content="Purchase Productions LLC. is a Michigan based agency for band management, tour management, design, and music/band/concert photography"
+        ></meta>
+        <link rel="canonical" href="https://purchaseproductions.com" />
+      </Helmet>
+      <Layout>
         <section className="hero-wrapper">
           <div className="svg-container">
             <svg
@@ -67,12 +81,12 @@ const IndexPage = ({ data }) => {
             </div>
           </div>
         </section>
-      </React.Fragment>
-    </Layout>
-  );
-};
+      </Layout>
+    </React.Fragment>
+  )
+}
 
-export default IndexPage;
+export default IndexPage
 
 export const homeHeroImage = graphql`
   query {
@@ -84,4 +98,4 @@ export const homeHeroImage = graphql`
       }
     }
   }
-`;
+`
