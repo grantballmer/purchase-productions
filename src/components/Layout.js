@@ -6,6 +6,7 @@
  */
 
 import React from "react"
+import { Helmet } from "react-helmet"
 import "./layout.scss"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
@@ -25,6 +26,49 @@ const Layout = ({ children }) => {
 
   return (
     <>
+      <Helmet>
+        <html lang="en" />
+        <title>Purchase Productions</title>
+        <meta
+          name="description"
+          content="Purchase Productions LLC. is a Michigan based agency for band management, tour management, design, and music/band/concert photography"
+        />
+        <link
+          href="https://fonts.googleapis.com/css?family=Open+Sans:300,700"
+          rel="stylesheet"
+        />
+
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="/img/apple-touch-icon.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          href="/assets/favicon-32x32.png"
+          sizes="32x32"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          href="/assets/favicon-16x16.png"
+          sizes="16x16"
+        />
+
+        <link
+          rel="mask-icon"
+          href="/img/safari-pinned-tab.svg"
+          color="#ff4400"
+        />
+        <meta name="theme-color" content="#fff" />
+
+        <meta property="og:type" content="business.business" />
+        {/* <meta property="og:title" content={data.site.siteMetadata.title} /> */}
+        <meta property="og:title" content="Purchase Productions LLC" />
+        <meta property="og:url" content="/" />
+        {/* <meta property="og:image" content="/img/og-image.jpg" /> */}
+      </Helmet>
       <Navbar siteTitle={data.site.siteMetadata.title} />
       {/* <div
         style={{

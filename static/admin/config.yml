@@ -1,5 +1,5 @@
 backend:
-  name: github
+  name: git-gateway
   repo: grantballmer/purchase-productions
 media_folder: static/assets
 public_folder: assets
