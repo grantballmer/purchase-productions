@@ -18,6 +18,11 @@ const SEO = ({ title, description, keywords, canonical }) => {
       />
 
       <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,700"
+        rel="stylesheet"
+      />
+
+      <link
         rel="apple-touch-icon"
         sizes="180x180"
         href="/img/apple-touch-icon.png"
