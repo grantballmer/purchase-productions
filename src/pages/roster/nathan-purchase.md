@@ -1,5 +1,5 @@
 ---
-path: www.purchaseproductions.com/roster/jesse-ray-and-the-carolina-catfish
+path: /roster/jesse-ray-and-the-carolina-catfish
 name: Nathan Purchase
 genre: Blues / Soul / Hip Hop
 thumbnail: /assets/0-2-.jpg
