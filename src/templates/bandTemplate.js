@@ -37,8 +37,17 @@ import Management from "../components/bandsPage/Management"
 const bandTemplate = ({ data }) => {
   const { frontmatter, html } = data.markdownRemark
   const { name, genre, banner, social, management } = frontmatter
-  const { spotify, youtube, itunes, facebook, instagram } = social[0]
+  // const { spotify, youtube, itunes, facebook, instagram } = social[0]
   const backgroundClass = name === "Chirp" ? "chirp" : ""
+  let spotify, youtube, itunes, facebook, instagram
+
+  if (social) {
+    spotify = social[0].spotify
+    youtube = social[0].youtube
+    itunes = social[0].itunes
+    facebook = social[0].facebook
+    instagram = social[0].instagram
+  }
 
   return (
     <Layout>
