@@ -20,11 +20,11 @@ collections:
         name: social
         widget: list
         fields:
-          - { label: Spotify Link, name: spotify }
-          - { label: Youtube Link, name: youtube }
-          - { label: iTunes Link, name: itunes }
-          - { label: Facebook Link, name: facebook }
-          - { label: Instagram Link, name: instagram }
+          - { label: Spotify Link, name: spotify, default: "empty" }
+          - { label: Youtube Link, name: youtube, default: "empty" }
+          - { label: iTunes Link, name: itunes, default: "empty" }
+          - { label: Facebook Link, name: facebook, default: "empty" }
+          - { label: Instagram Link, name: instagram, default: "empty" }
       - label: Management
         name: management
         widget: list

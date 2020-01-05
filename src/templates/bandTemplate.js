@@ -38,18 +38,18 @@ import Management from "../components/bandsPage/Management"
 const bandTemplate = ({ data }) => {
   const { frontmatter, html } = data.markdownRemark
   const { name, genre, banner, social, management } = frontmatter
-  // const { spotify, youtube, itunes, facebook, instagram } = social[0]
+  const { spotify, youtube, itunes, facebook, instagram } = social[0]
+  console.log(name)
   const backgroundClass =
     name === "Chirp" || name === "Nathan Purchase" ? "top" : ""
-  let spotify, youtube, itunes, facebook, instagram
 
-  if (social) {
-    spotify = social[0].spotify
-    youtube = social[0].youtube
-    itunes = social[0].itunes
-    facebook = social[0].facebook
-    instagram = social[0].instagram
-  }
+  // if (social) {
+  //   spotify = social[0].spotify
+  //   youtube = social[0].youtube
+  //   itunes = social[0].itunes
+  //   facebook = social[0].facebook
+  //   instagram = social[0].instagram
+  // }
 
   return (
     <React.Fragment>
@@ -88,11 +88,13 @@ const bandTemplate = ({ data }) => {
               <h4>{genre}</h4>
               <div dangerouslySetInnerHTML={{ __html: html }}></div>
             </div>
-            {social && (
-              <SocialMedia
-                info={{ spotify, youtube, itunes, facebook, instagram }}
-              />
-            )}
+            {/* {social && (
+              
+            )} */}
+
+            <SocialMedia
+              info={{ spotify, youtube, itunes, facebook, instagram }}
+            />
           </div>
 
           <div className="profile-contact">

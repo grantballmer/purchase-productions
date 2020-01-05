@@ -61,12 +61,14 @@ class Roster extends React.Component {
     const noScrollClass = showOverlay ? "noScroll" : ""
 
     const { edges } = this.props.data.allMarkdownRemark
+    console.log(edges)
     const bandInfo = edges.map(band => (
       <Artist
         name={band.node.frontmatter.name}
         path={band.node.frontmatter.path}
         image={band.node.frontmatter.thumbnail.childImageSharp.fluid}
         slideFunc={this.slideFunc}
+        key={band.node.frontmatter.name + band.node.frontmatter.path}
       />
     ))
 
