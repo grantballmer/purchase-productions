@@ -31,7 +31,6 @@ class Roster extends React.Component {
     // if (showOverlay) {
     //   document.body.style.position = 'fixed';
     // }
-
     this.setState({
       currentArtist,
       showOverlay: !showOverlay,
@@ -62,11 +61,14 @@ class Roster extends React.Component {
     const noScrollClass = showOverlay ? "noScroll" : ""
 
     const { edges } = this.props.data.allMarkdownRemark
-    const chirp = edges[0].node.frontmatter.thumbnail
-    const desmond = edges[1].node.frontmatter.thumbnail
-    const jesse = edges[2].node.frontmatter.thumbnail
-
-    // const { chirp, desmond, jesse } = this.props.data
+    const bandInfo = edges.map(band => (
+      <Artist
+        name={band.node.frontmatter.name}
+        path={band.node.frontmatter.path}
+        image={band.node.frontmatter.thumbnail.childImageSharp.fluid}
+        slideFunc={this.slideFunc}
+      />
+    ))
 
     return (
       <React.Fragment>
@@ -102,21 +104,7 @@ class Roster extends React.Component {
                 }}
               />
               <section className={`box-container ${noScrollClass}`}>
-                <Artist
-                  name="Desmond Jones"
-                  image={desmond.childImageSharp.fluid}
-                  slideFunc={this.slideFunc}
-                />
-                <Artist
-                  name="Jesse Ray & The Carolina Catfish"
-                  image={jesse.childImageSharp.fluid}
-                  slideFunc={this.slideFunc}
-                />
-                <Artist
-                  name="Chirp"
-                  image={chirp.childImageSharp.fluid}
-                  slideFunc={this.slideFunc}
-                />
+                {bandInfo}
               </section>
             </React.Fragment>
           )}
@@ -137,6 +125,7 @@ export const servicesImages = graphql`
         node {
           frontmatter {
             name
+            path
             thumbnail {
               childImageSharp {
                 fluid(maxWidth: 1000) {

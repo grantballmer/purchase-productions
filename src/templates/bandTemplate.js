@@ -2,6 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
 import "./scss/band.scss"
+import SEO from "../components/SEO"
 
 import Layout from "../components/Layout"
 import SocialMedia from "../components/bandsPage/SocialMedia"
@@ -38,7 +39,8 @@ const bandTemplate = ({ data }) => {
   const { frontmatter, html } = data.markdownRemark
   const { name, genre, banner, social, management } = frontmatter
   // const { spotify, youtube, itunes, facebook, instagram } = social[0]
-  const backgroundClass = name === "Chirp" ? "chirp" : ""
+  const backgroundClass =
+    name === "Chirp" || name === "Nathan Purchase" ? "top" : ""
   let spotify, youtube, itunes, facebook, instagram
 
   if (social) {
@@ -50,60 +52,70 @@ const bandTemplate = ({ data }) => {
   }
 
   return (
-    <Layout>
-      <section className="profile-container">
-        <div className="profile-hero-wrapper">
-          <div className="svg-container svg-container__profile">
-            <svg
-              width="100%"
-              height="100%"
-              viewBox="0 0 100 100"
-              preserveAspectRatio="none"
+    <React.Fragment>
+      <SEO
+        title={`${name} - Purchase Productions`}
+        keywords=""
+        description="Purchase Productions LLC offers an array of services, including: meeting any of your concert/band photography needs, poster and album design, and any booking/tour management needs."
+        canonical="/services"
+      />
+      <Layout>
+        <section className="profile-container">
+          <div className="profile-hero-wrapper">
+            <div className="svg-container svg-container__profile">
+              <svg
+                width="100%"
+                height="100%"
+                viewBox="0 0 100 100"
+                preserveAspectRatio="none"
+              >
+                <polygon points="0,94 100,98 100,100 0,100" />
+              </svg>
+            </div>
+
+            <BackgroundImage
+              className={`profile-hero profile-hero__${backgroundClass}`}
+              fluid={banner.childImageSharp.fluid}
+              alt={name}
             >
-              <polygon points="0,94 100,98 100,100 0,100" />
-            </svg>
+              <h2>{name}</h2>
+            </BackgroundImage>
           </div>
 
-          <BackgroundImage
-            className={`profile-hero profile-hero__${backgroundClass}`}
-            fluid={banner.childImageSharp.fluid}
-            alt={name}
-          >
-            <h2>{name}</h2>
-          </BackgroundImage>
-        </div>
-
-        <div className="profile-about">
-          <div className="profile-about__info">
-            <h3>{name}</h3>
-            <h4>{genre}</h4>
-            <div dangerouslySetInnerHTML={{ __html: html }}></div>
+          <div className="profile-about">
+            <div className="profile-about__info">
+              <h3>{name}</h3>
+              <h4>{genre}</h4>
+              <div dangerouslySetInnerHTML={{ __html: html }}></div>
+            </div>
+            {social && (
+              <SocialMedia
+                info={{ spotify, youtube, itunes, facebook, instagram }}
+              />
+            )}
           </div>
-          <SocialMedia
-            info={{ spotify, youtube, itunes, facebook, instagram }}
-          />
-        </div>
 
-        <div className="profile-contact">
-          <div className="svg-container svg-container__profile svg-container__contact">
-            <svg
-              width="100%"
-              height="100%"
-              viewBox="0 0 100 100"
-              preserveAspectRatio="none"
-            >
-              <polygon points="0,0 100,0 100,12 0,4" />
-            </svg>
-          </div>
-          <h4>Contact Info</h4>
+          <div className="profile-contact">
+            <div className="svg-container svg-container__profile svg-container__contact">
+              <svg
+                width="100%"
+                height="100%"
+                viewBox="0 0 100 100"
+                preserveAspectRatio="none"
+              >
+                <polygon points="0,0 100,0 100,12 0,4" />
+              </svg>
+            </div>
+            <h4>Contact Info</h4>
 
-          <div className="profile-contact__details">
-            <Management people={management} />
+            <div className="profile-contact__details">
+              <Management people={management} />
+            </div>
+            <div />
           </div>
-          <div />
-        </div>
-      </section>
-    </Layout>
+        </section>
+      </Layout>
+    </React.Fragment>
   )
 }
 

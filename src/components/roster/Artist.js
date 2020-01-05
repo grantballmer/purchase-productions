@@ -19,26 +19,20 @@ class Artist extends React.Component {
   }
 
   render() {
-    const { name, slideFunc, image } = this.props
+    const { name, path, slideFunc, image } = this.props
     const { clicked } = this.state
 
     const touchClass = clicked ? "screenTouchClass" : ""
 
-    const varName = name.split(" ")[0].toLowerCase()
-    const linkParam = name
-      .toLowerCase()
-      .replace(/\s/g, "-")
-      .replace("&", "and")
-
     return (
       <div
-        className={`box artist__${varName} ${touchClass}`}
+        className={`box box__artist ${touchClass}`}
         onClick={this.handleClick}
       >
         <div className="overlay-background-image">
           <Img fluid={image} style={{ position: "static" }} />
         </div>
-        <Link to={`/roster/${linkParam}`} className="btn btn-profile">
+        <Link to={path} className="btn btn-profile">
           Profile
         </Link>
         <p className="box__name">{name}</p>
