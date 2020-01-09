@@ -17,8 +17,8 @@ management:
   - email: chirplive@gmail.com
     name: John Gorine
     position: Tour Manager
-  - email: Nathan@purchaseproductions.com
-    name: Nathan Purchase
+  - email: chirplive@gmail.com
+    name: Jay Frydenlund
     position: Manager
 templateKey: bandTemplate
 ---
