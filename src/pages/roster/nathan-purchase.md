@@ -3,7 +3,7 @@ path: roster/nathan-purchase
 name: Nathan Purchase
 genre: Blues / Soul / Hip Hop
 thumbnail: /assets/0-2-.jpg
-banner: /assets/0-3-.jpg
+banner: /assets/_d2b1792-1-.jpg
 social:
   - facebook: 'https://www.facebook.com/nathanpurchasemusic'
     instagram: 'https://www.instagram.com/231natedawg/'
