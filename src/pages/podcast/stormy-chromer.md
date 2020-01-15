@@ -1,7 +1,7 @@
 ---
 templateKey: episode
 title: Stormy Chromer
-path: /podcast/stormychromer
+path: /podcast/stormy-chromer
 date: 2020-01-08T18:51:31.693Z
 description: >-
   Join us in another episode recorded live at Cowpie Music Festival this summer,
