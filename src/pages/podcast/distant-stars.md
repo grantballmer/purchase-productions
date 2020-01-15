@@ -1,7 +1,7 @@
 ---
 templateKey: episode
 title: Distant Stars
-path: /podcast/distantstars
+path: /podcast/distant-stars
 date: 2020-01-08T18:55:29.615Z
 description: Today we are joined by rock group Distant Stars. This one gets a little wild.
 episode: 029
