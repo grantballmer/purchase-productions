@@ -1,7 +1,7 @@
 ---
 templateKey: episode
 title: Ryan McMahon of Joe Hertler and the Rainbow Seekers
-path: /podcast/ryanmcmahon
+path: /podcast/ryan-mcmahon-of-joe-hertler-and-the-rainbow-seekers
 date: 2020-01-08T18:57:26.200Z
 description: >-
   In another episode from Cowpie Music Festival, we bring you some late night
