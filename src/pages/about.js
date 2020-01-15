@@ -7,6 +7,7 @@ import { FaAngleDoubleDown } from "react-icons/fa"
 import Nate from "../images/about/nate.jpg"
 import Eric from "../images/about/eric.jpg"
 import Isaac from "../images/about/isaac.jpg"
+import Sky from "../images/about/sky.jpg"
 
 import Layout from "../components/Layout"
 
@@ -109,21 +110,26 @@ class About extends React.Component {
                 <div className="details__desc details__desc--reverse">
                   <h1>Eric Frutchey</h1>
                   <p>
-                    Eric Frutchey is a die-hard music fan, radio personality,
-                    and booking agent sending Chirp (Ann Arbor) all over the
-                    Midwest. Frutchey is excited to be a part of this team and
-                    is ready to work hard for his clients.
+                    Eric is a live music enthusiast. By day, he manages a coffee
+                    shop and is a co-host on our podcast, Life Through Music. By
+                    night, you can find him at local and regional shows, either
+                    seeing his favorite bands or discovering new ones. His love
+                    and passion for music is carried with him in every aspect of
+                    his life. His ultimate dream and passion is to create and
+                    edit video content for bands, which coincides with the
+                    multimedia degree he obtained in college. If you see Eric at
+                    a show, go make friends! He loves meeting new people.
                   </p>
                 </div>
 
                 <div className="details__image details__image--reverse">
-                  <img src={Eric} alt="eric" />
+                  <img src={Eric} alt="Eric Frutchey profile" />
                 </div>
               </div>
 
               <div className="details">
                 <div className="details__image">
-                  <img src={Isaac} alt="nate" />
+                  <img src={Isaac} alt="Isaac Berkowitz profile" />
                 </div>
 
                 <div className="details__desc">
@@ -137,6 +143,29 @@ class About extends React.Component {
                     learned by doing and now he’s ready to help. Want to get out
                     of your hometown and get on the road? Let’s talk.
                   </p>
+                </div>
+              </div>
+
+              <div className="details">
+                <div className="details__desc details__desc--reverse">
+                  <h1>Sky Muilenburg</h1>
+                  <p>
+                    Sky is an artist and graphic designer with several years of
+                    hands on experience in the design world. Their passion for
+                    art started at a young age and has continually grown,
+                    shaping them into who they are today.
+                  </p>
+
+                  <p>
+                    Music has always played an important role in their design
+                    process. Through lyrics and sound, music as sparked emotion
+                    and creativity in them. Their passion for art and music work
+                    in perfect harmony.
+                  </p>
+                </div>
+
+                <div className="details__image details__image--reverse">
+                  <img src={Sky} alt="Sky Muilenburg profile" />
                 </div>
               </div>
             </div>
