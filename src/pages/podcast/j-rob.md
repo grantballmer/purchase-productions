@@ -1,7 +1,7 @@
 ---
 templateKey: episode
 title: J ROB
-path: /podcast/jrob
+path: /podcast/j-rob
 date: 2020-01-08T18:56:29.659Z
 description: >-
   In today's episode, we sit down with J.Rob from Grand Rapids. This is the
