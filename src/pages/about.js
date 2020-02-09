@@ -5,7 +5,6 @@ import SEO from "../components/SEO"
 import { FaAngleDoubleDown } from "react-icons/fa"
 
 import Nate from "../images/about/nate.jpg"
-import Eric from "../images/about/eric.jpg"
 import Isaac from "../images/about/isaac.jpg"
 import Sky from "../images/about/sky.jpg"
 
@@ -106,7 +105,7 @@ class About extends React.Component {
                 </div>
               </div>
 
-              <div className="details">
+              {/* <div className="details">
                 <div className="details__desc details__desc--reverse">
                   <h1>Eric Frutchey</h1>
                   <p>
@@ -125,14 +124,10 @@ class About extends React.Component {
                 <div className="details__image details__image--reverse">
                   <img src={Eric} alt="Eric Frutchey profile" />
                 </div>
-              </div>
+              </div> */}
 
               <div className="details">
-                <div className="details__image">
-                  <img src={Isaac} alt="Isaac Berkowitz profile" />
-                </div>
-
-                <div className="details__desc">
+                <div className="details__desc details__desc--reverse">
                   <h1>Isaac Berkowitz</h1>
                   <p>
                     Guitarist and co-founder of the band Desmond Jones,
@@ -144,10 +139,16 @@ class About extends React.Component {
                     of your hometown and get on the road? Let’s talk.
                   </p>
                 </div>
+                <div className="details__image details__image--reverse">
+                  <img src={Isaac} alt="Isaac Berkowitz profile" />
+                </div>
               </div>
 
               <div className="details">
-                <div className="details__desc details__desc--reverse">
+                <div className="details__image ">
+                  <img src={Sky} alt="Sky Muilenburg profile" />
+                </div>
+                <div className="details__desc ">
                   <h1>Sky Muilenburg</h1>
                   <p>
                     Sky is an artist and graphic designer with several years of
@@ -162,10 +163,6 @@ class About extends React.Component {
                     and creativity in them. Their passion for art and music work
                     in perfect harmony.
                   </p>
-                </div>
-
-                <div className="details__image details__image--reverse">
-                  <img src={Sky} alt="Sky Muilenburg profile" />
                 </div>
               </div>
             </div>

@@ -39,9 +39,7 @@ const bandTemplate = ({ data }) => {
   const { frontmatter, html } = data.markdownRemark
   const { name, genre, banner, social, management } = frontmatter
   const { spotify, youtube, itunes, facebook, instagram } = social[0]
-  console.log(name)
-  const backgroundClass =
-    name === "Chirp" || name === "Nathan Purchase" ? "top" : ""
+  const backgroundClass = name === "Chirp" ? "top" : ""
 
   // if (social) {
   //   spotify = social[0].spotify
