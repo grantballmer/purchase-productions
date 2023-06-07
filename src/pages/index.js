@@ -45,19 +45,6 @@ const IndexPage = ({ data }) => {
             ABOUT US
           </Link>
         </div>
-
-        <section className="home-booking-wrapper">
-          <div className="svg-container svg-container__booking">
-            <svg
-              width="100%"
-              height="100%"
-              viewBox="0 0 100 100"
-              preserveAspectRatio="none"
-            >
-              <polygon points="0,0 100,0 100,12 0,4" />
-            </svg>
-          </div>
-        </section>
       </Layout>
     </React.Fragment>
   )
