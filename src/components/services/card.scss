@@ -40,7 +40,8 @@
   }
 
   @include desktop {
-    flex: 1;
+    // flex: 1;
+    width: 33%;
     height: 400px;
   }
 }
@@ -95,10 +96,6 @@
   transform-style: preserve-3d;
   text-align: center;
   font-size: 1.8rem;
-
-  @include desktop {
-    width: 33%;
-  }
 
   h2 {
     font-weight: 300;
