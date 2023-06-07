@@ -38,8 +38,8 @@ const IndexPage = ({ data }) => {
 
         <div className="home-about">
           <h1>
-            Purchase Productions is a one stop shop for your band management,
-            booking, design, and photography needs based out of Muskegon, MI.
+            Purchase Productions is a one stop shop for your photography needs
+            based out of Muskegon, MI.
           </h1>
           <Link to="/about" className="btn btn-link">
             ABOUT US
@@ -56,22 +56,6 @@ const IndexPage = ({ data }) => {
             >
               <polygon points="0,0 100,0 100,12 0,4" />
             </svg>
-          </div>
-          <div
-            className="home-booking"
-            style={{ backgroundImage: `url(${concert}` }}
-          >
-            <div className="home-booking__section">
-              <Link to="/contact">Book With Us</Link>
-              <p>Interested in one of our live bands?</p>
-              <p>Contact us and book your next event.</p>
-            </div>
-            <div className="home-booking__section home-booking__ambassador">
-              <img src={POME} alt="POME logo" />
-              <div>
-                <h2>Brand Ambassador</h2>
-              </div>
-            </div>
           </div>
         </section>
       </Layout>

@@ -38,17 +38,8 @@ class Navbar extends React.Component {
         </Link>
 
         <div className="nav-middle">
-          <Link to="/about" className="nav-middle__links">
-            About
-          </Link>
-          <Link to="/roster" className="nav-middle__links">
-            Roster
-          </Link>
           <Link to="/services" className="nav-middle__links">
             Services
-          </Link>
-          <Link to="/podcast" className="nav-middle__links">
-            Podcast
           </Link>
           <Link to="/contact" className="nav-middle__links">
             Contact
@@ -69,13 +60,6 @@ class Navbar extends React.Component {
             rel="noopener noreferrer"
           >
             <FaInstagram />
-          </a>
-          <a
-            href="https://soundcloud.com/purchaseproductions?"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaSoundcloud />
           </a>
         </div>
 

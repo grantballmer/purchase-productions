@@ -26,18 +26,6 @@ const Services = ({ data }) => {
             icon={Camera}
             service="photography"
           />
-
-          <Card
-            frontImage={data.design.childImageSharp.fluid}
-            icon={Pencil}
-            service="design"
-          />
-
-          <Card
-            frontImage={data.management.childImageSharp.fluid}
-            icon={Phone}
-            service="management"
-          />
         </section>
       </Layout>
     </React.Fragment>
