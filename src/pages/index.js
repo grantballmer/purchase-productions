@@ -41,9 +41,6 @@ const IndexPage = ({ data }) => {
             Purchase Productions is a one stop shop for your photography needs
             based out of Muskegon, MI.
           </h1>
-          <Link to="/about" className="btn btn-link">
-            ABOUT US
-          </Link>
         </div>
       </Layout>
     </React.Fragment>
