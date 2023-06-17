@@ -73,17 +73,8 @@ class Navbar extends React.Component {
           <Link to="/" onClick={this.handleClick}>
             Home
           </Link>
-          <Link to="/about" onClick={this.handleClick}>
-            About
-          </Link>
-          <Link to="/roster" onClick={this.handleClick}>
-            Roster
-          </Link>
           <Link to="/services" onClick={this.handleClick}>
             Services
-          </Link>
-          <Link to="/podcast" onClick={this.handleClick}>
-            Podcast
           </Link>
           <Link to="/contact" onClick={this.handleClick}>
             Contact
